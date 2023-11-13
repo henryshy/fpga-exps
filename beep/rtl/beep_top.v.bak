@@ -1,0 +1,11 @@
+module beep_top(
+	clk,
+	rst,
+	
+	countMode,
+	countAct,
+
+);
+
+
+

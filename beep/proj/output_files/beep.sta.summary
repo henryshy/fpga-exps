@@ -1,0 +1,173 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -7.456
+TNS   : -381.997
+
+Type  : Slow 1200mV 85C Model Setup 'soundclk'
+Slack : -1.774
+TNS   : -8.864
+
+Type  : Slow 1200mV 85C Model Setup 'beep:timer1|counter[0]'
+Slack : -0.193
+TNS   : -0.193
+
+Type  : Slow 1200mV 85C Model Setup 'beep:beep01|counter[0]'
+Slack : 0.114
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'beep:timer1|counter[0]'
+Slack : 0.168
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'beep:beep01|counter[0]'
+Slack : 0.497
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.792
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'soundclk'
+Slack : 0.833
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'clk'
+Slack : -4.596
+TNS   : -145.232
+
+Type  : Slow 1200mV 85C Model Removal 'clk'
+Slack : 0.937
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -98.168
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'soundclk'
+Slack : -1.487
+TNS   : -7.435
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'beep:beep01|counter[0]'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'beep:timer1|counter[0]'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -7.017
+TNS   : -359.501
+
+Type  : Slow 1200mV 0C Model Setup 'soundclk'
+Slack : -1.564
+TNS   : -7.814
+
+Type  : Slow 1200mV 0C Model Setup 'beep:timer1|counter[0]'
+Slack : -0.152
+TNS   : -0.152
+
+Type  : Slow 1200mV 0C Model Setup 'beep:beep01|counter[0]'
+Slack : 0.208
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'beep:timer1|counter[0]'
+Slack : 0.165
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'beep:beep01|counter[0]'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.733
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'soundclk'
+Slack : 0.774
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'clk'
+Slack : -4.336
+TNS   : -136.557
+
+Type  : Slow 1200mV 0C Model Removal 'clk'
+Slack : 0.781
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -98.168
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'soundclk'
+Slack : -1.487
+TNS   : -7.435
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'beep:beep01|counter[0]'
+Slack : -1.487
+TNS   : -1.488
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'beep:timer1|counter[0]'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -2.930
+TNS   : -138.082
+
+Type  : Fast 1200mV 0C Model Setup 'soundclk'
+Slack : -0.177
+TNS   : -0.882
+
+Type  : Fast 1200mV 0C Model Setup 'beep:timer1|counter[0]'
+Slack : 0.183
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'beep:beep01|counter[0]'
+Slack : 0.626
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'beep:timer1|counter[0]'
+Slack : 0.108
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'beep:beep01|counter[0]'
+Slack : 0.208
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.317
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'soundclk'
+Slack : 0.338
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'clk'
+Slack : -1.524
+TNS   : -46.366
+
+Type  : Fast 1200mV 0C Model Removal 'clk'
+Slack : 0.416
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -68.109
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'soundclk'
+Slack : -1.000
+TNS   : -5.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'beep:beep01|counter[0]'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'beep:timer1|counter[0]'
+Slack : -1.000
+TNS   : -1.000
+
+------------------------------------------------------------

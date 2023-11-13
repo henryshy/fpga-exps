@@ -1,0 +1,80 @@
+module beep(
+	clk,
+	rst,
+	
+	timetogo,
+	countMode,
+	countAct,
+	
+	countVal
+	
+	button1,
+	button2,
+	button3,
+);
+	input clk;
+	input rst;
+	
+	input [31:0] timetogo;//定时值
+	
+	input reg countAct;
+	input reg countMode;
+	
+	output reg [31:0] countVal;
+	output reg fullflag;
+	
+	intitial begin
+		assign countVal = 0;
+		assign countAct = 1;//高电平使能计时
+		assign countMode = 1;//高电平循环计时
+	end
+
+	
+	assign countVal = 32'b0;
+	assign fullflag = 0;
+	
+	input button1;//控制模式
+	input button2;//计数器启停
+	input button3;
+	
+	always@(posedge clk or negedge rst) begin 
+		
+		if(rst) begin//复位信号失能
+		
+			if(countMode) begin//循环计时模式
+				if(countVal < timetogo )
+					countVal <= countVal + 1;
+				else
+					countVal <= 0;
+				end
+			else //单次计时模式
+				if(countVal < timetogo )
+					countVal <= countVal + 1;
+				else begin 
+					countVal <= 0;
+					
+				end
+			end//endif cm	
+			
+		end//endif rst
+		else //复位信号使能
+			countVal <= 0;
+	
+	end //end of always
+	
+	always@(posedge button1)
+		countAct <= ~countAct;
+	
+	always@(posedge button2)
+		countMode <= ~countMode;
+	
+	
+	
+
+
+
+
+
+endmodule
+
+

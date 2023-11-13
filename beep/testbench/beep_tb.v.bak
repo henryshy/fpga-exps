@@ -1,0 +1,12 @@
+`timescale 1ns/1ns
+
+module beep_tb();
+
+	
+
+
+
+
+
+
+endmodule
