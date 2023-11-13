@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at control.v(29): always construct contains both blocking and non-blocking assignments File: C:/fpga/workspace/datasend/rtl/control.v Line: 29
+Warning (10268): Verilog HDL information at sender.v(38): always construct contains both blocking and non-blocking assignments File: C:/fpga/workspace/datasend/rtl/sender.v Line: 38

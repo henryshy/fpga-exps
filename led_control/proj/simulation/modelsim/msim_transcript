@@ -1,0 +1,52 @@
+# Reading C:/intelFPGA/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# do led_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/fpga/workspace/led_control/rtl {C:/fpga/workspace/led_control/rtl/led.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:07:39 on Nov 11,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/led_control/rtl" C:/fpga/workspace/led_control/rtl/led.v 
+# -- Compiling module led
+# 
+# Top level modules:
+# 	led
+# End time: 11:07:39 on Nov 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/fpga/workspace/led_control/proj/../testbench {C:/fpga/workspace/led_control/proj/../testbench/led_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:07:39 on Nov 11,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/led_control/proj/../testbench" C:/fpga/workspace/led_control/proj/../testbench/led_tb.v 
+# -- Compiling module led_tb
+# 
+# Top level modules:
+# 	led_tb
+# End time: 11:07:39 on Nov 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  led_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" led_tb 
+# Start time: 11:07:39 on Nov 11,2023
+# Loading work.led_tb
+# Loading work.led
+# ** Warning: (vsim-3015) C:/fpga/workspace/led_control/proj/../testbench/led_tb.v(16): [PCDPC] - Port size (4) does not match connection size (1) for port 'light'. The port definition is at: C:/fpga/workspace/led_control/rtl/led.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /led_tb/ledtest File: C:/fpga/workspace/led_control/rtl/led.v
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Break key hit
+# Simulation stop requested.
+# End time: 11:07:53 on Nov 11,2023, Elapsed time: 0:00:14
+# Errors: 0, Warnings: 1

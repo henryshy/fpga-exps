@@ -1,0 +1,93 @@
+|datasend
+clk => clk.IN2
+rst_n => rst_n.IN2
+tx << sender:sender.tx
+data[0] => data[0].IN1
+data[1] => data[1].IN1
+data[2] => data[2].IN1
+data[3] => data[3].IN1
+data[4] => data[4].IN1
+data[5] => data[5].IN1
+data[6] => data[6].IN1
+data[7] => data[7].IN1
+
+
+|datasend|control:control
+clk => inner_counter[0].CLK
+clk => inner_counter[1].CLK
+clk => inner_counter[2].CLK
+clk => inner_counter[3].CLK
+clk => inner_counter[4].CLK
+clk => inner_counter[5].CLK
+clk => inner_counter[6].CLK
+clk => inner_counter[7].CLK
+clk => inner_counter[8].CLK
+clk => delay_done.CLK
+clk => cnt_en.CLK
+clk => en~reg0.CLK
+clk => state~4.DATAIN
+rst_n => inner_counter[0].ACLR
+rst_n => inner_counter[1].ACLR
+rst_n => inner_counter[2].ACLR
+rst_n => inner_counter[3].ACLR
+rst_n => inner_counter[4].ACLR
+rst_n => inner_counter[5].ACLR
+rst_n => inner_counter[6].ACLR
+rst_n => inner_counter[7].ACLR
+rst_n => inner_counter[8].ACLR
+rst_n => delay_done.PRESET
+rst_n => cnt_en.ACLR
+rst_n => en~reg0.PRESET
+rst_n => state~6.DATAIN
+tx_done => en.OUTPUTSELECT
+tx_done => state.OUTPUTSELECT
+tx_done => state.OUTPUTSELECT
+tx_done => state.OUTPUTSELECT
+tx_done => Selector4.IN1
+en <= en~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|datasend|sender:sender
+clk => tx_done~reg0.CLK
+clk => tx~reg0.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+rst_n => cnt[0].ACLR
+rst_n => cnt[1].ACLR
+rst_n => cnt[2].ACLR
+rst_n => cnt[3].ACLR
+rst_n => cnt[4].ACLR
+rst_n => cnt[5].ACLR
+rst_n => cnt[6].ACLR
+rst_n => cnt[7].ACLR
+rst_n => cnt[8].ACLR
+rst_n => tx_done~reg0.ACLR
+rst_n => tx~reg0.ACLR
+en => cnt[8].ENA
+en => cnt[7].ENA
+en => cnt[6].ENA
+en => cnt[5].ENA
+en => cnt[4].ENA
+en => cnt[3].ENA
+en => cnt[2].ENA
+en => cnt[1].ENA
+en => cnt[0].ENA
+tx_done <= tx_done~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data[0] => Selector0.IN16
+data[1] => Selector0.IN15
+data[2] => Selector0.IN14
+data[3] => Selector0.IN13
+data[4] => Selector0.IN12
+data[5] => Selector0.IN11
+data[6] => Selector0.IN10
+data[7] => Selector0.IN9
+tx <= tx~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

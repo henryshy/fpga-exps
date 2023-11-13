@@ -1,0 +1,76 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/fpga/workspace/led_control/proj/simulation/modelsim
+vhard_block
+Z1 !s110 1699598481
+!i10b 1
+!s100 f;Idj4[3Kdbc=kNWC_SnO3
+IRT_lZWz_fOhIfF1I5Lk?l2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1699598437
+Z4 8led_8_1200mv_85c_slow.vo
+Z5 Fled_8_1200mv_85c_slow.vo
+L0 1399
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1699598481.000000
+Z8 !s107 led_8_1200mv_85c_slow.vo|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|led_8_1200mv_85c_slow.vo|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+.
+Z12 tCvgOpt 0
+vled
+R1
+!i10b 1
+!s100 C2VV7@:M=f5]ZG[YZKMz23
+ISCYzU@6BY:g167;=a38XT1
+R2
+R0
+R3
+R4
+R5
+L0 31
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vled_tb
+R1
+!i10b 1
+!s100 KJz2J4dPDJ70cO9TIbXX12
+IEaWIkFjmH78E?83nzbWl21
+R2
+R0
+w1699597514
+8C:/fpga/workspace/led_control/proj/../testbench/led_tb.v
+FC:/fpga/workspace/led_control/proj/../testbench/led_tb.v
+L0 5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/fpga/workspace/led_control/proj/../testbench/led_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/led_control/proj/../testbench|C:/fpga/workspace/led_control/proj/../testbench/led_tb.v|
+!i113 1
+R10
+!s92 -vlog01compat -work work +incdir+C:/fpga/workspace/led_control/proj/../testbench
+R12

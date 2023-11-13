@@ -1,0 +1,98 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/fpga/workspace/datasend/proj/simulation/modelsim
+vcontrol
+Z1 !s110 1699864868
+!i10b 1
+!s100 AOGoX`32>2znQUT10L;<M2
+IHKF[gkL<1dTmZ];<gnVE[2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1699864280
+8C:/fpga/workspace/datasend/rtl/control.v
+FC:/fpga/workspace/datasend/rtl/control.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1699864868.000000
+!s107 C:/fpga/workspace/datasend/rtl/control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/datasend/rtl|C:/fpga/workspace/datasend/rtl/control.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/fpga/workspace/datasend/rtl
+Z7 tCvgOpt 0
+vdatasend
+R1
+!i10b 1
+!s100 big3bU^Z4mPVA0QEnRA9Y0
+IF>>5A<eoeXUEk`KgbWdR`3
+R2
+R0
+w1699864848
+8C:/fpga/workspace/datasend/rtl/datasend.v
+FC:/fpga/workspace/datasend/rtl/datasend.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/fpga/workspace/datasend/rtl/datasend.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/datasend/rtl|C:/fpga/workspace/datasend/rtl/datasend.v|
+!i113 1
+R5
+R6
+R7
+vsender
+R1
+!i10b 1
+!s100 UFn8:enC`<NI3`VSU<>4=0
+I2JT_``?ngQ@DQ3hd^SfCN1
+R2
+R0
+w1699861995
+8C:/fpga/workspace/datasend/rtl/sender.v
+FC:/fpga/workspace/datasend/rtl/sender.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/fpga/workspace/datasend/rtl/sender.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/datasend/rtl|C:/fpga/workspace/datasend/rtl/sender.v|
+!i113 1
+R5
+R6
+R7
+vsender_tb
+R1
+!i10b 1
+!s100 Abe7>Am]`<=PIZIaoH5Z[1
+I@6N5mH:Cg[DI[W_S>jgmc2
+R2
+R0
+w1699863793
+8C:/fpga/workspace/datasend/proj/../testbench/sender_tb.v
+FC:/fpga/workspace/datasend/proj/../testbench/sender_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/fpga/workspace/datasend/proj/../testbench/sender_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/datasend/proj/../testbench|C:/fpga/workspace/datasend/proj/../testbench/sender_tb.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/fpga/workspace/datasend/proj/../testbench
+R7
