@@ -1,124 +1,131 @@
-module uart_sender(
-	
-	clk,
-	rst_n,
-	baud_set,
-	send_en,
-	tx_done,
-	data,
-	tx,
-	uart_state
 
+
+module uart_sender(
+	Clk,       //50M时钟输入
+	Rst_n,     //模块复位
+	data_byte, //待传输8bit数据
+	send_en,   //发送使能
+	baud_set,  //波特率设置
+	
+	Rs232_Tx,  //Rs232输出信号
+	Tx_Done,   //一次发送数据完成标志
+	uart_state //发送数据状态
 );
 
-	input clk;//50mhz
-	input rst_n;
-	input [2:0] baud_set;
+	input Clk;
+	input Rst_n;
+	input [7:0]data_byte;
 	input send_en;
-	input [7:0] data;
+	input [2:0]baud_set;
 	
-	output reg tx_done;
-	
-	output reg tx;
+	output reg Rs232_Tx;
+	output reg Tx_Done;
 	output reg uart_state;
 	
-	reg [7:0] stable_data;
-
-
-	reg [12:0] clock_count;
-	reg [12:0] cnt;
+	reg bps_clk;	//波特率时钟
 	
-	reg [3:0] bit_cnt;
+	reg [15:0]div_cnt;//分频计数器
 	
-	initial cnt=0;
+	reg [15:0]bps_DR;//分频计数最大值
 	
+	reg [3:0]bps_cnt;//波特率时钟计数器
 	
-	always@(posedge clk or negedge rst_n)//稳定数据
-		if(!rst_n)
-			stable_data <= 0;
-		else if(send_en)
-			stable_data <= data;
+	reg [7:0]r_data_byte;
+	
+	localparam START_BIT = 1'b0;
+	localparam STOP_BIT = 1'b1;
+	
+	always@(posedge Clk or negedge Rst_n)
+	if(!Rst_n)
+		uart_state <= 1'b0;
+	else if(send_en)
+		uart_state <= 1'b1;
+	else if(Tx_Done)
+		uart_state <= 1'b0;
+	else
+		uart_state <= uart_state;
+	
+	always@(posedge Clk or negedge Rst_n)
+	if(!Rst_n)
+		r_data_byte <= 8'd0;
+	else if(send_en)
+		r_data_byte <= data_byte;
+	else
+		r_data_byte <= r_data_byte;
+	
+	always@(posedge Clk or negedge Rst_n)
+	if(!Rst_n)
+		bps_DR <= 16'd5207;
+	else begin
+		case(baud_set)
+			0:bps_DR <= 16'd5207;
+			1:bps_DR <= 16'd2603;
+			2:bps_DR <= 16'd1301;
+			3:bps_DR <= 16'd867;
+			4:bps_DR <= 16'd433;
+			default:bps_DR <= 16'd5207;			
+		endcase
+	end	
+	
+	//counter
+	always@(posedge Clk or negedge Rst_n)
+	if(!Rst_n)
+		div_cnt <= 16'd0;
+	else if(uart_state)begin
+		if(div_cnt == bps_DR)
+			div_cnt <= 16'd0;
 		else
-			stable_data <= stable_data;
+			div_cnt <= div_cnt + 1'b1;
+	end
+	else
+		div_cnt <= 16'd0;
 	
-	always@(*)//根据波特率得到1bit的时钟计数值clock_count，接下来需要根据计数值产生uart_clk
-		if(!rst_n)
-			clock_count <= 0;
-		else
-			case(baud_set)
-				0:clock_count = 5207;//9600
-				1:clock_count = 2603;//19200
-				2:clock_count = 1301;//38400
-				3:clock_count = 867;//57200
-				4:clock_count = 433;//115200
-				default:clock_count = 5207;//9600
-			endcase
-		
-
-		
-			
-	always@(posedge clk or negedge rst_n) //计数一个bit维持的时间
-		if(!rst_n) 
-			cnt <= 0;
-		else if(send_en) 
-			if(cnt == clock_count)
-				cnt <= 0;
-			else 
-				cnt <= cnt + 1;
-		else if(!send_en)
-			cnt <= 0;
-			
-
-			
-	always@(posedge clk or negedge rst_n)//计算当前发送的是第几个bit
-		if(!rst_n)
-			bit_cnt <= 1;
-		else if(send_en) 
-			if(cnt == clock_count) begin
-				if(bit_cnt == 10)
-					bit_cnt <= 1;
-				else 
-					bit_cnt <= bit_cnt + 1;
-			end
-			else
-				bit_cnt <= bit_cnt;
-		else
-			bit_cnt <= 1;	
-		
+	// bps_clk gen
+	always@(posedge Clk or negedge Rst_n)
+	if(!Rst_n)
+		bps_clk <= 1'b0;
+	else if(div_cnt == 16'd1)
+		bps_clk <= 1'b1;
+	else
+		bps_clk <= 1'b0;
 	
-	always@(posedge clk or negedge rst_n)
-		if(!rst_n)
-			tx <= 0;
-		else begin
-			case(bit_cnt)
-				1:	tx = 1'b0;  //start bit
-				2: tx = stable_data[0];
-				3: tx = stable_data[1];
-				4: tx = stable_data[2];
-				5: tx = stable_data[3];
-				6: tx = stable_data[4];
-				7: tx = stable_data[5];
-				8: tx = stable_data[6];
-				9: tx = stable_data[7];
-				10: tx = 1'b1; // stop bit
-				default: tx = 1'b1;
-			endcase
-		end
+	//bps counter
+	always@(posedge Clk or negedge Rst_n)
+	if(!Rst_n)	
+		bps_cnt <= 4'd0;
+	else if(Tx_Done)
+		bps_cnt <= 4'd0;
+	else if(bps_clk)
+		bps_cnt <= bps_cnt + 1'b1;
+	else
+		bps_cnt <= bps_cnt;
 		
-	always@(posedge clk or negedge rst_n)
-		if(!rst_n)
-			tx_done <= 0;
-		else if (cnt == clock_count && bit_cnt == 10)
-			tx_done <= 1;
-		else if (cnt == 0)
-			tx_done <= 0;
-			
-	always@(posedge clk or negedge rst_n)
-		if(!rst_n)
-			uart_state <= 0;
-		else if(send_en)
-			uart_state <= 1;
-		else if (cnt == clock_count)
-			uart_state <= 0;
-					
+	always@(posedge Clk or negedge Rst_n)
+	if(!Rst_n)
+		Tx_Done <= 1'b0;
+	else if(bps_cnt == 4'd11)
+		Tx_Done <= 1'b1;
+	else
+		Tx_Done <= 1'b0;
+		
+	always@(posedge Clk or negedge Rst_n)
+	if(!Rst_n)
+		Rs232_Tx <= 1'b1;
+	else begin
+		case(bps_cnt)
+			0:Rs232_Tx <= 1'b1;
+			1:Rs232_Tx <= START_BIT;
+			2:Rs232_Tx <= r_data_byte[0];
+			3:Rs232_Tx <= r_data_byte[1];
+			4:Rs232_Tx <= r_data_byte[2];
+			5:Rs232_Tx <= r_data_byte[3];
+			6:Rs232_Tx <= r_data_byte[4];
+			7:Rs232_Tx <= r_data_byte[5];
+			8:Rs232_Tx <= r_data_byte[6];
+			9:Rs232_Tx <= r_data_byte[7];
+			10:Rs232_Tx <= STOP_BIT;
+			default:Rs232_Tx <= 1'b1;
+		endcase
+	end	
+
 endmodule

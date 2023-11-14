@@ -1,0 +1,27 @@
+module uart_top(
+
+	clk,
+	rst_n,
+	uart_tx,
+	uart_rx
+
+);
+	input clk;
+	input rst_n;
+	
+	input uart_tx;
+	output uart_rx;
+	
+	uart_byte_rx uart_byte_rx(
+			Clk,        //模块时钟50M
+			Rst_n,      //模块复位
+			baud_set,   //波特率设置
+			Rs232_Rx,   //RS232数据输入
+			 
+			data_byte,  //并行数据输出
+			Rx_Done     //一次数据接收完成标志
+	);
+
+
+
+endmodule

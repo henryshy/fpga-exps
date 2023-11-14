@@ -1,0 +1,23 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart/proj/issp/synthesis {C:/fpga/workspace/fpga-exps/uart/proj/issp/synthesis/issp.v}
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart/rtl {C:/fpga/workspace/fpga-exps/uart/rtl/uart_receiver.v}
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart/rtl {C:/fpga/workspace/fpga-exps/uart/rtl/uart_top.v}
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart/testbench {C:/fpga/workspace/fpga-exps/uart/testbench/uart_receiver_tb.v}
+vlib issp
+vmap issp issp
+vlog -vlog01compat -work issp +incdir+c:/fpga/workspace/fpga-exps/uart/proj/db/ip/issp/submodules {c:/fpga/workspace/fpga-exps/uart/proj/db/ip/issp/submodules/altsource_probe_top.v}
+
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart/proj/../testbench {C:/fpga/workspace/fpga-exps/uart/proj/../testbench/uart_receiver_tb.v}
+
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -L issp -voptargs="+acc"  uart_receiver
+
+add wave *
+view structure
+view signals
+run -all

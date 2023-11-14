@@ -1,0 +1,27 @@
+module uart_receiver(
+
+
+	rx,
+	baud_set,
+	clk,
+	rst_n,
+	data,
+	rx_done
+
+);
+
+	input rx;
+	input baud_set;
+	input clk;
+	input rst_n;
+	
+	output [7:0] reg data;
+	output reg rx_done;
+	
+	reg rx_bit;
+	
+	assign rx = rx_bit;
+
+
+
+endmodule
