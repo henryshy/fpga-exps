@@ -1,0 +1,26 @@
+module uart_sender_tb();
+
+	reg clk;//50mhz
+	reg rst_n;
+	reg [2:0] baud_set;
+	reg send_en;
+	reg [7:0] data;
+	
+	wire  tx_done;
+	
+	wire  tx;
+	wire  uart_state;
+	sender sender(
+		
+		.clk(),
+		.rst_n(),
+		.baud_set(),
+		.send_en(),
+		.tx_done(),
+		.data(),
+		.tx()，
+		.uart_state()
+	);
+
+
+endmodule

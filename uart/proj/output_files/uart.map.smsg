@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at uart_sender.v(45): always construct contains both blocking and non-blocking assignments File: C:/fpga/workspace/fpga-exps/uart/rtl/uart_sender.v Line: 45
+Warning (10268): Verilog HDL information at uart_sender.v(89): always construct contains both blocking and non-blocking assignments File: C:/fpga/workspace/fpga-exps/uart/rtl/uart_sender.v Line: 89

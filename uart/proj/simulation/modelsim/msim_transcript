@@ -1,0 +1,276 @@
+# Reading C:/intelFPGA/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# ERROR: No extended dataflow license exists
+# do uart_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart/rtl {C:/fpga/workspace/fpga-exps/uart/rtl/uart_sender.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:09:23 on Nov 14,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart/rtl" C:/fpga/workspace/fpga-exps/uart/rtl/uart_sender.v 
+# -- Compiling module uart_sender
+# 
+# Top level modules:
+# 	uart_sender
+# End time: 11:09:23 on Nov 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart/proj/../testbench {C:/fpga/workspace/fpga-exps/uart/proj/../testbench/uart_sender_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:09:23 on Nov 14,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart/proj/../testbench" C:/fpga/workspace/fpga-exps/uart/proj/../testbench/uart_sender_tb.v 
+# -- Compiling module uart_sender_tb
+# 
+# Top level modules:
+# 	uart_sender_tb
+# End time: 11:09:23 on Nov 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  uart_sender_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" uart_sender_tb 
+# Start time: 11:09:23 on Nov 14,2023
+# Loading work.uart_sender_tb
+# Loading work.uart_sender
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $stop    : C:/fpga/workspace/fpga-exps/uart/proj/../testbench/uart_sender_tb.v(45)
+#    Time: 2000401 ps  Iteration: 0  Instance: /uart_sender_tb
+# Break in Module uart_sender_tb at C:/fpga/workspace/fpga-exps/uart/proj/../testbench/uart_sender_tb.v line 45
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart/rtl C:/fpga/workspace/fpga-exps/uart/rtl/uart_sender.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:14:19 on Nov 14,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart/rtl" C:/fpga/workspace/fpga-exps/uart/rtl/uart_sender.v 
+# -- Compiling module uart_sender
+# 
+# Top level modules:
+# 	uart_sender
+# End time: 11:14:19 on Nov 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart/proj/../testbench C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:14:20 on Nov 14,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart/proj/../testbench" C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v 
+# -- Compiling module uart_sender_tb
+# 
+# Top level modules:
+# 	uart_sender_tb
+# End time: 11:14:20 on Nov 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Break key hit
+restart
+# Loading work.uart_sender_tb
+# Loading work.uart_sender
+run -all
+# ** Note: $stop    : C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v(45)
+#    Time: 2000401 ps  Iteration: 0  Instance: /uart_sender_tb
+# Break in Module uart_sender_tb at C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v line 45
+add wave -position insertpoint sim:/uart_sender_tb/uart_sender/*
+restart
+run -all
+# ** Note: $stop    : C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v(45)
+#    Time: 2000401 ps  Iteration: 0  Instance: /uart_sender_tb
+# Break in Module uart_sender_tb at C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v line 45
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart/proj/../testbench C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:36:44 on Nov 14,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart/proj/../testbench" C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v 
+# -- Compiling module uart_sender_tb
+# 
+# Top level modules:
+# 	uart_sender_tb
+# End time: 11:36:44 on Nov 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart/rtl C:/fpga/workspace/fpga-exps/uart/rtl/uart_sender.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:36:46 on Nov 14,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart/rtl" C:/fpga/workspace/fpga-exps/uart/rtl/uart_sender.v 
+# -- Compiling module uart_sender
+# 
+# Top level modules:
+# 	uart_sender
+# End time: 11:36:46 on Nov 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.uart_sender_tb
+# Loading work.uart_sender
+run -all
+# ** Note: $stop    : C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v(48)
+#    Time: 2200401 ps  Iteration: 0  Instance: /uart_sender_tb
+# Break in Module uart_sender_tb at C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v line 48
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart/rtl C:/fpga/workspace/fpga-exps/uart/rtl/uart_sender.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:39:41 on Nov 14,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart/rtl" C:/fpga/workspace/fpga-exps/uart/rtl/uart_sender.v 
+# -- Compiling module uart_sender
+# 
+# Top level modules:
+# 	uart_sender
+# End time: 11:39:41 on Nov 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart/proj/../testbench C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:39:42 on Nov 14,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart/proj/../testbench" C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v 
+# -- Compiling module uart_sender_tb
+# 
+# Top level modules:
+# 	uart_sender_tb
+# End time: 11:39:42 on Nov 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.uart_sender_tb
+# Loading work.uart_sender
+run -all
+# ** Note: $stop    : C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v(48)
+#    Time: 2200401 ps  Iteration: 0  Instance: /uart_sender_tb
+# Break in Module uart_sender_tb at C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v line 48
+run -all
+restart
+run -all
+# ** Note: $stop    : C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v(48)
+#    Time: 2200401 ps  Iteration: 0  Instance: /uart_sender_tb
+# Break in Module uart_sender_tb at C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v line 48
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart/rtl C:/fpga/workspace/fpga-exps/uart/rtl/uart_sender.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:42:20 on Nov 14,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart/rtl" C:/fpga/workspace/fpga-exps/uart/rtl/uart_sender.v 
+# -- Compiling module uart_sender
+# 
+# Top level modules:
+# 	uart_sender
+# End time: 11:42:20 on Nov 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart/proj/../testbench C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:42:21 on Nov 14,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart/proj/../testbench" C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v 
+# -- Compiling module uart_sender_tb
+# 
+# Top level modules:
+# 	uart_sender_tb
+# End time: 11:42:21 on Nov 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.uart_sender_tb
+# Loading work.uart_sender
+run -all
+# ** Note: $stop    : C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v(48)
+#    Time: 2200401 ps  Iteration: 0  Instance: /uart_sender_tb
+# Break in Module uart_sender_tb at C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v line 48
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart/rtl C:/fpga/workspace/fpga-exps/uart/rtl/uart_sender.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:45:19 on Nov 14,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart/rtl" C:/fpga/workspace/fpga-exps/uart/rtl/uart_sender.v 
+# -- Compiling module uart_sender
+# 
+# Top level modules:
+# 	uart_sender
+# End time: 11:45:19 on Nov 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart/proj/../testbench C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:45:20 on Nov 14,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart/proj/../testbench" C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v 
+# -- Compiling module uart_sender_tb
+# 
+# Top level modules:
+# 	uart_sender_tb
+# End time: 11:45:20 on Nov 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.uart_sender_tb
+# Loading work.uart_sender
+# Warning in wave window restart: (vish-4014) No objects found matching '/uart_sender_tb/uart_sender/uart_clk'. 
+run -all
+# ** Note: $stop    : C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v(48)
+#    Time: 2200401 ps  Iteration: 0  Instance: /uart_sender_tb
+# Break in Module uart_sender_tb at C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v line 48
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart/rtl C:/fpga/workspace/fpga-exps/uart/rtl/uart_sender.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:47:03 on Nov 14,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart/rtl" C:/fpga/workspace/fpga-exps/uart/rtl/uart_sender.v 
+# -- Compiling module uart_sender
+# 
+# Top level modules:
+# 	uart_sender
+# End time: 11:47:03 on Nov 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.uart_sender
+run -all
+# ** Note: $stop    : C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v(48)
+#    Time: 2200401 ps  Iteration: 0  Instance: /uart_sender_tb
+# Break in Module uart_sender_tb at C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v line 48
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart/rtl C:/fpga/workspace/fpga-exps/uart/rtl/uart_sender.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:49:06 on Nov 14,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart/rtl" C:/fpga/workspace/fpga-exps/uart/rtl/uart_sender.v 
+# -- Compiling module uart_sender
+# 
+# Top level modules:
+# 	uart_sender
+# End time: 11:49:06 on Nov 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.uart_sender
+run -all
+# ** Note: $stop    : C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v(48)
+#    Time: 2200401 ps  Iteration: 0  Instance: /uart_sender_tb
+# Break in Module uart_sender_tb at C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v line 48
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart/rtl C:/fpga/workspace/fpga-exps/uart/rtl/uart_sender.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:56:42 on Nov 14,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart/rtl" C:/fpga/workspace/fpga-exps/uart/rtl/uart_sender.v 
+# -- Compiling module uart_sender
+# 
+# Top level modules:
+# 	uart_sender
+# End time: 11:56:42 on Nov 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart/proj/../testbench C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:56:44 on Nov 14,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart/proj/../testbench" C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v 
+# -- Compiling module uart_sender_tb
+# 
+# Top level modules:
+# 	uart_sender_tb
+# End time: 11:56:44 on Nov 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.uart_sender_tb
+# Loading work.uart_sender
+run -all
+# ** Note: $stop    : C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v(48)
+#    Time: 2200401 ps  Iteration: 0  Instance: /uart_sender_tb
+# Break in Module uart_sender_tb at C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v line 48
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart/proj/../testbench C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:59:03 on Nov 14,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart/proj/../testbench" C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v 
+# -- Compiling module uart_sender_tb
+# 
+# Top level modules:
+# 	uart_sender_tb
+# End time: 11:59:03 on Nov 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.uart_sender_tb
+run -all
+# ** Note: $stop    : C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v(48)
+#    Time: 2200401 ps  Iteration: 0  Instance: /uart_sender_tb
+# Break in Module uart_sender_tb at C:/fpga/workspace/fpga-exps/uart/testbench/uart_sender_tb.v line 48
+# End time: 11:59:50 on Nov 14,2023, Elapsed time: 0:50:27
+# Errors: 1, Warnings: 0
