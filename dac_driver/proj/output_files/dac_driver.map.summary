@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Nov 14 22:09:32 2023
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+Revision Name : dac_driver
+Top-level Entity Name : dac_driver
+Family : Cyclone IV E
+Total logic elements : 1
+    Total combinational functions : 0
+    Dedicated logic registers : 1
+Total registers : 1
+Total pins : 23
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
