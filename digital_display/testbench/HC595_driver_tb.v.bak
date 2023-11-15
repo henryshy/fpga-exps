@@ -1,0 +1,43 @@
+`timescale 1ns/1ns
+module HC595_driver_tb();
+
+	
+	reg clk;
+	reg rst_n;
+	reg [31:0]data;
+	reg en;
+	wire ds;
+	wire stcp;
+	wire shcp;
+	
+	HC595_driver HC595_driver(
+		.clk(clk),
+		.rst_n(rst_n),
+		.data(data),
+		.en(1),
+		.ds(ds),
+		.stcp(stcp),
+		.shcp(shcp)
+	);
+
+	initial clk = 1;
+	always #10 clk = ~clk;
+	
+	
+	initial begin
+	
+		data = 8'h12345678;
+		rst_n = 0;
+		en = 1;
+		#200
+		rst_n = 1;
+		
+		#2000000
+		data = 8'h87654321;
+		#2000000
+		
+		$stop;
+		
+
+
+endmodule

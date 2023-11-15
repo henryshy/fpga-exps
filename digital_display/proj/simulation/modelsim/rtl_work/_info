@@ -1,0 +1,56 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/fpga/workspace/fpga-exps/digital_display/proj/simulation/modelsim
+vHC595_driver
+!s110 1700051418
+!i10b 1
+!s100 E5:`XF9468N;HHNK`iN9T2
+Ij2PX]_f@l]3HD:fUO;>Eg3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1700050974
+8C:/fpga/workspace/fpga-exps/digital_display/rtl/HC595_driver.v
+FC:/fpga/workspace/fpga-exps/digital_display/rtl/HC595_driver.v
+L0 1
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1700051418.000000
+!s107 C:/fpga/workspace/fpga-exps/digital_display/rtl/HC595_driver.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/digital_display/proj/../rtl|C:/fpga/workspace/fpga-exps/digital_display/rtl/HC595_driver.v|
+!i113 1
+Z3 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/digital_display/proj/../rtl
+Z4 tCvgOpt 0
+n@h@c595_driver
+vHC595_driver_tb
+!s110 1700051416
+!i10b 1
+!s100 KEDHENM?YdXYAmdXURVHM1
+IeYXBI<]b```@d`cAQh`Oc0
+R1
+R0
+w1700051388
+8C:/fpga/workspace/fpga-exps/digital_display/testbench/HC595_driver_tb.v
+FC:/fpga/workspace/fpga-exps/digital_display/testbench/HC595_driver_tb.v
+L0 2
+R2
+r1
+!s85 0
+31
+!s108 1700051416.000000
+!s107 C:/fpga/workspace/fpga-exps/digital_display/testbench/HC595_driver_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/digital_display/proj/../testbench|C:/fpga/workspace/fpga-exps/digital_display/testbench/HC595_driver_tb.v|
+!i113 1
+R3
+!s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/digital_display/proj/../testbench
+R4
+n@h@c595_driver_tb

@@ -1,0 +1,25 @@
+module display_top(
+
+	clk,
+	rst,
+	sel,
+	led
+);
+	input clk;
+	input rst;
+	
+	output sel;
+	output led;
+	
+	digital_display digital_display(
+
+		.clk(clk),
+		.rst_n(rst_n),
+		.nums(nums),
+		.en(en),
+		.sel(sel),
+		.led(led)
+
+	);
+
+end

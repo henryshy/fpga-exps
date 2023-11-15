@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at digital_display.v(50): always construct contains both blocking and non-blocking assignments File: C:/fpga/workspace/fpga-exps/digital_display/rtl/digital_display.v Line: 50
+Warning (10268): Verilog HDL information at digital_display.v(66): always construct contains both blocking and non-blocking assignments File: C:/fpga/workspace/fpga-exps/digital_display/rtl/digital_display.v Line: 66

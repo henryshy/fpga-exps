@@ -1,0 +1,25 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/digital_display/ip/digital_display_issp/synthesis {C:/fpga/workspace/fpga-exps/digital_display/ip/digital_display_issp/synthesis/digital_display_issp.v}
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/digital_display/rtl {C:/fpga/workspace/fpga-exps/digital_display/rtl/digital_display.v}
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/digital_display/rtl {C:/fpga/workspace/fpga-exps/digital_display/rtl/display_top.v}
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/digital_display/rtl {C:/fpga/workspace/fpga-exps/digital_display/rtl/HC595_driver.v}
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/digital_display/testbench {C:/fpga/workspace/fpga-exps/digital_display/testbench/HC595_driver_tb.v}
+vlib digital_display_issp
+vmap digital_display_issp digital_display_issp
+vlog -vlog01compat -work digital_display_issp +incdir+c:/fpga/workspace/fpga-exps/digital_display/proj/db/ip/digital_display_issp/submodules {c:/fpga/workspace/fpga-exps/digital_display/proj/db/ip/digital_display_issp/submodules/altsource_probe_top.v}
+
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/digital_display/proj/../testbench {C:/fpga/workspace/fpga-exps/digital_display/proj/../testbench/HC595_driver_tb.v}
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/digital_display/proj/../rtl {C:/fpga/workspace/fpga-exps/digital_display/proj/../rtl/HC595_driver.v}
+
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -L digital_display_issp -voptargs="+acc"  HC595_driver_tb
+
+add wave *
+view structure
+view signals
+run -all

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Nov 15 20:49:51 2023
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+Revision Name : digital_display
+Top-level Entity Name : display_top
+Family : Cyclone IV E
+Total logic elements : 328
+    Total combinational functions : 299
+    Dedicated logic registers : 186
+Total registers : 186
+Total pins : 5
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
