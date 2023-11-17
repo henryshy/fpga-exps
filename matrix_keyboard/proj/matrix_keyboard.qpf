@@ -18,13 +18,13 @@
 #
 # Quartus Prime
 # Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
-# Date created = 10:01:56  November 17, 2023
+# Date created = 16:40:27  November 17, 2023
 #
 # -------------------------------------------------------------------------- #
 
 QUARTUS_VERSION = "17.1"
-DATE = "10:01:56  November 17, 2023"
+DATE = "16:40:27  November 17, 2023"
 
 # Revisions
 
-PROJECT_REVISION = "matri_keyboard"
+PROJECT_REVISION = "matrix_keyboard"

@@ -1,0 +1,14 @@
+
+State Machine - |matrix_keyboard|state
+Name state.read_row_in state.filter_r state.wait_r state.result state.scan_column_4 state.scan_column_3 state.scan_column_2 state.scan_column_1 state.store_row_in state.filter_p state.idle 
+state.idle 0 0 0 0 0 0 0 0 0 0 0 
+state.filter_p 0 0 0 0 0 0 0 0 0 1 1 
+state.store_row_in 0 0 0 0 0 0 0 0 1 0 1 
+state.scan_column_1 0 0 0 0 0 0 0 1 0 0 1 
+state.scan_column_2 0 0 0 0 0 0 1 0 0 0 1 
+state.scan_column_3 0 0 0 0 0 1 0 0 0 0 1 
+state.scan_column_4 0 0 0 0 1 0 0 0 0 0 1 
+state.result 0 0 0 1 0 0 0 0 0 0 1 
+state.wait_r 0 0 1 0 0 0 0 0 0 0 1 
+state.filter_r 0 1 0 0 0 0 0 0 0 0 1 
+state.read_row_in 1 0 0 0 0 0 0 0 0 0 1 
