@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/fpga/workspace/fpga-exps/dparm/proj/simulation/modelsim
+vdparm
+Z1 !s110 1700225074
+!i10b 1
+!s100 nC:>j[B1TG6n7=eBP]8ZG1
+I?dBSE5FTEo@n7=ISLOkBK3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1700224492
+8C:/fpga/workspace/fpga-exps/dparm/ip/dparm.v
+FC:/fpga/workspace/fpga-exps/dparm/ip/dparm.v
+L0 39
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1700225074.000000
+!s107 C:/fpga/workspace/fpga-exps/dparm/ip/dparm.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/dparm/ip|C:/fpga/workspace/fpga-exps/dparm/ip/dparm.v|
+!i113 1
+Z5 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/dparm/ip
+Z6 tCvgOpt 0
+vdparm_tb
+R1
+!i10b 1
+!s100 <Ch@J7X47T<>i0I?06eU<0
+ITFh>B^fbae91BQM@2]@kz2
+R2
+R0
+w1700225052
+8C:/fpga/workspace/fpga-exps/dparm/proj/../testbench/dparm_tb.v
+FC:/fpga/workspace/fpga-exps/dparm/proj/../testbench/dparm_tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/fpga/workspace/fpga-exps/dparm/proj/../testbench/dparm_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/dparm/proj/../testbench|C:/fpga/workspace/fpga-exps/dparm/proj/../testbench/dparm_tb.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/dparm/proj/../testbench
+R6
