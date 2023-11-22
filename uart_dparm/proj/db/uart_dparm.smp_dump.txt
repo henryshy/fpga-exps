@@ -1,0 +1,7 @@
+
+State Machine - |uart_dparm|key_filter:key_filter|state
+Name state.up state.filter1 state.down state.filter0 
+state.up 0 0 0 0 
+state.filter0 1 0 0 1 
+state.down 1 0 1 0 
+state.filter1 1 1 0 0 

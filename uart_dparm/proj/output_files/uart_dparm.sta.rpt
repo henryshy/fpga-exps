@@ -1,0 +1,1187 @@
+TimeQuest Timing Analyzer report for uart_dparm
+Wed Nov 22 18:14:52 2023
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'clk'
+ 13. Slow 1200mV 85C Model Hold: 'clk'
+ 14. Slow 1200mV 85C Model Metastability Summary
+ 15. Slow 1200mV 0C Model Fmax Summary
+ 16. Slow 1200mV 0C Model Setup Summary
+ 17. Slow 1200mV 0C Model Hold Summary
+ 18. Slow 1200mV 0C Model Recovery Summary
+ 19. Slow 1200mV 0C Model Removal Summary
+ 20. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 21. Slow 1200mV 0C Model Setup: 'clk'
+ 22. Slow 1200mV 0C Model Hold: 'clk'
+ 23. Slow 1200mV 0C Model Metastability Summary
+ 24. Fast 1200mV 0C Model Setup Summary
+ 25. Fast 1200mV 0C Model Hold Summary
+ 26. Fast 1200mV 0C Model Recovery Summary
+ 27. Fast 1200mV 0C Model Removal Summary
+ 28. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 29. Fast 1200mV 0C Model Setup: 'clk'
+ 30. Fast 1200mV 0C Model Hold: 'clk'
+ 31. Fast 1200mV 0C Model Metastability Summary
+ 32. Multicorner Timing Analysis Summary
+ 33. Board Trace Model Assignments
+ 34. Input Transition Times
+ 35. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 36. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 37. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 38. Setup Transfers
+ 39. Hold Transfers
+ 40. Report TCCS
+ 41. Report RSKM
+ 42. Unconstrained Paths Summary
+ 43. Clock Status Summary
+ 44. Unconstrained Input Ports
+ 45. Unconstrained Output Ports
+ 46. Unconstrained Input Ports
+ 47. Unconstrained Output Ports
+ 48. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                               ;
++-----------------------+---------------------------------------------------------+
+; Quartus Prime Version ; Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition ;
+; Timing Analyzer       ; TimeQuest                                               ;
+; Revision Name         ; uart_dparm                                              ;
+; Device Family         ; Cyclone IV E                                            ;
+; Device Name           ; EP4CE10F17C8                                            ;
+; Timing Models         ; Final                                                   ;
+; Delay Model           ; Combined                                                ;
+; Rise/Fall Delays      ; Enabled                                                 ;
++-----------------------+---------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.11        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   2.4%      ;
+;     Processors 3-16        ;   0.6%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 229.83 MHz ; 229.83 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+--------+--------------------+
+; Clock ; Slack  ; End Point TNS      ;
++-------+--------+--------------------+
+; clk   ; -3.351 ; -341.173           ;
++-------+--------+--------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.433 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; clk   ; -3.201 ; -264.462                         ;
++-------+--------+----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk'                                                                                                                                     ;
++--------+-----------------------------------------+-----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                               ; To Node                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------+-----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.351 ; uart_receiver:uart_receiver|div_cnt[14] ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.574     ; 3.778      ;
+; -3.351 ; uart_receiver:uart_receiver|div_cnt[14] ; uart_receiver:uart_receiver|div_cnt[3]        ; clk          ; clk         ; 1.000        ; -0.574     ; 3.778      ;
+; -3.351 ; uart_receiver:uart_receiver|div_cnt[14] ; uart_receiver:uart_receiver|div_cnt[4]        ; clk          ; clk         ; 1.000        ; -0.574     ; 3.778      ;
+; -3.351 ; uart_receiver:uart_receiver|div_cnt[14] ; uart_receiver:uart_receiver|div_cnt[5]        ; clk          ; clk         ; 1.000        ; -0.574     ; 3.778      ;
+; -3.351 ; uart_receiver:uart_receiver|div_cnt[14] ; uart_receiver:uart_receiver|div_cnt[10]       ; clk          ; clk         ; 1.000        ; -0.574     ; 3.778      ;
+; -3.351 ; uart_receiver:uart_receiver|div_cnt[14] ; uart_receiver:uart_receiver|div_cnt[9]        ; clk          ; clk         ; 1.000        ; -0.574     ; 3.778      ;
+; -3.351 ; uart_receiver:uart_receiver|div_cnt[14] ; uart_receiver:uart_receiver|div_cnt[11]       ; clk          ; clk         ; 1.000        ; -0.574     ; 3.778      ;
+; -3.351 ; uart_receiver:uart_receiver|div_cnt[14] ; uart_receiver:uart_receiver|div_cnt[12]       ; clk          ; clk         ; 1.000        ; -0.574     ; 3.778      ;
+; -3.351 ; uart_receiver:uart_receiver|div_cnt[14] ; uart_receiver:uart_receiver|div_cnt[13]       ; clk          ; clk         ; 1.000        ; -0.574     ; 3.778      ;
+; -3.342 ; uart_receiver:uart_receiver|div_cnt[7]  ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.574     ; 3.769      ;
+; -3.342 ; uart_receiver:uart_receiver|div_cnt[7]  ; uart_receiver:uart_receiver|div_cnt[3]        ; clk          ; clk         ; 1.000        ; -0.574     ; 3.769      ;
+; -3.342 ; uart_receiver:uart_receiver|div_cnt[7]  ; uart_receiver:uart_receiver|div_cnt[4]        ; clk          ; clk         ; 1.000        ; -0.574     ; 3.769      ;
+; -3.342 ; uart_receiver:uart_receiver|div_cnt[7]  ; uart_receiver:uart_receiver|div_cnt[5]        ; clk          ; clk         ; 1.000        ; -0.574     ; 3.769      ;
+; -3.342 ; uart_receiver:uart_receiver|div_cnt[7]  ; uart_receiver:uart_receiver|div_cnt[10]       ; clk          ; clk         ; 1.000        ; -0.574     ; 3.769      ;
+; -3.342 ; uart_receiver:uart_receiver|div_cnt[7]  ; uart_receiver:uart_receiver|div_cnt[9]        ; clk          ; clk         ; 1.000        ; -0.574     ; 3.769      ;
+; -3.342 ; uart_receiver:uart_receiver|div_cnt[7]  ; uart_receiver:uart_receiver|div_cnt[11]       ; clk          ; clk         ; 1.000        ; -0.574     ; 3.769      ;
+; -3.342 ; uart_receiver:uart_receiver|div_cnt[7]  ; uart_receiver:uart_receiver|div_cnt[12]       ; clk          ; clk         ; 1.000        ; -0.574     ; 3.769      ;
+; -3.342 ; uart_receiver:uart_receiver|div_cnt[7]  ; uart_receiver:uart_receiver|div_cnt[13]       ; clk          ; clk         ; 1.000        ; -0.574     ; 3.769      ;
+; -3.330 ; uart_receiver:uart_receiver|div_cnt[4]  ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.081     ; 4.250      ;
+; -3.330 ; uart_receiver:uart_receiver|div_cnt[4]  ; uart_receiver:uart_receiver|div_cnt[3]        ; clk          ; clk         ; 1.000        ; -0.081     ; 4.250      ;
+; -3.330 ; uart_receiver:uart_receiver|div_cnt[4]  ; uart_receiver:uart_receiver|div_cnt[4]        ; clk          ; clk         ; 1.000        ; -0.081     ; 4.250      ;
+; -3.330 ; uart_receiver:uart_receiver|div_cnt[4]  ; uart_receiver:uart_receiver|div_cnt[5]        ; clk          ; clk         ; 1.000        ; -0.081     ; 4.250      ;
+; -3.330 ; uart_receiver:uart_receiver|div_cnt[4]  ; uart_receiver:uart_receiver|div_cnt[10]       ; clk          ; clk         ; 1.000        ; -0.081     ; 4.250      ;
+; -3.330 ; uart_receiver:uart_receiver|div_cnt[4]  ; uart_receiver:uart_receiver|div_cnt[9]        ; clk          ; clk         ; 1.000        ; -0.081     ; 4.250      ;
+; -3.330 ; uart_receiver:uart_receiver|div_cnt[4]  ; uart_receiver:uart_receiver|div_cnt[11]       ; clk          ; clk         ; 1.000        ; -0.081     ; 4.250      ;
+; -3.330 ; uart_receiver:uart_receiver|div_cnt[4]  ; uart_receiver:uart_receiver|div_cnt[12]       ; clk          ; clk         ; 1.000        ; -0.081     ; 4.250      ;
+; -3.330 ; uart_receiver:uart_receiver|div_cnt[4]  ; uart_receiver:uart_receiver|div_cnt[13]       ; clk          ; clk         ; 1.000        ; -0.081     ; 4.250      ;
+; -3.306 ; uart_receiver:uart_receiver|div_cnt[3]  ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.081     ; 4.226      ;
+; -3.306 ; uart_receiver:uart_receiver|div_cnt[3]  ; uart_receiver:uart_receiver|div_cnt[3]        ; clk          ; clk         ; 1.000        ; -0.081     ; 4.226      ;
+; -3.306 ; uart_receiver:uart_receiver|div_cnt[3]  ; uart_receiver:uart_receiver|div_cnt[4]        ; clk          ; clk         ; 1.000        ; -0.081     ; 4.226      ;
+; -3.306 ; uart_receiver:uart_receiver|div_cnt[3]  ; uart_receiver:uart_receiver|div_cnt[5]        ; clk          ; clk         ; 1.000        ; -0.081     ; 4.226      ;
+; -3.306 ; uart_receiver:uart_receiver|div_cnt[3]  ; uart_receiver:uart_receiver|div_cnt[10]       ; clk          ; clk         ; 1.000        ; -0.081     ; 4.226      ;
+; -3.306 ; uart_receiver:uart_receiver|div_cnt[3]  ; uart_receiver:uart_receiver|div_cnt[9]        ; clk          ; clk         ; 1.000        ; -0.081     ; 4.226      ;
+; -3.306 ; uart_receiver:uart_receiver|div_cnt[3]  ; uart_receiver:uart_receiver|div_cnt[11]       ; clk          ; clk         ; 1.000        ; -0.081     ; 4.226      ;
+; -3.306 ; uart_receiver:uart_receiver|div_cnt[3]  ; uart_receiver:uart_receiver|div_cnt[12]       ; clk          ; clk         ; 1.000        ; -0.081     ; 4.226      ;
+; -3.306 ; uart_receiver:uart_receiver|div_cnt[3]  ; uart_receiver:uart_receiver|div_cnt[13]       ; clk          ; clk         ; 1.000        ; -0.081     ; 4.226      ;
+; -3.233 ; uart_receiver:uart_receiver|div_cnt[6]  ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.574     ; 3.660      ;
+; -3.233 ; uart_receiver:uart_receiver|div_cnt[6]  ; uart_receiver:uart_receiver|div_cnt[3]        ; clk          ; clk         ; 1.000        ; -0.574     ; 3.660      ;
+; -3.233 ; uart_receiver:uart_receiver|div_cnt[6]  ; uart_receiver:uart_receiver|div_cnt[4]        ; clk          ; clk         ; 1.000        ; -0.574     ; 3.660      ;
+; -3.233 ; uart_receiver:uart_receiver|div_cnt[6]  ; uart_receiver:uart_receiver|div_cnt[5]        ; clk          ; clk         ; 1.000        ; -0.574     ; 3.660      ;
+; -3.233 ; uart_receiver:uart_receiver|div_cnt[6]  ; uart_receiver:uart_receiver|div_cnt[10]       ; clk          ; clk         ; 1.000        ; -0.574     ; 3.660      ;
+; -3.233 ; uart_receiver:uart_receiver|div_cnt[6]  ; uart_receiver:uart_receiver|div_cnt[9]        ; clk          ; clk         ; 1.000        ; -0.574     ; 3.660      ;
+; -3.233 ; uart_receiver:uart_receiver|div_cnt[6]  ; uart_receiver:uart_receiver|div_cnt[11]       ; clk          ; clk         ; 1.000        ; -0.574     ; 3.660      ;
+; -3.233 ; uart_receiver:uart_receiver|div_cnt[6]  ; uart_receiver:uart_receiver|div_cnt[12]       ; clk          ; clk         ; 1.000        ; -0.574     ; 3.660      ;
+; -3.233 ; uart_receiver:uart_receiver|div_cnt[6]  ; uart_receiver:uart_receiver|div_cnt[13]       ; clk          ; clk         ; 1.000        ; -0.574     ; 3.660      ;
+; -3.223 ; uart_receiver:uart_receiver|div_cnt[15] ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.574     ; 3.650      ;
+; -3.223 ; uart_receiver:uart_receiver|div_cnt[15] ; uart_receiver:uart_receiver|div_cnt[3]        ; clk          ; clk         ; 1.000        ; -0.574     ; 3.650      ;
+; -3.223 ; uart_receiver:uart_receiver|div_cnt[15] ; uart_receiver:uart_receiver|div_cnt[4]        ; clk          ; clk         ; 1.000        ; -0.574     ; 3.650      ;
+; -3.223 ; uart_receiver:uart_receiver|div_cnt[15] ; uart_receiver:uart_receiver|div_cnt[5]        ; clk          ; clk         ; 1.000        ; -0.574     ; 3.650      ;
+; -3.223 ; uart_receiver:uart_receiver|div_cnt[15] ; uart_receiver:uart_receiver|div_cnt[10]       ; clk          ; clk         ; 1.000        ; -0.574     ; 3.650      ;
+; -3.223 ; uart_receiver:uart_receiver|div_cnt[15] ; uart_receiver:uart_receiver|div_cnt[9]        ; clk          ; clk         ; 1.000        ; -0.574     ; 3.650      ;
+; -3.223 ; uart_receiver:uart_receiver|div_cnt[15] ; uart_receiver:uart_receiver|div_cnt[11]       ; clk          ; clk         ; 1.000        ; -0.574     ; 3.650      ;
+; -3.223 ; uart_receiver:uart_receiver|div_cnt[15] ; uart_receiver:uart_receiver|div_cnt[12]       ; clk          ; clk         ; 1.000        ; -0.574     ; 3.650      ;
+; -3.223 ; uart_receiver:uart_receiver|div_cnt[15] ; uart_receiver:uart_receiver|div_cnt[13]       ; clk          ; clk         ; 1.000        ; -0.574     ; 3.650      ;
+; -3.200 ; uart_receiver:uart_receiver|div_cnt[0]  ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.574     ; 3.627      ;
+; -3.200 ; uart_receiver:uart_receiver|div_cnt[0]  ; uart_receiver:uart_receiver|div_cnt[3]        ; clk          ; clk         ; 1.000        ; -0.574     ; 3.627      ;
+; -3.200 ; uart_receiver:uart_receiver|div_cnt[0]  ; uart_receiver:uart_receiver|div_cnt[4]        ; clk          ; clk         ; 1.000        ; -0.574     ; 3.627      ;
+; -3.200 ; uart_receiver:uart_receiver|div_cnt[0]  ; uart_receiver:uart_receiver|div_cnt[5]        ; clk          ; clk         ; 1.000        ; -0.574     ; 3.627      ;
+; -3.200 ; uart_receiver:uart_receiver|div_cnt[0]  ; uart_receiver:uart_receiver|div_cnt[10]       ; clk          ; clk         ; 1.000        ; -0.574     ; 3.627      ;
+; -3.200 ; uart_receiver:uart_receiver|div_cnt[0]  ; uart_receiver:uart_receiver|div_cnt[9]        ; clk          ; clk         ; 1.000        ; -0.574     ; 3.627      ;
+; -3.200 ; uart_receiver:uart_receiver|div_cnt[0]  ; uart_receiver:uart_receiver|div_cnt[11]       ; clk          ; clk         ; 1.000        ; -0.574     ; 3.627      ;
+; -3.200 ; uart_receiver:uart_receiver|div_cnt[0]  ; uart_receiver:uart_receiver|div_cnt[12]       ; clk          ; clk         ; 1.000        ; -0.574     ; 3.627      ;
+; -3.200 ; uart_receiver:uart_receiver|div_cnt[0]  ; uart_receiver:uart_receiver|div_cnt[13]       ; clk          ; clk         ; 1.000        ; -0.574     ; 3.627      ;
+; -3.192 ; uart_receiver:uart_receiver|div_cnt[11] ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.081     ; 4.112      ;
+; -3.192 ; uart_receiver:uart_receiver|div_cnt[11] ; uart_receiver:uart_receiver|div_cnt[3]        ; clk          ; clk         ; 1.000        ; -0.081     ; 4.112      ;
+; -3.192 ; uart_receiver:uart_receiver|div_cnt[11] ; uart_receiver:uart_receiver|div_cnt[4]        ; clk          ; clk         ; 1.000        ; -0.081     ; 4.112      ;
+; -3.192 ; uart_receiver:uart_receiver|div_cnt[11] ; uart_receiver:uart_receiver|div_cnt[5]        ; clk          ; clk         ; 1.000        ; -0.081     ; 4.112      ;
+; -3.192 ; uart_receiver:uart_receiver|div_cnt[11] ; uart_receiver:uart_receiver|div_cnt[10]       ; clk          ; clk         ; 1.000        ; -0.081     ; 4.112      ;
+; -3.192 ; uart_receiver:uart_receiver|div_cnt[11] ; uart_receiver:uart_receiver|div_cnt[9]        ; clk          ; clk         ; 1.000        ; -0.081     ; 4.112      ;
+; -3.192 ; uart_receiver:uart_receiver|div_cnt[11] ; uart_receiver:uart_receiver|div_cnt[11]       ; clk          ; clk         ; 1.000        ; -0.081     ; 4.112      ;
+; -3.192 ; uart_receiver:uart_receiver|div_cnt[11] ; uart_receiver:uart_receiver|div_cnt[12]       ; clk          ; clk         ; 1.000        ; -0.081     ; 4.112      ;
+; -3.192 ; uart_receiver:uart_receiver|div_cnt[11] ; uart_receiver:uart_receiver|div_cnt[13]       ; clk          ; clk         ; 1.000        ; -0.081     ; 4.112      ;
+; -3.182 ; uart_receiver:uart_receiver|div_cnt[9]  ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.081     ; 4.102      ;
+; -3.182 ; uart_receiver:uart_receiver|div_cnt[9]  ; uart_receiver:uart_receiver|div_cnt[3]        ; clk          ; clk         ; 1.000        ; -0.081     ; 4.102      ;
+; -3.182 ; uart_receiver:uart_receiver|div_cnt[9]  ; uart_receiver:uart_receiver|div_cnt[4]        ; clk          ; clk         ; 1.000        ; -0.081     ; 4.102      ;
+; -3.182 ; uart_receiver:uart_receiver|div_cnt[9]  ; uart_receiver:uart_receiver|div_cnt[5]        ; clk          ; clk         ; 1.000        ; -0.081     ; 4.102      ;
+; -3.182 ; uart_receiver:uart_receiver|div_cnt[9]  ; uart_receiver:uart_receiver|div_cnt[10]       ; clk          ; clk         ; 1.000        ; -0.081     ; 4.102      ;
+; -3.182 ; uart_receiver:uart_receiver|div_cnt[9]  ; uart_receiver:uart_receiver|div_cnt[9]        ; clk          ; clk         ; 1.000        ; -0.081     ; 4.102      ;
+; -3.182 ; uart_receiver:uart_receiver|div_cnt[9]  ; uart_receiver:uart_receiver|div_cnt[11]       ; clk          ; clk         ; 1.000        ; -0.081     ; 4.102      ;
+; -3.182 ; uart_receiver:uart_receiver|div_cnt[9]  ; uart_receiver:uart_receiver|div_cnt[12]       ; clk          ; clk         ; 1.000        ; -0.081     ; 4.102      ;
+; -3.182 ; uart_receiver:uart_receiver|div_cnt[9]  ; uart_receiver:uart_receiver|div_cnt[13]       ; clk          ; clk         ; 1.000        ; -0.081     ; 4.102      ;
+; -3.173 ; uart_receiver:uart_receiver|bps_cnt[3]  ; uart_receiver:uart_receiver|r_data_byte[0][2] ; clk          ; clk         ; 1.000        ; -0.083     ; 4.091      ;
+; -3.173 ; uart_receiver:uart_receiver|bps_cnt[3]  ; uart_receiver:uart_receiver|r_data_byte[0][1] ; clk          ; clk         ; 1.000        ; -0.083     ; 4.091      ;
+; -3.173 ; uart_receiver:uart_receiver|bps_cnt[3]  ; uart_receiver:uart_receiver|r_data_byte[0][0] ; clk          ; clk         ; 1.000        ; -0.083     ; 4.091      ;
+; -3.142 ; uart_receiver:uart_receiver|bps_cnt[1]  ; uart_receiver:uart_receiver|r_data_byte[0][2] ; clk          ; clk         ; 1.000        ; -0.083     ; 4.060      ;
+; -3.142 ; uart_receiver:uart_receiver|bps_cnt[1]  ; uart_receiver:uart_receiver|r_data_byte[0][1] ; clk          ; clk         ; 1.000        ; -0.083     ; 4.060      ;
+; -3.142 ; uart_receiver:uart_receiver|bps_cnt[1]  ; uart_receiver:uart_receiver|r_data_byte[0][0] ; clk          ; clk         ; 1.000        ; -0.083     ; 4.060      ;
+; -3.105 ; uart_receiver:uart_receiver|div_cnt[1]  ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.081     ; 4.025      ;
+; -3.105 ; uart_receiver:uart_receiver|div_cnt[1]  ; uart_receiver:uart_receiver|div_cnt[3]        ; clk          ; clk         ; 1.000        ; -0.081     ; 4.025      ;
+; -3.105 ; uart_receiver:uart_receiver|div_cnt[1]  ; uart_receiver:uart_receiver|div_cnt[4]        ; clk          ; clk         ; 1.000        ; -0.081     ; 4.025      ;
+; -3.105 ; uart_receiver:uart_receiver|div_cnt[1]  ; uart_receiver:uart_receiver|div_cnt[5]        ; clk          ; clk         ; 1.000        ; -0.081     ; 4.025      ;
+; -3.105 ; uart_receiver:uart_receiver|div_cnt[1]  ; uart_receiver:uart_receiver|div_cnt[10]       ; clk          ; clk         ; 1.000        ; -0.081     ; 4.025      ;
+; -3.105 ; uart_receiver:uart_receiver|div_cnt[1]  ; uart_receiver:uart_receiver|div_cnt[9]        ; clk          ; clk         ; 1.000        ; -0.081     ; 4.025      ;
+; -3.105 ; uart_receiver:uart_receiver|div_cnt[1]  ; uart_receiver:uart_receiver|div_cnt[11]       ; clk          ; clk         ; 1.000        ; -0.081     ; 4.025      ;
+; -3.105 ; uart_receiver:uart_receiver|div_cnt[1]  ; uart_receiver:uart_receiver|div_cnt[12]       ; clk          ; clk         ; 1.000        ; -0.081     ; 4.025      ;
+; -3.105 ; uart_receiver:uart_receiver|div_cnt[1]  ; uart_receiver:uart_receiver|div_cnt[13]       ; clk          ; clk         ; 1.000        ; -0.081     ; 4.025      ;
+; -3.074 ; uart_receiver:uart_receiver|bps_cnt[2]  ; uart_receiver:uart_receiver|r_data_byte[0][2] ; clk          ; clk         ; 1.000        ; -0.083     ; 3.992      ;
+; -3.074 ; uart_receiver:uart_receiver|bps_cnt[2]  ; uart_receiver:uart_receiver|r_data_byte[0][1] ; clk          ; clk         ; 1.000        ; -0.083     ; 3.992      ;
+; -3.074 ; uart_receiver:uart_receiver|bps_cnt[2]  ; uart_receiver:uart_receiver|r_data_byte[0][0] ; clk          ; clk         ; 1.000        ; -0.083     ; 3.992      ;
+; -3.061 ; uart_receiver:uart_receiver|div_cnt[13] ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.081     ; 3.981      ;
++--------+-----------------------------------------+-----------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk'                                                                                                                                                                                                        ;
++-------+-----------------------------------------------+------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                     ; To Node                                                                                                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------+------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.433 ; uart_receiver:uart_receiver|r_data_byte[6][1] ; uart_receiver:uart_receiver|r_data_byte[6][1]                                                              ; clk          ; clk         ; 0.000        ; 0.101      ; 0.746      ;
+; 0.433 ; uart_receiver:uart_receiver|r_data_byte[6][0] ; uart_receiver:uart_receiver|r_data_byte[6][0]                                                              ; clk          ; clk         ; 0.000        ; 0.101      ; 0.746      ;
+; 0.434 ; uart_receiver:uart_receiver|uart_state        ; uart_receiver:uart_receiver|uart_state                                                                     ; clk          ; clk         ; 0.000        ; 0.100      ; 0.746      ;
+; 0.436 ; uart_receiver:uart_receiver|r_data_byte[7][2] ; uart_receiver:uart_receiver|r_data_byte[7][2]                                                              ; clk          ; clk         ; 0.000        ; 0.098      ; 0.746      ;
+; 0.436 ; uart_receiver:uart_receiver|r_data_byte[7][1] ; uart_receiver:uart_receiver|r_data_byte[7][1]                                                              ; clk          ; clk         ; 0.000        ; 0.098      ; 0.746      ;
+; 0.436 ; uart_receiver:uart_receiver|r_data_byte[7][0] ; uart_receiver:uart_receiver|r_data_byte[7][0]                                                              ; clk          ; clk         ; 0.000        ; 0.098      ; 0.746      ;
+; 0.439 ; control:control|wraddress[7]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.474      ; 1.167      ;
+; 0.447 ; uart_receiver:uart_receiver|data_byte[0]      ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk          ; clk         ; 0.000        ; 0.485      ; 1.186      ;
+; 0.453 ; control:control|wraddress[0]                  ; control:control|wraddress[0]                                                                               ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; control:control|rdaddress[0]                  ; control:control|rdaddress[0]                                                                               ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; uart_receiver:uart_receiver|r_data_byte[1][2] ; uart_receiver:uart_receiver|r_data_byte[1][2]                                                              ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; uart_receiver:uart_receiver|r_data_byte[1][1] ; uart_receiver:uart_receiver|r_data_byte[1][1]                                                              ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; uart_receiver:uart_receiver|r_data_byte[1][0] ; uart_receiver:uart_receiver|r_data_byte[1][0]                                                              ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; uart_receiver:uart_receiver|r_data_byte[2][2] ; uart_receiver:uart_receiver|r_data_byte[2][2]                                                              ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; uart_receiver:uart_receiver|r_data_byte[2][1] ; uart_receiver:uart_receiver|r_data_byte[2][1]                                                              ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; uart_receiver:uart_receiver|r_data_byte[2][0] ; uart_receiver:uart_receiver|r_data_byte[2][0]                                                              ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; uart_receiver:uart_receiver|r_data_byte[4][2] ; uart_receiver:uart_receiver|r_data_byte[4][2]                                                              ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; uart_receiver:uart_receiver|r_data_byte[4][1] ; uart_receiver:uart_receiver|r_data_byte[4][1]                                                              ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; uart_receiver:uart_receiver|r_data_byte[4][0] ; uart_receiver:uart_receiver|r_data_byte[4][0]                                                              ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; uart_receiver:uart_receiver|r_data_byte[5][2] ; uart_receiver:uart_receiver|r_data_byte[5][2]                                                              ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; uart_receiver:uart_receiver|r_data_byte[5][1] ; uart_receiver:uart_receiver|r_data_byte[5][1]                                                              ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; uart_receiver:uart_receiver|r_data_byte[5][0] ; uart_receiver:uart_receiver|r_data_byte[5][0]                                                              ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; uart_receiver:uart_receiver|r_data_byte[6][2] ; uart_receiver:uart_receiver|r_data_byte[6][2]                                                              ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; control:control|do_send                       ; control:control|do_send                                                                                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; key_filter:key_filter|key_state               ; key_filter:key_filter|key_state                                                                            ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; key_filter:key_filter|key_flag                ; key_filter:key_filter|key_flag                                                                             ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; key_filter:key_filter|cnt_en                  ; key_filter:key_filter|cnt_en                                                                               ; clk          ; clk         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.454 ; uart_receiver:uart_receiver|r_data_byte[0][2] ; uart_receiver:uart_receiver|r_data_byte[0][2]                                                              ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; uart_receiver:uart_receiver|r_data_byte[0][1] ; uart_receiver:uart_receiver|r_data_byte[0][1]                                                              ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; uart_receiver:uart_receiver|r_data_byte[0][0] ; uart_receiver:uart_receiver|r_data_byte[0][0]                                                              ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; control:control|wraddress[3]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.474      ; 1.182      ;
+; 0.454 ; uart_receiver:uart_receiver|r_data_byte[3][2] ; uart_receiver:uart_receiver|r_data_byte[3][2]                                                              ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; uart_receiver:uart_receiver|r_data_byte[3][1] ; uart_receiver:uart_receiver|r_data_byte[3][1]                                                              ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; uart_receiver:uart_receiver|r_data_byte[3][0] ; uart_receiver:uart_receiver|r_data_byte[3][0]                                                              ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; uart_receiver:uart_receiver|START_BIT[0]      ; uart_receiver:uart_receiver|START_BIT[0]                                                                   ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; uart_receiver:uart_receiver|START_BIT[1]      ; uart_receiver:uart_receiver|START_BIT[1]                                                                   ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; uart_sender:uart_sender|uart_state            ; uart_sender:uart_sender|uart_state                                                                         ; clk          ; clk         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.457 ; uart_receiver:uart_receiver|data_byte[5]      ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk          ; clk         ; 0.000        ; 0.485      ; 1.196      ;
+; 0.468 ; uart_receiver:uart_receiver|r_data_byte[7][1] ; uart_receiver:uart_receiver|r_data_byte[7][2]                                                              ; clk          ; clk         ; 0.000        ; 0.098      ; 0.778      ;
+; 0.471 ; control:control|wraddress[4]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.474      ; 1.199      ;
+; 0.472 ; uart_receiver:uart_receiver|data_byte[4]      ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk          ; clk         ; 0.000        ; 0.485      ; 1.211      ;
+; 0.473 ; uart_receiver:uart_receiver|data_byte[7]      ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk          ; clk         ; 0.000        ; 0.485      ; 1.212      ;
+; 0.479 ; uart_receiver:uart_receiver|data_byte[2]      ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk          ; clk         ; 0.000        ; 0.485      ; 1.218      ;
+; 0.485 ; uart_receiver:uart_receiver|r_data_byte[0][1] ; uart_receiver:uart_receiver|r_data_byte[0][2]                                                              ; clk          ; clk         ; 0.000        ; 0.080      ; 0.777      ;
+; 0.486 ; control:control|wraddress[5]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.474      ; 1.214      ;
+; 0.486 ; uart_receiver:uart_receiver|r_data_byte[3][1] ; uart_receiver:uart_receiver|r_data_byte[3][2]                                                              ; clk          ; clk         ; 0.000        ; 0.080      ; 0.778      ;
+; 0.487 ; uart_receiver:uart_receiver|data_byte[3]      ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk          ; clk         ; 0.000        ; 0.487      ; 1.228      ;
+; 0.490 ; uart_receiver:uart_receiver|r_data_byte[2][0] ; uart_receiver:uart_receiver|r_data_byte[2][1]                                                              ; clk          ; clk         ; 0.000        ; 0.081      ; 0.783      ;
+; 0.492 ; uart_receiver:uart_receiver|r_data_byte[1][0] ; uart_receiver:uart_receiver|r_data_byte[1][1]                                                              ; clk          ; clk         ; 0.000        ; 0.081      ; 0.785      ;
+; 0.493 ; uart_receiver:uart_receiver|r_data_byte[1][0] ; uart_receiver:uart_receiver|r_data_byte[1][2]                                                              ; clk          ; clk         ; 0.000        ; 0.081      ; 0.786      ;
+; 0.496 ; control:control|do_send                       ; control:control|rdaddress[0]                                                                               ; clk          ; clk         ; 0.000        ; 0.081      ; 0.789      ;
+; 0.496 ; uart_receiver:uart_receiver|r_data_byte[2][0] ; uart_receiver:uart_receiver|r_data_byte[2][2]                                                              ; clk          ; clk         ; 0.000        ; 0.081      ; 0.789      ;
+; 0.501 ; uart_receiver:uart_receiver|s0_Rs232_Rx       ; uart_receiver:uart_receiver|s1_Rs232_Rx                                                                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.794      ;
+; 0.502 ; key_filter:key_filter|key_sync                ; key_filter:key_filter|key_synced                                                                           ; clk          ; clk         ; 0.000        ; 0.081      ; 0.795      ;
+; 0.503 ; control:control|send_en_reg1                  ; control:control|send_en_reg2                                                                               ; clk          ; clk         ; 0.000        ; 0.081      ; 0.796      ;
+; 0.510 ; uart_receiver:uart_receiver|data_byte[1]      ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk          ; clk         ; 0.000        ; 0.487      ; 1.251      ;
+; 0.515 ; key_filter:key_filter|state.filter1           ; key_filter:key_filter|key_state                                                                            ; clk          ; clk         ; 0.000        ; 0.081      ; 0.808      ;
+; 0.516 ; control:control|rdaddress[4]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~portb_address_reg0 ; clk          ; clk         ; 0.000        ; 0.399      ; 1.169      ;
+; 0.518 ; control:control|rdaddress[3]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~portb_address_reg0 ; clk          ; clk         ; 0.000        ; 0.399      ; 1.171      ;
+; 0.519 ; uart_receiver:uart_receiver|START_BIT[0]      ; uart_receiver:uart_receiver|START_BIT[1]                                                                   ; clk          ; clk         ; 0.000        ; 0.080      ; 0.811      ;
+; 0.526 ; key_filter:key_filter|key_tmp2                ; key_filter:key_filter|state.filter1                                                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 0.819      ;
+; 0.528 ; key_filter:key_filter|state.up                ; key_filter:key_filter|key_flag                                                                             ; clk          ; clk         ; 0.000        ; 0.081      ; 0.821      ;
+; 0.541 ; control:control|rdaddress[0]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~portb_address_reg0 ; clk          ; clk         ; 0.000        ; 0.399      ; 1.194      ;
+; 0.542 ; key_filter:key_filter|key_tmp2                ; key_filter:key_filter|state.filter0                                                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 0.835      ;
+; 0.545 ; control:control|rdaddress[5]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~portb_address_reg0 ; clk          ; clk         ; 0.000        ; 0.399      ; 1.198      ;
+; 0.551 ; control:control|rdaddress[2]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~portb_address_reg0 ; clk          ; clk         ; 0.000        ; 0.399      ; 1.204      ;
+; 0.557 ; control:control|rdaddress[7]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~portb_address_reg0 ; clk          ; clk         ; 0.000        ; 0.399      ; 1.210      ;
+; 0.623 ; uart_receiver:uart_receiver|div_cnt[1]        ; uart_receiver:uart_receiver|div_cnt[2]                                                                     ; clk          ; clk         ; 0.000        ; 0.574      ; 1.409      ;
+; 0.624 ; uart_receiver:uart_receiver|div_cnt[5]        ; uart_receiver:uart_receiver|div_cnt[6]                                                                     ; clk          ; clk         ; 0.000        ; 0.574      ; 1.410      ;
+; 0.624 ; uart_receiver:uart_receiver|div_cnt[13]       ; uart_receiver:uart_receiver|div_cnt[14]                                                                    ; clk          ; clk         ; 0.000        ; 0.574      ; 1.410      ;
+; 0.642 ; uart_receiver:uart_receiver|div_cnt[4]        ; uart_receiver:uart_receiver|div_cnt[6]                                                                     ; clk          ; clk         ; 0.000        ; 0.574      ; 1.428      ;
+; 0.643 ; uart_receiver:uart_receiver|div_cnt[12]       ; uart_receiver:uart_receiver|div_cnt[14]                                                                    ; clk          ; clk         ; 0.000        ; 0.574      ; 1.429      ;
+; 0.644 ; control:control|send_en_reg2                  ; control:control|send_en                                                                                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.937      ;
+; 0.686 ; uart_receiver:uart_receiver|r_data_byte[0][2] ; uart_receiver:uart_receiver|data_byte[0]                                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 0.981      ;
+; 0.691 ; control:control|wraddress[7]                  ; control:control|wraddress[7]                                                                               ; clk          ; clk         ; 0.000        ; 0.081      ; 0.984      ;
+; 0.695 ; control:control|wraddress[1]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.474      ; 1.423      ;
+; 0.718 ; uart_receiver:uart_receiver|data_byte[6]      ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk          ; clk         ; 0.000        ; 0.485      ; 1.457      ;
+; 0.721 ; control:control|wraddress[6]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.474      ; 1.449      ;
+; 0.730 ; uart_receiver:uart_receiver|r_data_byte[6][0] ; uart_receiver:uart_receiver|r_data_byte[6][1]                                                              ; clk          ; clk         ; 0.000        ; 0.101      ; 1.043      ;
+; 0.730 ; uart_receiver:uart_receiver|r_data_byte[7][0] ; uart_receiver:uart_receiver|r_data_byte[7][2]                                                              ; clk          ; clk         ; 0.000        ; 0.098      ; 1.040      ;
+; 0.731 ; uart_receiver:uart_receiver|r_data_byte[7][0] ; uart_receiver:uart_receiver|r_data_byte[7][1]                                                              ; clk          ; clk         ; 0.000        ; 0.098      ; 1.041      ;
+; 0.740 ; uart_receiver:uart_receiver|r_data_byte[4][1] ; uart_receiver:uart_receiver|r_data_byte[4][2]                                                              ; clk          ; clk         ; 0.000        ; 0.081      ; 1.033      ;
+; 0.741 ; uart_receiver:uart_receiver|r_data_byte[1][1] ; uart_receiver:uart_receiver|r_data_byte[1][2]                                                              ; clk          ; clk         ; 0.000        ; 0.081      ; 1.034      ;
+; 0.742 ; uart_receiver:uart_receiver|r_data_byte[5][1] ; uart_receiver:uart_receiver|r_data_byte[5][2]                                                              ; clk          ; clk         ; 0.000        ; 0.081      ; 1.035      ;
+; 0.743 ; key_filter:key_filter|cnt[7]                  ; key_filter:key_filter|cnt[7]                                                                               ; clk          ; clk         ; 0.000        ; 0.080      ; 1.035      ;
+; 0.743 ; uart_receiver:uart_receiver|r_data_byte[2][1] ; uart_receiver:uart_receiver|r_data_byte[2][2]                                                              ; clk          ; clk         ; 0.000        ; 0.081      ; 1.036      ;
+; 0.744 ; uart_receiver:uart_receiver|div_cnt[15]       ; uart_receiver:uart_receiver|div_cnt[15]                                                                    ; clk          ; clk         ; 0.000        ; 0.100      ; 1.056      ;
+; 0.744 ; key_filter:key_filter|cnt[5]                  ; key_filter:key_filter|cnt[5]                                                                               ; clk          ; clk         ; 0.000        ; 0.080      ; 1.036      ;
+; 0.745 ; uart_receiver:uart_receiver|div_cnt[7]        ; uart_receiver:uart_receiver|div_cnt[7]                                                                     ; clk          ; clk         ; 0.000        ; 0.100      ; 1.057      ;
+; 0.745 ; uart_receiver:uart_receiver|div_cnt[6]        ; uart_receiver:uart_receiver|div_cnt[6]                                                                     ; clk          ; clk         ; 0.000        ; 0.100      ; 1.057      ;
+; 0.746 ; uart_receiver:uart_receiver|div_cnt[14]       ; uart_receiver:uart_receiver|div_cnt[14]                                                                    ; clk          ; clk         ; 0.000        ; 0.100      ; 1.058      ;
+; 0.747 ; uart_receiver:uart_receiver|div_cnt[8]        ; uart_receiver:uart_receiver|div_cnt[8]                                                                     ; clk          ; clk         ; 0.000        ; 0.100      ; 1.059      ;
+; 0.748 ; key_filter:key_filter|cnt[4]                  ; key_filter:key_filter|cnt[4]                                                                               ; clk          ; clk         ; 0.000        ; 0.080      ; 1.040      ;
+; 0.748 ; uart_receiver:uart_receiver|r_data_byte[4][0] ; uart_receiver:uart_receiver|r_data_byte[4][1]                                                              ; clk          ; clk         ; 0.000        ; 0.081      ; 1.041      ;
+; 0.749 ; uart_receiver:uart_receiver|r_data_byte[5][0] ; uart_receiver:uart_receiver|r_data_byte[5][1]                                                              ; clk          ; clk         ; 0.000        ; 0.081      ; 1.042      ;
+; 0.750 ; uart_receiver:uart_receiver|r_data_byte[4][0] ; uart_receiver:uart_receiver|r_data_byte[4][2]                                                              ; clk          ; clk         ; 0.000        ; 0.081      ; 1.043      ;
+; 0.750 ; uart_receiver:uart_receiver|r_data_byte[5][0] ; uart_receiver:uart_receiver|r_data_byte[5][2]                                                              ; clk          ; clk         ; 0.000        ; 0.081      ; 1.043      ;
+; 0.750 ; uart_receiver:uart_receiver|r_data_byte[0][0] ; uart_receiver:uart_receiver|r_data_byte[0][1]                                                              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.042      ;
+; 0.750 ; uart_receiver:uart_receiver|r_data_byte[3][0] ; uart_receiver:uart_receiver|r_data_byte[3][2]                                                              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.042      ;
+; 0.750 ; uart_receiver:uart_receiver|r_data_byte[3][0] ; uart_receiver:uart_receiver|r_data_byte[3][1]                                                              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.042      ;
++-------+-----------------------------------------------+------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
+
+
+
++--------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                          ;
++------------+-----------------+------------+------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                           ;
++------------+-----------------+------------+------------------------------------------------+
+; 246.37 MHz ; 238.04 MHz      ; clk        ; limit due to minimum period restriction (tmin) ;
++------------+-----------------+------------+------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -3.059 ; -304.919          ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.382 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.201 ; -264.462                        ;
++-------+--------+---------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk'                                                                                                                                      ;
++--------+-----------------------------------------+-----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                               ; To Node                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------+-----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.059 ; uart_receiver:uart_receiver|div_cnt[14] ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.539     ; 3.522      ;
+; -3.059 ; uart_receiver:uart_receiver|div_cnt[14] ; uart_receiver:uart_receiver|div_cnt[3]        ; clk          ; clk         ; 1.000        ; -0.539     ; 3.522      ;
+; -3.059 ; uart_receiver:uart_receiver|div_cnt[14] ; uart_receiver:uart_receiver|div_cnt[4]        ; clk          ; clk         ; 1.000        ; -0.539     ; 3.522      ;
+; -3.059 ; uart_receiver:uart_receiver|div_cnt[14] ; uart_receiver:uart_receiver|div_cnt[5]        ; clk          ; clk         ; 1.000        ; -0.539     ; 3.522      ;
+; -3.059 ; uart_receiver:uart_receiver|div_cnt[14] ; uart_receiver:uart_receiver|div_cnt[10]       ; clk          ; clk         ; 1.000        ; -0.539     ; 3.522      ;
+; -3.059 ; uart_receiver:uart_receiver|div_cnt[14] ; uart_receiver:uart_receiver|div_cnt[9]        ; clk          ; clk         ; 1.000        ; -0.539     ; 3.522      ;
+; -3.059 ; uart_receiver:uart_receiver|div_cnt[14] ; uart_receiver:uart_receiver|div_cnt[11]       ; clk          ; clk         ; 1.000        ; -0.539     ; 3.522      ;
+; -3.059 ; uart_receiver:uart_receiver|div_cnt[14] ; uart_receiver:uart_receiver|div_cnt[12]       ; clk          ; clk         ; 1.000        ; -0.539     ; 3.522      ;
+; -3.059 ; uart_receiver:uart_receiver|div_cnt[14] ; uart_receiver:uart_receiver|div_cnt[13]       ; clk          ; clk         ; 1.000        ; -0.539     ; 3.522      ;
+; -3.051 ; uart_receiver:uart_receiver|div_cnt[7]  ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.539     ; 3.514      ;
+; -3.051 ; uart_receiver:uart_receiver|div_cnt[7]  ; uart_receiver:uart_receiver|div_cnt[3]        ; clk          ; clk         ; 1.000        ; -0.539     ; 3.514      ;
+; -3.051 ; uart_receiver:uart_receiver|div_cnt[7]  ; uart_receiver:uart_receiver|div_cnt[4]        ; clk          ; clk         ; 1.000        ; -0.539     ; 3.514      ;
+; -3.051 ; uart_receiver:uart_receiver|div_cnt[7]  ; uart_receiver:uart_receiver|div_cnt[5]        ; clk          ; clk         ; 1.000        ; -0.539     ; 3.514      ;
+; -3.051 ; uart_receiver:uart_receiver|div_cnt[7]  ; uart_receiver:uart_receiver|div_cnt[10]       ; clk          ; clk         ; 1.000        ; -0.539     ; 3.514      ;
+; -3.051 ; uart_receiver:uart_receiver|div_cnt[7]  ; uart_receiver:uart_receiver|div_cnt[9]        ; clk          ; clk         ; 1.000        ; -0.539     ; 3.514      ;
+; -3.051 ; uart_receiver:uart_receiver|div_cnt[7]  ; uart_receiver:uart_receiver|div_cnt[11]       ; clk          ; clk         ; 1.000        ; -0.539     ; 3.514      ;
+; -3.051 ; uart_receiver:uart_receiver|div_cnt[7]  ; uart_receiver:uart_receiver|div_cnt[12]       ; clk          ; clk         ; 1.000        ; -0.539     ; 3.514      ;
+; -3.051 ; uart_receiver:uart_receiver|div_cnt[7]  ; uart_receiver:uart_receiver|div_cnt[13]       ; clk          ; clk         ; 1.000        ; -0.539     ; 3.514      ;
+; -3.023 ; uart_receiver:uart_receiver|div_cnt[4]  ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.073     ; 3.952      ;
+; -3.023 ; uart_receiver:uart_receiver|div_cnt[4]  ; uart_receiver:uart_receiver|div_cnt[3]        ; clk          ; clk         ; 1.000        ; -0.073     ; 3.952      ;
+; -3.023 ; uart_receiver:uart_receiver|div_cnt[4]  ; uart_receiver:uart_receiver|div_cnt[4]        ; clk          ; clk         ; 1.000        ; -0.073     ; 3.952      ;
+; -3.023 ; uart_receiver:uart_receiver|div_cnt[4]  ; uart_receiver:uart_receiver|div_cnt[5]        ; clk          ; clk         ; 1.000        ; -0.073     ; 3.952      ;
+; -3.023 ; uart_receiver:uart_receiver|div_cnt[4]  ; uart_receiver:uart_receiver|div_cnt[10]       ; clk          ; clk         ; 1.000        ; -0.073     ; 3.952      ;
+; -3.023 ; uart_receiver:uart_receiver|div_cnt[4]  ; uart_receiver:uart_receiver|div_cnt[9]        ; clk          ; clk         ; 1.000        ; -0.073     ; 3.952      ;
+; -3.023 ; uart_receiver:uart_receiver|div_cnt[4]  ; uart_receiver:uart_receiver|div_cnt[11]       ; clk          ; clk         ; 1.000        ; -0.073     ; 3.952      ;
+; -3.023 ; uart_receiver:uart_receiver|div_cnt[4]  ; uart_receiver:uart_receiver|div_cnt[12]       ; clk          ; clk         ; 1.000        ; -0.073     ; 3.952      ;
+; -3.023 ; uart_receiver:uart_receiver|div_cnt[4]  ; uart_receiver:uart_receiver|div_cnt[13]       ; clk          ; clk         ; 1.000        ; -0.073     ; 3.952      ;
+; -3.016 ; uart_receiver:uart_receiver|div_cnt[6]  ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.539     ; 3.479      ;
+; -3.016 ; uart_receiver:uart_receiver|div_cnt[6]  ; uart_receiver:uart_receiver|div_cnt[3]        ; clk          ; clk         ; 1.000        ; -0.539     ; 3.479      ;
+; -3.016 ; uart_receiver:uart_receiver|div_cnt[6]  ; uart_receiver:uart_receiver|div_cnt[4]        ; clk          ; clk         ; 1.000        ; -0.539     ; 3.479      ;
+; -3.016 ; uart_receiver:uart_receiver|div_cnt[6]  ; uart_receiver:uart_receiver|div_cnt[5]        ; clk          ; clk         ; 1.000        ; -0.539     ; 3.479      ;
+; -3.016 ; uart_receiver:uart_receiver|div_cnt[6]  ; uart_receiver:uart_receiver|div_cnt[10]       ; clk          ; clk         ; 1.000        ; -0.539     ; 3.479      ;
+; -3.016 ; uart_receiver:uart_receiver|div_cnt[6]  ; uart_receiver:uart_receiver|div_cnt[9]        ; clk          ; clk         ; 1.000        ; -0.539     ; 3.479      ;
+; -3.016 ; uart_receiver:uart_receiver|div_cnt[6]  ; uart_receiver:uart_receiver|div_cnt[11]       ; clk          ; clk         ; 1.000        ; -0.539     ; 3.479      ;
+; -3.016 ; uart_receiver:uart_receiver|div_cnt[6]  ; uart_receiver:uart_receiver|div_cnt[12]       ; clk          ; clk         ; 1.000        ; -0.539     ; 3.479      ;
+; -3.016 ; uart_receiver:uart_receiver|div_cnt[6]  ; uart_receiver:uart_receiver|div_cnt[13]       ; clk          ; clk         ; 1.000        ; -0.539     ; 3.479      ;
+; -3.004 ; uart_receiver:uart_receiver|div_cnt[3]  ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.073     ; 3.933      ;
+; -3.004 ; uart_receiver:uart_receiver|div_cnt[3]  ; uart_receiver:uart_receiver|div_cnt[3]        ; clk          ; clk         ; 1.000        ; -0.073     ; 3.933      ;
+; -3.004 ; uart_receiver:uart_receiver|div_cnt[3]  ; uart_receiver:uart_receiver|div_cnt[4]        ; clk          ; clk         ; 1.000        ; -0.073     ; 3.933      ;
+; -3.004 ; uart_receiver:uart_receiver|div_cnt[3]  ; uart_receiver:uart_receiver|div_cnt[5]        ; clk          ; clk         ; 1.000        ; -0.073     ; 3.933      ;
+; -3.004 ; uart_receiver:uart_receiver|div_cnt[3]  ; uart_receiver:uart_receiver|div_cnt[10]       ; clk          ; clk         ; 1.000        ; -0.073     ; 3.933      ;
+; -3.004 ; uart_receiver:uart_receiver|div_cnt[3]  ; uart_receiver:uart_receiver|div_cnt[9]        ; clk          ; clk         ; 1.000        ; -0.073     ; 3.933      ;
+; -3.004 ; uart_receiver:uart_receiver|div_cnt[3]  ; uart_receiver:uart_receiver|div_cnt[11]       ; clk          ; clk         ; 1.000        ; -0.073     ; 3.933      ;
+; -3.004 ; uart_receiver:uart_receiver|div_cnt[3]  ; uart_receiver:uart_receiver|div_cnt[12]       ; clk          ; clk         ; 1.000        ; -0.073     ; 3.933      ;
+; -3.004 ; uart_receiver:uart_receiver|div_cnt[3]  ; uart_receiver:uart_receiver|div_cnt[13]       ; clk          ; clk         ; 1.000        ; -0.073     ; 3.933      ;
+; -2.940 ; uart_receiver:uart_receiver|div_cnt[15] ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.539     ; 3.403      ;
+; -2.940 ; uart_receiver:uart_receiver|div_cnt[15] ; uart_receiver:uart_receiver|div_cnt[3]        ; clk          ; clk         ; 1.000        ; -0.539     ; 3.403      ;
+; -2.940 ; uart_receiver:uart_receiver|div_cnt[15] ; uart_receiver:uart_receiver|div_cnt[4]        ; clk          ; clk         ; 1.000        ; -0.539     ; 3.403      ;
+; -2.940 ; uart_receiver:uart_receiver|div_cnt[15] ; uart_receiver:uart_receiver|div_cnt[5]        ; clk          ; clk         ; 1.000        ; -0.539     ; 3.403      ;
+; -2.940 ; uart_receiver:uart_receiver|div_cnt[15] ; uart_receiver:uart_receiver|div_cnt[10]       ; clk          ; clk         ; 1.000        ; -0.539     ; 3.403      ;
+; -2.940 ; uart_receiver:uart_receiver|div_cnt[15] ; uart_receiver:uart_receiver|div_cnt[9]        ; clk          ; clk         ; 1.000        ; -0.539     ; 3.403      ;
+; -2.940 ; uart_receiver:uart_receiver|div_cnt[15] ; uart_receiver:uart_receiver|div_cnt[11]       ; clk          ; clk         ; 1.000        ; -0.539     ; 3.403      ;
+; -2.940 ; uart_receiver:uart_receiver|div_cnt[15] ; uart_receiver:uart_receiver|div_cnt[12]       ; clk          ; clk         ; 1.000        ; -0.539     ; 3.403      ;
+; -2.940 ; uart_receiver:uart_receiver|div_cnt[15] ; uart_receiver:uart_receiver|div_cnt[13]       ; clk          ; clk         ; 1.000        ; -0.539     ; 3.403      ;
+; -2.893 ; uart_receiver:uart_receiver|bps_cnt[3]  ; uart_receiver:uart_receiver|r_data_byte[0][2] ; clk          ; clk         ; 1.000        ; -0.072     ; 3.823      ;
+; -2.893 ; uart_receiver:uart_receiver|bps_cnt[3]  ; uart_receiver:uart_receiver|r_data_byte[0][1] ; clk          ; clk         ; 1.000        ; -0.072     ; 3.823      ;
+; -2.893 ; uart_receiver:uart_receiver|bps_cnt[3]  ; uart_receiver:uart_receiver|r_data_byte[0][0] ; clk          ; clk         ; 1.000        ; -0.072     ; 3.823      ;
+; -2.889 ; uart_receiver:uart_receiver|div_cnt[0]  ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.539     ; 3.352      ;
+; -2.889 ; uart_receiver:uart_receiver|div_cnt[0]  ; uart_receiver:uart_receiver|div_cnt[3]        ; clk          ; clk         ; 1.000        ; -0.539     ; 3.352      ;
+; -2.889 ; uart_receiver:uart_receiver|div_cnt[0]  ; uart_receiver:uart_receiver|div_cnt[4]        ; clk          ; clk         ; 1.000        ; -0.539     ; 3.352      ;
+; -2.889 ; uart_receiver:uart_receiver|div_cnt[0]  ; uart_receiver:uart_receiver|div_cnt[5]        ; clk          ; clk         ; 1.000        ; -0.539     ; 3.352      ;
+; -2.889 ; uart_receiver:uart_receiver|div_cnt[0]  ; uart_receiver:uart_receiver|div_cnt[10]       ; clk          ; clk         ; 1.000        ; -0.539     ; 3.352      ;
+; -2.889 ; uart_receiver:uart_receiver|div_cnt[0]  ; uart_receiver:uart_receiver|div_cnt[9]        ; clk          ; clk         ; 1.000        ; -0.539     ; 3.352      ;
+; -2.889 ; uart_receiver:uart_receiver|div_cnt[0]  ; uart_receiver:uart_receiver|div_cnt[11]       ; clk          ; clk         ; 1.000        ; -0.539     ; 3.352      ;
+; -2.889 ; uart_receiver:uart_receiver|div_cnt[0]  ; uart_receiver:uart_receiver|div_cnt[12]       ; clk          ; clk         ; 1.000        ; -0.539     ; 3.352      ;
+; -2.889 ; uart_receiver:uart_receiver|div_cnt[0]  ; uart_receiver:uart_receiver|div_cnt[13]       ; clk          ; clk         ; 1.000        ; -0.539     ; 3.352      ;
+; -2.886 ; uart_receiver:uart_receiver|div_cnt[11] ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.073     ; 3.815      ;
+; -2.886 ; uart_receiver:uart_receiver|div_cnt[11] ; uart_receiver:uart_receiver|div_cnt[3]        ; clk          ; clk         ; 1.000        ; -0.073     ; 3.815      ;
+; -2.886 ; uart_receiver:uart_receiver|div_cnt[11] ; uart_receiver:uart_receiver|div_cnt[4]        ; clk          ; clk         ; 1.000        ; -0.073     ; 3.815      ;
+; -2.886 ; uart_receiver:uart_receiver|div_cnt[11] ; uart_receiver:uart_receiver|div_cnt[5]        ; clk          ; clk         ; 1.000        ; -0.073     ; 3.815      ;
+; -2.886 ; uart_receiver:uart_receiver|div_cnt[11] ; uart_receiver:uart_receiver|div_cnt[10]       ; clk          ; clk         ; 1.000        ; -0.073     ; 3.815      ;
+; -2.886 ; uart_receiver:uart_receiver|div_cnt[11] ; uart_receiver:uart_receiver|div_cnt[9]        ; clk          ; clk         ; 1.000        ; -0.073     ; 3.815      ;
+; -2.886 ; uart_receiver:uart_receiver|div_cnt[11] ; uart_receiver:uart_receiver|div_cnt[11]       ; clk          ; clk         ; 1.000        ; -0.073     ; 3.815      ;
+; -2.886 ; uart_receiver:uart_receiver|div_cnt[11] ; uart_receiver:uart_receiver|div_cnt[12]       ; clk          ; clk         ; 1.000        ; -0.073     ; 3.815      ;
+; -2.886 ; uart_receiver:uart_receiver|div_cnt[11] ; uart_receiver:uart_receiver|div_cnt[13]       ; clk          ; clk         ; 1.000        ; -0.073     ; 3.815      ;
+; -2.879 ; uart_receiver:uart_receiver|div_cnt[9]  ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.073     ; 3.808      ;
+; -2.879 ; uart_receiver:uart_receiver|div_cnt[9]  ; uart_receiver:uart_receiver|div_cnt[3]        ; clk          ; clk         ; 1.000        ; -0.073     ; 3.808      ;
+; -2.879 ; uart_receiver:uart_receiver|div_cnt[9]  ; uart_receiver:uart_receiver|div_cnt[4]        ; clk          ; clk         ; 1.000        ; -0.073     ; 3.808      ;
+; -2.879 ; uart_receiver:uart_receiver|div_cnt[9]  ; uart_receiver:uart_receiver|div_cnt[5]        ; clk          ; clk         ; 1.000        ; -0.073     ; 3.808      ;
+; -2.879 ; uart_receiver:uart_receiver|div_cnt[9]  ; uart_receiver:uart_receiver|div_cnt[10]       ; clk          ; clk         ; 1.000        ; -0.073     ; 3.808      ;
+; -2.879 ; uart_receiver:uart_receiver|div_cnt[9]  ; uart_receiver:uart_receiver|div_cnt[9]        ; clk          ; clk         ; 1.000        ; -0.073     ; 3.808      ;
+; -2.879 ; uart_receiver:uart_receiver|div_cnt[9]  ; uart_receiver:uart_receiver|div_cnt[11]       ; clk          ; clk         ; 1.000        ; -0.073     ; 3.808      ;
+; -2.879 ; uart_receiver:uart_receiver|div_cnt[9]  ; uart_receiver:uart_receiver|div_cnt[12]       ; clk          ; clk         ; 1.000        ; -0.073     ; 3.808      ;
+; -2.879 ; uart_receiver:uart_receiver|div_cnt[9]  ; uart_receiver:uart_receiver|div_cnt[13]       ; clk          ; clk         ; 1.000        ; -0.073     ; 3.808      ;
+; -2.865 ; uart_receiver:uart_receiver|bps_cnt[1]  ; uart_receiver:uart_receiver|r_data_byte[0][2] ; clk          ; clk         ; 1.000        ; -0.072     ; 3.795      ;
+; -2.865 ; uart_receiver:uart_receiver|bps_cnt[1]  ; uart_receiver:uart_receiver|r_data_byte[0][1] ; clk          ; clk         ; 1.000        ; -0.072     ; 3.795      ;
+; -2.865 ; uart_receiver:uart_receiver|bps_cnt[1]  ; uart_receiver:uart_receiver|r_data_byte[0][0] ; clk          ; clk         ; 1.000        ; -0.072     ; 3.795      ;
+; -2.831 ; uart_receiver:uart_receiver|div_cnt[1]  ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.073     ; 3.760      ;
+; -2.831 ; uart_receiver:uart_receiver|div_cnt[1]  ; uart_receiver:uart_receiver|div_cnt[3]        ; clk          ; clk         ; 1.000        ; -0.073     ; 3.760      ;
+; -2.831 ; uart_receiver:uart_receiver|div_cnt[1]  ; uart_receiver:uart_receiver|div_cnt[4]        ; clk          ; clk         ; 1.000        ; -0.073     ; 3.760      ;
+; -2.831 ; uart_receiver:uart_receiver|div_cnt[1]  ; uart_receiver:uart_receiver|div_cnt[5]        ; clk          ; clk         ; 1.000        ; -0.073     ; 3.760      ;
+; -2.831 ; uart_receiver:uart_receiver|div_cnt[1]  ; uart_receiver:uart_receiver|div_cnt[10]       ; clk          ; clk         ; 1.000        ; -0.073     ; 3.760      ;
+; -2.831 ; uart_receiver:uart_receiver|div_cnt[1]  ; uart_receiver:uart_receiver|div_cnt[9]        ; clk          ; clk         ; 1.000        ; -0.073     ; 3.760      ;
+; -2.831 ; uart_receiver:uart_receiver|div_cnt[1]  ; uart_receiver:uart_receiver|div_cnt[11]       ; clk          ; clk         ; 1.000        ; -0.073     ; 3.760      ;
+; -2.831 ; uart_receiver:uart_receiver|div_cnt[1]  ; uart_receiver:uart_receiver|div_cnt[12]       ; clk          ; clk         ; 1.000        ; -0.073     ; 3.760      ;
+; -2.831 ; uart_receiver:uart_receiver|div_cnt[1]  ; uart_receiver:uart_receiver|div_cnt[13]       ; clk          ; clk         ; 1.000        ; -0.073     ; 3.760      ;
+; -2.828 ; uart_receiver:uart_receiver|div_cnt[2]  ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.539     ; 3.291      ;
+; -2.828 ; uart_receiver:uart_receiver|div_cnt[2]  ; uart_receiver:uart_receiver|div_cnt[3]        ; clk          ; clk         ; 1.000        ; -0.539     ; 3.291      ;
+; -2.828 ; uart_receiver:uart_receiver|div_cnt[2]  ; uart_receiver:uart_receiver|div_cnt[4]        ; clk          ; clk         ; 1.000        ; -0.539     ; 3.291      ;
+; -2.828 ; uart_receiver:uart_receiver|div_cnt[2]  ; uart_receiver:uart_receiver|div_cnt[5]        ; clk          ; clk         ; 1.000        ; -0.539     ; 3.291      ;
++--------+-----------------------------------------+-----------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk'                                                                                                                                                                                                         ;
++-------+-----------------------------------------------+------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                     ; To Node                                                                                                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------+------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.382 ; uart_receiver:uart_receiver|uart_state        ; uart_receiver:uart_receiver|uart_state                                                                     ; clk          ; clk         ; 0.000        ; 0.092      ; 0.669      ;
+; 0.383 ; uart_receiver:uart_receiver|r_data_byte[6][1] ; uart_receiver:uart_receiver|r_data_byte[6][1]                                                              ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
+; 0.383 ; uart_receiver:uart_receiver|r_data_byte[6][0] ; uart_receiver:uart_receiver|r_data_byte[6][0]                                                              ; clk          ; clk         ; 0.000        ; 0.091      ; 0.669      ;
+; 0.385 ; uart_receiver:uart_receiver|r_data_byte[7][2] ; uart_receiver:uart_receiver|r_data_byte[7][2]                                                              ; clk          ; clk         ; 0.000        ; 0.089      ; 0.669      ;
+; 0.385 ; uart_receiver:uart_receiver|r_data_byte[7][1] ; uart_receiver:uart_receiver|r_data_byte[7][1]                                                              ; clk          ; clk         ; 0.000        ; 0.089      ; 0.669      ;
+; 0.385 ; uart_receiver:uart_receiver|r_data_byte[7][0] ; uart_receiver:uart_receiver|r_data_byte[7][0]                                                              ; clk          ; clk         ; 0.000        ; 0.089      ; 0.669      ;
+; 0.401 ; uart_receiver:uart_receiver|r_data_byte[0][2] ; uart_receiver:uart_receiver|r_data_byte[0][2]                                                              ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; uart_receiver:uart_receiver|r_data_byte[0][1] ; uart_receiver:uart_receiver|r_data_byte[0][1]                                                              ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; uart_receiver:uart_receiver|r_data_byte[0][0] ; uart_receiver:uart_receiver|r_data_byte[0][0]                                                              ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; control:control|wraddress[0]                  ; control:control|wraddress[0]                                                                               ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; uart_receiver:uart_receiver|r_data_byte[3][2] ; uart_receiver:uart_receiver|r_data_byte[3][2]                                                              ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; uart_receiver:uart_receiver|r_data_byte[3][1] ; uart_receiver:uart_receiver|r_data_byte[3][1]                                                              ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; uart_receiver:uart_receiver|r_data_byte[3][0] ; uart_receiver:uart_receiver|r_data_byte[3][0]                                                              ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; uart_receiver:uart_receiver|r_data_byte[6][2] ; uart_receiver:uart_receiver|r_data_byte[6][2]                                                              ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; uart_receiver:uart_receiver|START_BIT[0]      ; uart_receiver:uart_receiver|START_BIT[0]                                                                   ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; uart_receiver:uart_receiver|START_BIT[1]      ; uart_receiver:uart_receiver|START_BIT[1]                                                                   ; clk          ; clk         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.402 ; control:control|rdaddress[0]                  ; control:control|rdaddress[0]                                                                               ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; uart_receiver:uart_receiver|r_data_byte[1][2] ; uart_receiver:uart_receiver|r_data_byte[1][2]                                                              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; uart_receiver:uart_receiver|r_data_byte[1][1] ; uart_receiver:uart_receiver|r_data_byte[1][1]                                                              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; uart_receiver:uart_receiver|r_data_byte[1][0] ; uart_receiver:uart_receiver|r_data_byte[1][0]                                                              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; uart_receiver:uart_receiver|r_data_byte[2][2] ; uart_receiver:uart_receiver|r_data_byte[2][2]                                                              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; uart_receiver:uart_receiver|r_data_byte[2][1] ; uart_receiver:uart_receiver|r_data_byte[2][1]                                                              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; uart_receiver:uart_receiver|r_data_byte[2][0] ; uart_receiver:uart_receiver|r_data_byte[2][0]                                                              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; uart_receiver:uart_receiver|r_data_byte[4][2] ; uart_receiver:uart_receiver|r_data_byte[4][2]                                                              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; uart_receiver:uart_receiver|r_data_byte[4][1] ; uart_receiver:uart_receiver|r_data_byte[4][1]                                                              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; uart_receiver:uart_receiver|r_data_byte[4][0] ; uart_receiver:uart_receiver|r_data_byte[4][0]                                                              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; uart_receiver:uart_receiver|r_data_byte[5][2] ; uart_receiver:uart_receiver|r_data_byte[5][2]                                                              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; uart_receiver:uart_receiver|r_data_byte[5][1] ; uart_receiver:uart_receiver|r_data_byte[5][1]                                                              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; uart_receiver:uart_receiver|r_data_byte[5][0] ; uart_receiver:uart_receiver|r_data_byte[5][0]                                                              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; uart_sender:uart_sender|uart_state            ; uart_sender:uart_sender|uart_state                                                                         ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; control:control|do_send                       ; control:control|do_send                                                                                    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; key_filter:key_filter|key_state               ; key_filter:key_filter|key_state                                                                            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; key_filter:key_filter|key_flag                ; key_filter:key_filter|key_flag                                                                             ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; key_filter:key_filter|cnt_en                  ; key_filter:key_filter|cnt_en                                                                               ; clk          ; clk         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.421 ; uart_receiver:uart_receiver|data_byte[0]      ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk          ; clk         ; 0.000        ; 0.430      ; 1.081      ;
+; 0.423 ; control:control|wraddress[7]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.418      ; 1.071      ;
+; 0.432 ; uart_receiver:uart_receiver|data_byte[5]      ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk          ; clk         ; 0.000        ; 0.430      ; 1.092      ;
+; 0.433 ; uart_receiver:uart_receiver|r_data_byte[7][1] ; uart_receiver:uart_receiver|r_data_byte[7][2]                                                              ; clk          ; clk         ; 0.000        ; 0.089      ; 0.717      ;
+; 0.436 ; control:control|wraddress[3]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.418      ; 1.084      ;
+; 0.445 ; uart_receiver:uart_receiver|data_byte[7]      ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk          ; clk         ; 0.000        ; 0.430      ; 1.105      ;
+; 0.447 ; uart_receiver:uart_receiver|data_byte[4]      ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk          ; clk         ; 0.000        ; 0.430      ; 1.107      ;
+; 0.448 ; control:control|wraddress[4]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.418      ; 1.096      ;
+; 0.448 ; uart_receiver:uart_receiver|r_data_byte[0][1] ; uart_receiver:uart_receiver|r_data_byte[0][2]                                                              ; clk          ; clk         ; 0.000        ; 0.073      ; 0.716      ;
+; 0.449 ; uart_receiver:uart_receiver|r_data_byte[3][1] ; uart_receiver:uart_receiver|r_data_byte[3][2]                                                              ; clk          ; clk         ; 0.000        ; 0.073      ; 0.717      ;
+; 0.451 ; uart_receiver:uart_receiver|data_byte[2]      ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk          ; clk         ; 0.000        ; 0.430      ; 1.111      ;
+; 0.454 ; uart_receiver:uart_receiver|r_data_byte[2][0] ; uart_receiver:uart_receiver|r_data_byte[2][1]                                                              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.721      ;
+; 0.455 ; uart_receiver:uart_receiver|r_data_byte[1][0] ; uart_receiver:uart_receiver|r_data_byte[1][1]                                                              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.722      ;
+; 0.456 ; uart_receiver:uart_receiver|r_data_byte[1][0] ; uart_receiver:uart_receiver|r_data_byte[1][2]                                                              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.723      ;
+; 0.459 ; uart_receiver:uart_receiver|data_byte[3]      ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk          ; clk         ; 0.000        ; 0.432      ; 1.121      ;
+; 0.459 ; control:control|do_send                       ; control:control|rdaddress[0]                                                                               ; clk          ; clk         ; 0.000        ; 0.072      ; 0.726      ;
+; 0.459 ; uart_receiver:uart_receiver|r_data_byte[2][0] ; uart_receiver:uart_receiver|r_data_byte[2][2]                                                              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.726      ;
+; 0.462 ; control:control|wraddress[5]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.418      ; 1.110      ;
+; 0.470 ; uart_receiver:uart_receiver|s0_Rs232_Rx       ; uart_receiver:uart_receiver|s1_Rs232_Rx                                                                    ; clk          ; clk         ; 0.000        ; 0.073      ; 0.738      ;
+; 0.472 ; control:control|send_en_reg1                  ; control:control|send_en_reg2                                                                               ; clk          ; clk         ; 0.000        ; 0.072      ; 0.739      ;
+; 0.472 ; key_filter:key_filter|key_sync                ; key_filter:key_filter|key_synced                                                                           ; clk          ; clk         ; 0.000        ; 0.072      ; 0.739      ;
+; 0.477 ; uart_receiver:uart_receiver|START_BIT[0]      ; uart_receiver:uart_receiver|START_BIT[1]                                                                   ; clk          ; clk         ; 0.000        ; 0.073      ; 0.745      ;
+; 0.478 ; uart_receiver:uart_receiver|data_byte[1]      ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk          ; clk         ; 0.000        ; 0.432      ; 1.140      ;
+; 0.479 ; key_filter:key_filter|state.filter1           ; key_filter:key_filter|key_state                                                                            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.746      ;
+; 0.485 ; control:control|rdaddress[4]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~portb_address_reg0 ; clk          ; clk         ; 0.000        ; 0.350      ; 1.065      ;
+; 0.490 ; control:control|rdaddress[3]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~portb_address_reg0 ; clk          ; clk         ; 0.000        ; 0.350      ; 1.070      ;
+; 0.490 ; key_filter:key_filter|key_tmp2                ; key_filter:key_filter|state.filter1                                                                        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.757      ;
+; 0.496 ; key_filter:key_filter|state.up                ; key_filter:key_filter|key_flag                                                                             ; clk          ; clk         ; 0.000        ; 0.072      ; 0.763      ;
+; 0.507 ; control:control|rdaddress[0]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~portb_address_reg0 ; clk          ; clk         ; 0.000        ; 0.350      ; 1.087      ;
+; 0.511 ; control:control|rdaddress[5]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~portb_address_reg0 ; clk          ; clk         ; 0.000        ; 0.350      ; 1.091      ;
+; 0.512 ; key_filter:key_filter|key_tmp2                ; key_filter:key_filter|state.filter0                                                                        ; clk          ; clk         ; 0.000        ; 0.072      ; 0.779      ;
+; 0.516 ; control:control|rdaddress[2]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~portb_address_reg0 ; clk          ; clk         ; 0.000        ; 0.350      ; 1.096      ;
+; 0.522 ; control:control|rdaddress[7]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~portb_address_reg0 ; clk          ; clk         ; 0.000        ; 0.350      ; 1.102      ;
+; 0.561 ; uart_receiver:uart_receiver|div_cnt[5]        ; uart_receiver:uart_receiver|div_cnt[6]                                                                     ; clk          ; clk         ; 0.000        ; 0.539      ; 1.295      ;
+; 0.561 ; uart_receiver:uart_receiver|div_cnt[13]       ; uart_receiver:uart_receiver|div_cnt[14]                                                                    ; clk          ; clk         ; 0.000        ; 0.539      ; 1.295      ;
+; 0.564 ; uart_receiver:uart_receiver|div_cnt[1]        ; uart_receiver:uart_receiver|div_cnt[2]                                                                     ; clk          ; clk         ; 0.000        ; 0.539      ; 1.298      ;
+; 0.579 ; uart_receiver:uart_receiver|div_cnt[4]        ; uart_receiver:uart_receiver|div_cnt[6]                                                                     ; clk          ; clk         ; 0.000        ; 0.539      ; 1.313      ;
+; 0.579 ; uart_receiver:uart_receiver|div_cnt[12]       ; uart_receiver:uart_receiver|div_cnt[14]                                                                    ; clk          ; clk         ; 0.000        ; 0.539      ; 1.313      ;
+; 0.602 ; control:control|send_en_reg2                  ; control:control|send_en                                                                                    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.869      ;
+; 0.608 ; uart_receiver:uart_receiver|r_data_byte[0][2] ; uart_receiver:uart_receiver|data_byte[0]                                                                   ; clk          ; clk         ; 0.000        ; 0.075      ; 0.878      ;
+; 0.626 ; control:control|wraddress[7]                  ; control:control|wraddress[7]                                                                               ; clk          ; clk         ; 0.000        ; 0.073      ; 0.894      ;
+; 0.642 ; control:control|wraddress[1]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.418      ; 1.290      ;
+; 0.655 ; uart_receiver:uart_receiver|div_cnt[13]       ; uart_receiver:uart_receiver|div_cnt[15]                                                                    ; clk          ; clk         ; 0.000        ; 0.539      ; 1.389      ;
+; 0.655 ; uart_receiver:uart_receiver|div_cnt[5]        ; uart_receiver:uart_receiver|div_cnt[7]                                                                     ; clk          ; clk         ; 0.000        ; 0.539      ; 1.389      ;
+; 0.663 ; uart_receiver:uart_receiver|data_byte[6]      ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk          ; clk         ; 0.000        ; 0.430      ; 1.323      ;
+; 0.671 ; control:control|wraddress[6]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.418      ; 1.319      ;
+; 0.679 ; uart_receiver:uart_receiver|r_data_byte[7][0] ; uart_receiver:uart_receiver|r_data_byte[7][2]                                                              ; clk          ; clk         ; 0.000        ; 0.089      ; 0.963      ;
+; 0.680 ; uart_receiver:uart_receiver|r_data_byte[7][0] ; uart_receiver:uart_receiver|r_data_byte[7][1]                                                              ; clk          ; clk         ; 0.000        ; 0.089      ; 0.964      ;
+; 0.681 ; uart_receiver:uart_receiver|r_data_byte[6][0] ; uart_receiver:uart_receiver|r_data_byte[6][1]                                                              ; clk          ; clk         ; 0.000        ; 0.091      ; 0.967      ;
+; 0.683 ; uart_receiver:uart_receiver|div_cnt[5]        ; uart_receiver:uart_receiver|div_cnt[8]                                                                     ; clk          ; clk         ; 0.000        ; 0.539      ; 1.417      ;
+; 0.683 ; uart_receiver:uart_receiver|div_cnt[3]        ; uart_receiver:uart_receiver|div_cnt[6]                                                                     ; clk          ; clk         ; 0.000        ; 0.539      ; 1.417      ;
+; 0.684 ; uart_receiver:uart_receiver|div_cnt[11]       ; uart_receiver:uart_receiver|div_cnt[14]                                                                    ; clk          ; clk         ; 0.000        ; 0.539      ; 1.418      ;
+; 0.684 ; uart_receiver:uart_receiver|div_cnt[4]        ; uart_receiver:uart_receiver|div_cnt[7]                                                                     ; clk          ; clk         ; 0.000        ; 0.539      ; 1.418      ;
+; 0.685 ; uart_receiver:uart_receiver|div_cnt[12]       ; uart_receiver:uart_receiver|div_cnt[15]                                                                    ; clk          ; clk         ; 0.000        ; 0.539      ; 1.419      ;
+; 0.689 ; uart_receiver:uart_receiver|r_data_byte[1][1] ; uart_receiver:uart_receiver|r_data_byte[1][2]                                                              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.956      ;
+; 0.689 ; uart_receiver:uart_receiver|r_data_byte[4][1] ; uart_receiver:uart_receiver|r_data_byte[4][2]                                                              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.956      ;
+; 0.689 ; uart_receiver:uart_receiver|div_cnt[6]        ; uart_receiver:uart_receiver|div_cnt[6]                                                                     ; clk          ; clk         ; 0.000        ; 0.091      ; 0.975      ;
+; 0.689 ; uart_receiver:uart_receiver|div_cnt[15]       ; uart_receiver:uart_receiver|div_cnt[15]                                                                    ; clk          ; clk         ; 0.000        ; 0.091      ; 0.975      ;
+; 0.690 ; uart_receiver:uart_receiver|r_data_byte[5][1] ; uart_receiver:uart_receiver|r_data_byte[5][2]                                                              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.957      ;
+; 0.690 ; uart_receiver:uart_receiver|div_cnt[7]        ; uart_receiver:uart_receiver|div_cnt[7]                                                                     ; clk          ; clk         ; 0.000        ; 0.091      ; 0.976      ;
+; 0.691 ; key_filter:key_filter|cnt[7]                  ; key_filter:key_filter|cnt[7]                                                                               ; clk          ; clk         ; 0.000        ; 0.072      ; 0.958      ;
+; 0.692 ; key_filter:key_filter|cnt[5]                  ; key_filter:key_filter|cnt[5]                                                                               ; clk          ; clk         ; 0.000        ; 0.072      ; 0.959      ;
+; 0.692 ; uart_receiver:uart_receiver|r_data_byte[2][1] ; uart_receiver:uart_receiver|r_data_byte[2][2]                                                              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.959      ;
+; 0.693 ; uart_receiver:uart_receiver|div_cnt[14]       ; uart_receiver:uart_receiver|div_cnt[14]                                                                    ; clk          ; clk         ; 0.000        ; 0.091      ; 0.979      ;
+; 0.694 ; uart_receiver:uart_receiver|div_cnt[8]        ; uart_receiver:uart_receiver|div_cnt[8]                                                                     ; clk          ; clk         ; 0.000        ; 0.091      ; 0.980      ;
+; 0.698 ; key_filter:key_filter|cnt[4]                  ; key_filter:key_filter|cnt[4]                                                                               ; clk          ; clk         ; 0.000        ; 0.072      ; 0.965      ;
++-------+-----------------------------------------------+------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
+
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -0.818 ; -57.426           ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.149 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -176.328                        ;
++-------+--------+---------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk'                                                                                                                                      ;
++--------+-----------------------------------------+-----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                               ; To Node                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------+-----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.818 ; uart_receiver:uart_receiver|div_cnt[4]  ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.037     ; 1.768      ;
+; -0.818 ; uart_receiver:uart_receiver|div_cnt[4]  ; uart_receiver:uart_receiver|div_cnt[3]        ; clk          ; clk         ; 1.000        ; -0.037     ; 1.768      ;
+; -0.818 ; uart_receiver:uart_receiver|div_cnt[4]  ; uart_receiver:uart_receiver|div_cnt[4]        ; clk          ; clk         ; 1.000        ; -0.037     ; 1.768      ;
+; -0.818 ; uart_receiver:uart_receiver|div_cnt[4]  ; uart_receiver:uart_receiver|div_cnt[5]        ; clk          ; clk         ; 1.000        ; -0.037     ; 1.768      ;
+; -0.818 ; uart_receiver:uart_receiver|div_cnt[4]  ; uart_receiver:uart_receiver|div_cnt[10]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.768      ;
+; -0.818 ; uart_receiver:uart_receiver|div_cnt[4]  ; uart_receiver:uart_receiver|div_cnt[9]        ; clk          ; clk         ; 1.000        ; -0.037     ; 1.768      ;
+; -0.818 ; uart_receiver:uart_receiver|div_cnt[4]  ; uart_receiver:uart_receiver|div_cnt[11]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.768      ;
+; -0.818 ; uart_receiver:uart_receiver|div_cnt[4]  ; uart_receiver:uart_receiver|div_cnt[12]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.768      ;
+; -0.818 ; uart_receiver:uart_receiver|div_cnt[4]  ; uart_receiver:uart_receiver|div_cnt[13]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.768      ;
+; -0.810 ; uart_receiver:uart_receiver|div_cnt[3]  ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.037     ; 1.760      ;
+; -0.810 ; uart_receiver:uart_receiver|div_cnt[3]  ; uart_receiver:uart_receiver|div_cnt[3]        ; clk          ; clk         ; 1.000        ; -0.037     ; 1.760      ;
+; -0.810 ; uart_receiver:uart_receiver|div_cnt[3]  ; uart_receiver:uart_receiver|div_cnt[4]        ; clk          ; clk         ; 1.000        ; -0.037     ; 1.760      ;
+; -0.810 ; uart_receiver:uart_receiver|div_cnt[3]  ; uart_receiver:uart_receiver|div_cnt[5]        ; clk          ; clk         ; 1.000        ; -0.037     ; 1.760      ;
+; -0.810 ; uart_receiver:uart_receiver|div_cnt[3]  ; uart_receiver:uart_receiver|div_cnt[10]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.760      ;
+; -0.810 ; uart_receiver:uart_receiver|div_cnt[3]  ; uart_receiver:uart_receiver|div_cnt[9]        ; clk          ; clk         ; 1.000        ; -0.037     ; 1.760      ;
+; -0.810 ; uart_receiver:uart_receiver|div_cnt[3]  ; uart_receiver:uart_receiver|div_cnt[11]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.760      ;
+; -0.810 ; uart_receiver:uart_receiver|div_cnt[3]  ; uart_receiver:uart_receiver|div_cnt[12]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.760      ;
+; -0.810 ; uart_receiver:uart_receiver|div_cnt[3]  ; uart_receiver:uart_receiver|div_cnt[13]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.760      ;
+; -0.805 ; uart_receiver:uart_receiver|div_cnt[14] ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.236     ; 1.556      ;
+; -0.805 ; uart_receiver:uart_receiver|div_cnt[14] ; uart_receiver:uart_receiver|div_cnt[3]        ; clk          ; clk         ; 1.000        ; -0.236     ; 1.556      ;
+; -0.805 ; uart_receiver:uart_receiver|div_cnt[14] ; uart_receiver:uart_receiver|div_cnt[4]        ; clk          ; clk         ; 1.000        ; -0.236     ; 1.556      ;
+; -0.805 ; uart_receiver:uart_receiver|div_cnt[14] ; uart_receiver:uart_receiver|div_cnt[5]        ; clk          ; clk         ; 1.000        ; -0.236     ; 1.556      ;
+; -0.805 ; uart_receiver:uart_receiver|div_cnt[14] ; uart_receiver:uart_receiver|div_cnt[10]       ; clk          ; clk         ; 1.000        ; -0.236     ; 1.556      ;
+; -0.805 ; uart_receiver:uart_receiver|div_cnt[14] ; uart_receiver:uart_receiver|div_cnt[9]        ; clk          ; clk         ; 1.000        ; -0.236     ; 1.556      ;
+; -0.805 ; uart_receiver:uart_receiver|div_cnt[14] ; uart_receiver:uart_receiver|div_cnt[11]       ; clk          ; clk         ; 1.000        ; -0.236     ; 1.556      ;
+; -0.805 ; uart_receiver:uart_receiver|div_cnt[14] ; uart_receiver:uart_receiver|div_cnt[12]       ; clk          ; clk         ; 1.000        ; -0.236     ; 1.556      ;
+; -0.805 ; uart_receiver:uart_receiver|div_cnt[14] ; uart_receiver:uart_receiver|div_cnt[13]       ; clk          ; clk         ; 1.000        ; -0.236     ; 1.556      ;
+; -0.804 ; uart_receiver:uart_receiver|div_cnt[7]  ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.236     ; 1.555      ;
+; -0.804 ; uart_receiver:uart_receiver|div_cnt[7]  ; uart_receiver:uart_receiver|div_cnt[3]        ; clk          ; clk         ; 1.000        ; -0.236     ; 1.555      ;
+; -0.804 ; uart_receiver:uart_receiver|div_cnt[7]  ; uart_receiver:uart_receiver|div_cnt[4]        ; clk          ; clk         ; 1.000        ; -0.236     ; 1.555      ;
+; -0.804 ; uart_receiver:uart_receiver|div_cnt[7]  ; uart_receiver:uart_receiver|div_cnt[5]        ; clk          ; clk         ; 1.000        ; -0.236     ; 1.555      ;
+; -0.804 ; uart_receiver:uart_receiver|div_cnt[7]  ; uart_receiver:uart_receiver|div_cnt[10]       ; clk          ; clk         ; 1.000        ; -0.236     ; 1.555      ;
+; -0.804 ; uart_receiver:uart_receiver|div_cnt[7]  ; uart_receiver:uart_receiver|div_cnt[9]        ; clk          ; clk         ; 1.000        ; -0.236     ; 1.555      ;
+; -0.804 ; uart_receiver:uart_receiver|div_cnt[7]  ; uart_receiver:uart_receiver|div_cnt[11]       ; clk          ; clk         ; 1.000        ; -0.236     ; 1.555      ;
+; -0.804 ; uart_receiver:uart_receiver|div_cnt[7]  ; uart_receiver:uart_receiver|div_cnt[12]       ; clk          ; clk         ; 1.000        ; -0.236     ; 1.555      ;
+; -0.804 ; uart_receiver:uart_receiver|div_cnt[7]  ; uart_receiver:uart_receiver|div_cnt[13]       ; clk          ; clk         ; 1.000        ; -0.236     ; 1.555      ;
+; -0.798 ; uart_receiver:uart_receiver|div_cnt[6]  ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.236     ; 1.549      ;
+; -0.798 ; uart_receiver:uart_receiver|div_cnt[6]  ; uart_receiver:uart_receiver|div_cnt[3]        ; clk          ; clk         ; 1.000        ; -0.236     ; 1.549      ;
+; -0.798 ; uart_receiver:uart_receiver|div_cnt[6]  ; uart_receiver:uart_receiver|div_cnt[4]        ; clk          ; clk         ; 1.000        ; -0.236     ; 1.549      ;
+; -0.798 ; uart_receiver:uart_receiver|div_cnt[6]  ; uart_receiver:uart_receiver|div_cnt[5]        ; clk          ; clk         ; 1.000        ; -0.236     ; 1.549      ;
+; -0.798 ; uart_receiver:uart_receiver|div_cnt[6]  ; uart_receiver:uart_receiver|div_cnt[10]       ; clk          ; clk         ; 1.000        ; -0.236     ; 1.549      ;
+; -0.798 ; uart_receiver:uart_receiver|div_cnt[6]  ; uart_receiver:uart_receiver|div_cnt[9]        ; clk          ; clk         ; 1.000        ; -0.236     ; 1.549      ;
+; -0.798 ; uart_receiver:uart_receiver|div_cnt[6]  ; uart_receiver:uart_receiver|div_cnt[11]       ; clk          ; clk         ; 1.000        ; -0.236     ; 1.549      ;
+; -0.798 ; uart_receiver:uart_receiver|div_cnt[6]  ; uart_receiver:uart_receiver|div_cnt[12]       ; clk          ; clk         ; 1.000        ; -0.236     ; 1.549      ;
+; -0.798 ; uart_receiver:uart_receiver|div_cnt[6]  ; uart_receiver:uart_receiver|div_cnt[13]       ; clk          ; clk         ; 1.000        ; -0.236     ; 1.549      ;
+; -0.789 ; uart_receiver:uart_receiver|div_cnt[0]  ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.236     ; 1.540      ;
+; -0.789 ; uart_receiver:uart_receiver|div_cnt[0]  ; uart_receiver:uart_receiver|div_cnt[3]        ; clk          ; clk         ; 1.000        ; -0.236     ; 1.540      ;
+; -0.789 ; uart_receiver:uart_receiver|div_cnt[0]  ; uart_receiver:uart_receiver|div_cnt[4]        ; clk          ; clk         ; 1.000        ; -0.236     ; 1.540      ;
+; -0.789 ; uart_receiver:uart_receiver|div_cnt[0]  ; uart_receiver:uart_receiver|div_cnt[5]        ; clk          ; clk         ; 1.000        ; -0.236     ; 1.540      ;
+; -0.789 ; uart_receiver:uart_receiver|div_cnt[0]  ; uart_receiver:uart_receiver|div_cnt[10]       ; clk          ; clk         ; 1.000        ; -0.236     ; 1.540      ;
+; -0.789 ; uart_receiver:uart_receiver|div_cnt[0]  ; uart_receiver:uart_receiver|div_cnt[9]        ; clk          ; clk         ; 1.000        ; -0.236     ; 1.540      ;
+; -0.789 ; uart_receiver:uart_receiver|div_cnt[0]  ; uart_receiver:uart_receiver|div_cnt[11]       ; clk          ; clk         ; 1.000        ; -0.236     ; 1.540      ;
+; -0.789 ; uart_receiver:uart_receiver|div_cnt[0]  ; uart_receiver:uart_receiver|div_cnt[12]       ; clk          ; clk         ; 1.000        ; -0.236     ; 1.540      ;
+; -0.789 ; uart_receiver:uart_receiver|div_cnt[0]  ; uart_receiver:uart_receiver|div_cnt[13]       ; clk          ; clk         ; 1.000        ; -0.236     ; 1.540      ;
+; -0.766 ; key_filter:key_filter|cnt[1]            ; key_filter:key_filter|cnt[18]                 ; clk          ; clk         ; 1.000        ; -0.035     ; 1.718      ;
+; -0.761 ; uart_receiver:uart_receiver|div_cnt[11] ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.037     ; 1.711      ;
+; -0.761 ; uart_receiver:uart_receiver|div_cnt[11] ; uart_receiver:uart_receiver|div_cnt[3]        ; clk          ; clk         ; 1.000        ; -0.037     ; 1.711      ;
+; -0.761 ; uart_receiver:uart_receiver|div_cnt[11] ; uart_receiver:uart_receiver|div_cnt[4]        ; clk          ; clk         ; 1.000        ; -0.037     ; 1.711      ;
+; -0.761 ; uart_receiver:uart_receiver|div_cnt[11] ; uart_receiver:uart_receiver|div_cnt[5]        ; clk          ; clk         ; 1.000        ; -0.037     ; 1.711      ;
+; -0.761 ; uart_receiver:uart_receiver|div_cnt[11] ; uart_receiver:uart_receiver|div_cnt[10]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.711      ;
+; -0.761 ; uart_receiver:uart_receiver|div_cnt[11] ; uart_receiver:uart_receiver|div_cnt[9]        ; clk          ; clk         ; 1.000        ; -0.037     ; 1.711      ;
+; -0.761 ; uart_receiver:uart_receiver|div_cnt[11] ; uart_receiver:uart_receiver|div_cnt[11]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.711      ;
+; -0.761 ; uart_receiver:uart_receiver|div_cnt[11] ; uart_receiver:uart_receiver|div_cnt[12]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.711      ;
+; -0.761 ; uart_receiver:uart_receiver|div_cnt[11] ; uart_receiver:uart_receiver|div_cnt[13]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.711      ;
+; -0.756 ; uart_receiver:uart_receiver|div_cnt[15] ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.236     ; 1.507      ;
+; -0.756 ; uart_receiver:uart_receiver|div_cnt[15] ; uart_receiver:uart_receiver|div_cnt[3]        ; clk          ; clk         ; 1.000        ; -0.236     ; 1.507      ;
+; -0.756 ; uart_receiver:uart_receiver|div_cnt[15] ; uart_receiver:uart_receiver|div_cnt[4]        ; clk          ; clk         ; 1.000        ; -0.236     ; 1.507      ;
+; -0.756 ; uart_receiver:uart_receiver|div_cnt[15] ; uart_receiver:uart_receiver|div_cnt[5]        ; clk          ; clk         ; 1.000        ; -0.236     ; 1.507      ;
+; -0.756 ; uart_receiver:uart_receiver|div_cnt[15] ; uart_receiver:uart_receiver|div_cnt[10]       ; clk          ; clk         ; 1.000        ; -0.236     ; 1.507      ;
+; -0.756 ; uart_receiver:uart_receiver|div_cnt[15] ; uart_receiver:uart_receiver|div_cnt[9]        ; clk          ; clk         ; 1.000        ; -0.236     ; 1.507      ;
+; -0.756 ; uart_receiver:uart_receiver|div_cnt[15] ; uart_receiver:uart_receiver|div_cnt[11]       ; clk          ; clk         ; 1.000        ; -0.236     ; 1.507      ;
+; -0.756 ; uart_receiver:uart_receiver|div_cnt[15] ; uart_receiver:uart_receiver|div_cnt[12]       ; clk          ; clk         ; 1.000        ; -0.236     ; 1.507      ;
+; -0.756 ; uart_receiver:uart_receiver|div_cnt[15] ; uart_receiver:uart_receiver|div_cnt[13]       ; clk          ; clk         ; 1.000        ; -0.236     ; 1.507      ;
+; -0.754 ; uart_receiver:uart_receiver|div_cnt[9]  ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.037     ; 1.704      ;
+; -0.754 ; uart_receiver:uart_receiver|div_cnt[9]  ; uart_receiver:uart_receiver|div_cnt[3]        ; clk          ; clk         ; 1.000        ; -0.037     ; 1.704      ;
+; -0.754 ; uart_receiver:uart_receiver|div_cnt[9]  ; uart_receiver:uart_receiver|div_cnt[4]        ; clk          ; clk         ; 1.000        ; -0.037     ; 1.704      ;
+; -0.754 ; uart_receiver:uart_receiver|div_cnt[9]  ; uart_receiver:uart_receiver|div_cnt[5]        ; clk          ; clk         ; 1.000        ; -0.037     ; 1.704      ;
+; -0.754 ; uart_receiver:uart_receiver|div_cnt[9]  ; uart_receiver:uart_receiver|div_cnt[10]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.704      ;
+; -0.754 ; uart_receiver:uart_receiver|div_cnt[9]  ; uart_receiver:uart_receiver|div_cnt[9]        ; clk          ; clk         ; 1.000        ; -0.037     ; 1.704      ;
+; -0.754 ; uart_receiver:uart_receiver|div_cnt[9]  ; uart_receiver:uart_receiver|div_cnt[11]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.704      ;
+; -0.754 ; uart_receiver:uart_receiver|div_cnt[9]  ; uart_receiver:uart_receiver|div_cnt[12]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.704      ;
+; -0.754 ; uart_receiver:uart_receiver|div_cnt[9]  ; uart_receiver:uart_receiver|div_cnt[13]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.704      ;
+; -0.726 ; uart_receiver:uart_receiver|bps_cnt[3]  ; uart_receiver:uart_receiver|r_data_byte[0][2] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.676      ;
+; -0.726 ; uart_receiver:uart_receiver|bps_cnt[3]  ; uart_receiver:uart_receiver|r_data_byte[0][1] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.676      ;
+; -0.726 ; uart_receiver:uart_receiver|bps_cnt[3]  ; uart_receiver:uart_receiver|r_data_byte[0][0] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.676      ;
+; -0.723 ; uart_receiver:uart_receiver|div_cnt[1]  ; uart_receiver:uart_receiver|div_cnt[1]        ; clk          ; clk         ; 1.000        ; -0.037     ; 1.673      ;
+; -0.723 ; uart_receiver:uart_receiver|div_cnt[1]  ; uart_receiver:uart_receiver|div_cnt[3]        ; clk          ; clk         ; 1.000        ; -0.037     ; 1.673      ;
+; -0.723 ; uart_receiver:uart_receiver|div_cnt[1]  ; uart_receiver:uart_receiver|div_cnt[4]        ; clk          ; clk         ; 1.000        ; -0.037     ; 1.673      ;
+; -0.723 ; uart_receiver:uart_receiver|div_cnt[1]  ; uart_receiver:uart_receiver|div_cnt[5]        ; clk          ; clk         ; 1.000        ; -0.037     ; 1.673      ;
+; -0.723 ; uart_receiver:uart_receiver|div_cnt[1]  ; uart_receiver:uart_receiver|div_cnt[10]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.673      ;
+; -0.723 ; uart_receiver:uart_receiver|div_cnt[1]  ; uart_receiver:uart_receiver|div_cnt[9]        ; clk          ; clk         ; 1.000        ; -0.037     ; 1.673      ;
+; -0.723 ; uart_receiver:uart_receiver|div_cnt[1]  ; uart_receiver:uart_receiver|div_cnt[11]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.673      ;
+; -0.723 ; uart_receiver:uart_receiver|div_cnt[1]  ; uart_receiver:uart_receiver|div_cnt[12]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.673      ;
+; -0.723 ; uart_receiver:uart_receiver|div_cnt[1]  ; uart_receiver:uart_receiver|div_cnt[13]       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.673      ;
+; -0.718 ; uart_receiver:uart_receiver|bps_cnt[1]  ; uart_receiver:uart_receiver|r_data_byte[0][2] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.668      ;
+; -0.718 ; uart_receiver:uart_receiver|bps_cnt[1]  ; uart_receiver:uart_receiver|r_data_byte[0][1] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.668      ;
+; -0.718 ; uart_receiver:uart_receiver|bps_cnt[1]  ; uart_receiver:uart_receiver|r_data_byte[0][0] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.668      ;
+; -0.717 ; key_filter:key_filter|cnt[0]            ; key_filter:key_filter|cnt[18]                 ; clk          ; clk         ; 1.000        ; -0.035     ; 1.669      ;
+; -0.708 ; uart_receiver:uart_receiver|bps_cnt[2]  ; uart_receiver:uart_receiver|r_data_byte[0][2] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.658      ;
+; -0.708 ; uart_receiver:uart_receiver|bps_cnt[2]  ; uart_receiver:uart_receiver|r_data_byte[0][1] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.658      ;
++--------+-----------------------------------------+-----------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk'                                                                                                                                                                                                         ;
++-------+-----------------------------------------------+------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                     ; To Node                                                                                                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------+------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.149 ; uart_receiver:uart_receiver|data_byte[0]      ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk          ; clk         ; 0.000        ; 0.227      ; 0.480      ;
+; 0.151 ; control:control|wraddress[7]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.220      ; 0.475      ;
+; 0.154 ; uart_receiver:uart_receiver|data_byte[5]      ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk          ; clk         ; 0.000        ; 0.227      ; 0.485      ;
+; 0.157 ; uart_receiver:uart_receiver|data_byte[7]      ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk          ; clk         ; 0.000        ; 0.227      ; 0.488      ;
+; 0.158 ; control:control|wraddress[3]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.220      ; 0.482      ;
+; 0.160 ; uart_receiver:uart_receiver|data_byte[2]      ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk          ; clk         ; 0.000        ; 0.227      ; 0.491      ;
+; 0.164 ; control:control|wraddress[4]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.220      ; 0.488      ;
+; 0.165 ; uart_receiver:uart_receiver|data_byte[4]      ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk          ; clk         ; 0.000        ; 0.227      ; 0.496      ;
+; 0.166 ; uart_receiver:uart_receiver|data_byte[3]      ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk          ; clk         ; 0.000        ; 0.229      ; 0.499      ;
+; 0.172 ; control:control|wraddress[5]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.220      ; 0.496      ;
+; 0.173 ; uart_receiver:uart_receiver|data_byte[1]      ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk          ; clk         ; 0.000        ; 0.229      ; 0.506      ;
+; 0.178 ; uart_receiver:uart_receiver|r_data_byte[6][1] ; uart_receiver:uart_receiver|r_data_byte[6][1]                                                              ; clk          ; clk         ; 0.000        ; 0.045      ; 0.307      ;
+; 0.178 ; uart_receiver:uart_receiver|r_data_byte[6][0] ; uart_receiver:uart_receiver|r_data_byte[6][0]                                                              ; clk          ; clk         ; 0.000        ; 0.045      ; 0.307      ;
+; 0.178 ; uart_receiver:uart_receiver|uart_state        ; uart_receiver:uart_receiver|uart_state                                                                     ; clk          ; clk         ; 0.000        ; 0.045      ; 0.307      ;
+; 0.179 ; uart_receiver:uart_receiver|r_data_byte[7][2] ; uart_receiver:uart_receiver|r_data_byte[7][2]                                                              ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; uart_receiver:uart_receiver|r_data_byte[7][1] ; uart_receiver:uart_receiver|r_data_byte[7][1]                                                              ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.179 ; uart_receiver:uart_receiver|r_data_byte[7][0] ; uart_receiver:uart_receiver|r_data_byte[7][0]                                                              ; clk          ; clk         ; 0.000        ; 0.044      ; 0.307      ;
+; 0.186 ; control:control|wraddress[0]                  ; control:control|wraddress[0]                                                                               ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; uart_receiver:uart_receiver|r_data_byte[6][2] ; uart_receiver:uart_receiver|r_data_byte[6][2]                                                              ; clk          ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.187 ; uart_receiver:uart_receiver|r_data_byte[0][2] ; uart_receiver:uart_receiver|r_data_byte[0][2]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; uart_receiver:uart_receiver|r_data_byte[0][1] ; uart_receiver:uart_receiver|r_data_byte[0][1]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; uart_receiver:uart_receiver|r_data_byte[0][0] ; uart_receiver:uart_receiver|r_data_byte[0][0]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; control:control|rdaddress[0]                  ; control:control|rdaddress[0]                                                                               ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; uart_receiver:uart_receiver|r_data_byte[1][2] ; uart_receiver:uart_receiver|r_data_byte[1][2]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; uart_receiver:uart_receiver|r_data_byte[1][1] ; uart_receiver:uart_receiver|r_data_byte[1][1]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; uart_receiver:uart_receiver|r_data_byte[1][0] ; uart_receiver:uart_receiver|r_data_byte[1][0]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; uart_receiver:uart_receiver|r_data_byte[2][2] ; uart_receiver:uart_receiver|r_data_byte[2][2]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; uart_receiver:uart_receiver|r_data_byte[2][1] ; uart_receiver:uart_receiver|r_data_byte[2][1]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; uart_receiver:uart_receiver|r_data_byte[2][0] ; uart_receiver:uart_receiver|r_data_byte[2][0]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; uart_receiver:uart_receiver|r_data_byte[3][2] ; uart_receiver:uart_receiver|r_data_byte[3][2]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; uart_receiver:uart_receiver|r_data_byte[3][1] ; uart_receiver:uart_receiver|r_data_byte[3][1]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; uart_receiver:uart_receiver|r_data_byte[3][0] ; uart_receiver:uart_receiver|r_data_byte[3][0]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; uart_receiver:uart_receiver|r_data_byte[4][2] ; uart_receiver:uart_receiver|r_data_byte[4][2]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; uart_receiver:uart_receiver|r_data_byte[4][1] ; uart_receiver:uart_receiver|r_data_byte[4][1]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; uart_receiver:uart_receiver|r_data_byte[4][0] ; uart_receiver:uart_receiver|r_data_byte[4][0]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; uart_receiver:uart_receiver|r_data_byte[5][2] ; uart_receiver:uart_receiver|r_data_byte[5][2]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; uart_receiver:uart_receiver|r_data_byte[5][1] ; uart_receiver:uart_receiver|r_data_byte[5][1]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; uart_receiver:uart_receiver|r_data_byte[5][0] ; uart_receiver:uart_receiver|r_data_byte[5][0]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; uart_receiver:uart_receiver|START_BIT[0]      ; uart_receiver:uart_receiver|START_BIT[0]                                                                   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; uart_receiver:uart_receiver|START_BIT[1]      ; uart_receiver:uart_receiver|START_BIT[1]                                                                   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; uart_sender:uart_sender|uart_state            ; uart_sender:uart_sender|uart_state                                                                         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; control:control|do_send                       ; control:control|do_send                                                                                    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; key_filter:key_filter|key_state               ; key_filter:key_filter|key_state                                                                            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; key_filter:key_filter|key_flag                ; key_filter:key_filter|key_flag                                                                             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; key_filter:key_filter|cnt_en                  ; key_filter:key_filter|cnt_en                                                                               ; clk          ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; uart_receiver:uart_receiver|r_data_byte[7][1] ; uart_receiver:uart_receiver|r_data_byte[7][2]                                                              ; clk          ; clk         ; 0.000        ; 0.044      ; 0.315      ;
+; 0.193 ; key_filter:key_filter|key_sync                ; key_filter:key_filter|key_synced                                                                           ; clk          ; clk         ; 0.000        ; 0.037      ; 0.314      ;
+; 0.194 ; control:control|rdaddress[4]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~portb_address_reg0 ; clk          ; clk         ; 0.000        ; 0.182      ; 0.480      ;
+; 0.194 ; uart_receiver:uart_receiver|s0_Rs232_Rx       ; uart_receiver:uart_receiver|s1_Rs232_Rx                                                                    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.314      ;
+; 0.194 ; uart_receiver:uart_receiver|r_data_byte[0][1] ; uart_receiver:uart_receiver|r_data_byte[0][2]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.314      ;
+; 0.195 ; uart_receiver:uart_receiver|r_data_byte[3][1] ; uart_receiver:uart_receiver|r_data_byte[3][2]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.315      ;
+; 0.196 ; control:control|rdaddress[3]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~portb_address_reg0 ; clk          ; clk         ; 0.000        ; 0.182      ; 0.482      ;
+; 0.196 ; control:control|send_en_reg1                  ; control:control|send_en_reg2                                                                               ; clk          ; clk         ; 0.000        ; 0.036      ; 0.316      ;
+; 0.196 ; uart_receiver:uart_receiver|r_data_byte[2][0] ; uart_receiver:uart_receiver|r_data_byte[2][1]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.316      ;
+; 0.198 ; uart_receiver:uart_receiver|r_data_byte[1][0] ; uart_receiver:uart_receiver|r_data_byte[1][2]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.318      ;
+; 0.198 ; uart_receiver:uart_receiver|r_data_byte[1][0] ; uart_receiver:uart_receiver|r_data_byte[1][1]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.318      ;
+; 0.201 ; control:control|do_send                       ; control:control|rdaddress[0]                                                                               ; clk          ; clk         ; 0.000        ; 0.036      ; 0.321      ;
+; 0.201 ; uart_receiver:uart_receiver|r_data_byte[2][0] ; uart_receiver:uart_receiver|r_data_byte[2][2]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.321      ;
+; 0.203 ; control:control|rdaddress[0]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~portb_address_reg0 ; clk          ; clk         ; 0.000        ; 0.182      ; 0.489      ;
+; 0.205 ; control:control|rdaddress[5]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~portb_address_reg0 ; clk          ; clk         ; 0.000        ; 0.182      ; 0.491      ;
+; 0.209 ; control:control|rdaddress[2]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~portb_address_reg0 ; clk          ; clk         ; 0.000        ; 0.182      ; 0.495      ;
+; 0.209 ; key_filter:key_filter|state.up                ; key_filter:key_filter|key_flag                                                                             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.329      ;
+; 0.211 ; uart_receiver:uart_receiver|START_BIT[0]      ; uart_receiver:uart_receiver|START_BIT[1]                                                                   ; clk          ; clk         ; 0.000        ; 0.036      ; 0.331      ;
+; 0.212 ; control:control|rdaddress[7]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~portb_address_reg0 ; clk          ; clk         ; 0.000        ; 0.182      ; 0.498      ;
+; 0.215 ; key_filter:key_filter|state.filter1           ; key_filter:key_filter|key_state                                                                            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.335      ;
+; 0.216 ; key_filter:key_filter|key_tmp2                ; key_filter:key_filter|state.filter0                                                                        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.336      ;
+; 0.221 ; key_filter:key_filter|key_tmp2                ; key_filter:key_filter|state.filter1                                                                        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.341      ;
+; 0.254 ; uart_receiver:uart_receiver|div_cnt[1]        ; uart_receiver:uart_receiver|div_cnt[2]                                                                     ; clk          ; clk         ; 0.000        ; 0.236      ; 0.574      ;
+; 0.254 ; uart_receiver:uart_receiver|div_cnt[5]        ; uart_receiver:uart_receiver|div_cnt[6]                                                                     ; clk          ; clk         ; 0.000        ; 0.236      ; 0.574      ;
+; 0.254 ; uart_receiver:uart_receiver|div_cnt[13]       ; uart_receiver:uart_receiver|div_cnt[14]                                                                    ; clk          ; clk         ; 0.000        ; 0.236      ; 0.574      ;
+; 0.256 ; control:control|send_en_reg2                  ; control:control|send_en                                                                                    ; clk          ; clk         ; 0.000        ; 0.036      ; 0.376      ;
+; 0.258 ; uart_receiver:uart_receiver|r_data_byte[0][2] ; uart_receiver:uart_receiver|data_byte[0]                                                                   ; clk          ; clk         ; 0.000        ; 0.038      ; 0.380      ;
+; 0.265 ; control:control|wraddress[1]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.220      ; 0.589      ;
+; 0.266 ; control:control|wraddress[7]                  ; control:control|wraddress[7]                                                                               ; clk          ; clk         ; 0.000        ; 0.037      ; 0.387      ;
+; 0.267 ; uart_receiver:uart_receiver|data_byte[6]      ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk          ; clk         ; 0.000        ; 0.227      ; 0.598      ;
+; 0.268 ; uart_receiver:uart_receiver|div_cnt[4]        ; uart_receiver:uart_receiver|div_cnt[6]                                                                     ; clk          ; clk         ; 0.000        ; 0.236      ; 0.588      ;
+; 0.269 ; uart_receiver:uart_receiver|div_cnt[12]       ; uart_receiver:uart_receiver|div_cnt[14]                                                                    ; clk          ; clk         ; 0.000        ; 0.236      ; 0.589      ;
+; 0.275 ; control:control|wraddress[6]                  ; dparm:dparm|altsyncram:altsyncram_component|altsyncram_rbp1:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.220      ; 0.599      ;
+; 0.291 ; uart_receiver:uart_receiver|r_data_byte[6][0] ; uart_receiver:uart_receiver|r_data_byte[6][1]                                                              ; clk          ; clk         ; 0.000        ; 0.045      ; 0.420      ;
+; 0.291 ; uart_receiver:uart_receiver|r_data_byte[7][0] ; uart_receiver:uart_receiver|r_data_byte[7][2]                                                              ; clk          ; clk         ; 0.000        ; 0.044      ; 0.419      ;
+; 0.292 ; uart_receiver:uart_receiver|r_data_byte[7][0] ; uart_receiver:uart_receiver|r_data_byte[7][1]                                                              ; clk          ; clk         ; 0.000        ; 0.044      ; 0.420      ;
+; 0.295 ; uart_receiver:uart_receiver|r_data_byte[4][1] ; uart_receiver:uart_receiver|r_data_byte[4][2]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.415      ;
+; 0.296 ; uart_receiver:uart_receiver|div_cnt[15]       ; uart_receiver:uart_receiver|div_cnt[15]                                                                    ; clk          ; clk         ; 0.000        ; 0.044      ; 0.424      ;
+; 0.296 ; uart_receiver:uart_receiver|r_data_byte[1][1] ; uart_receiver:uart_receiver|r_data_byte[1][2]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.416      ;
+; 0.297 ; key_filter:key_filter|cnt[7]                  ; key_filter:key_filter|cnt[7]                                                                               ; clk          ; clk         ; 0.000        ; 0.036      ; 0.417      ;
+; 0.297 ; uart_receiver:uart_receiver|r_data_byte[5][1] ; uart_receiver:uart_receiver|r_data_byte[5][2]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.417      ;
+; 0.298 ; uart_receiver:uart_receiver|div_cnt[7]        ; uart_receiver:uart_receiver|div_cnt[7]                                                                     ; clk          ; clk         ; 0.000        ; 0.044      ; 0.426      ;
+; 0.298 ; key_filter:key_filter|cnt[5]                  ; key_filter:key_filter|cnt[5]                                                                               ; clk          ; clk         ; 0.000        ; 0.036      ; 0.418      ;
+; 0.298 ; uart_receiver:uart_receiver|r_data_byte[2][1] ; uart_receiver:uart_receiver|r_data_byte[2][2]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.418      ;
+; 0.298 ; uart_receiver:uart_receiver|div_cnt[6]        ; uart_receiver:uart_receiver|div_cnt[6]                                                                     ; clk          ; clk         ; 0.000        ; 0.044      ; 0.426      ;
+; 0.299 ; uart_receiver:uart_receiver|div_cnt[8]        ; uart_receiver:uart_receiver|div_cnt[8]                                                                     ; clk          ; clk         ; 0.000        ; 0.044      ; 0.427      ;
+; 0.299 ; uart_receiver:uart_receiver|div_cnt[14]       ; uart_receiver:uart_receiver|div_cnt[14]                                                                    ; clk          ; clk         ; 0.000        ; 0.044      ; 0.427      ;
+; 0.300 ; key_filter:key_filter|cnt[4]                  ; key_filter:key_filter|cnt[4]                                                                               ; clk          ; clk         ; 0.000        ; 0.036      ; 0.420      ;
+; 0.300 ; uart_receiver:uart_receiver|r_data_byte[0][0] ; uart_receiver:uart_receiver|r_data_byte[0][1]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.420      ;
+; 0.300 ; uart_receiver:uart_receiver|r_data_byte[3][0] ; uart_receiver:uart_receiver|r_data_byte[3][2]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.420      ;
+; 0.300 ; uart_receiver:uart_receiver|r_data_byte[3][0] ; uart_receiver:uart_receiver|r_data_byte[3][1]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.420      ;
+; 0.300 ; uart_receiver:uart_receiver|r_data_byte[4][0] ; uart_receiver:uart_receiver|r_data_byte[4][1]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.420      ;
+; 0.300 ; uart_receiver:uart_receiver|r_data_byte[5][0] ; uart_receiver:uart_receiver|r_data_byte[5][1]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.420      ;
+; 0.301 ; uart_sender:uart_sender|bps_clk               ; uart_sender:uart_sender|bps_cnt[0]                                                                         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.421      ;
+; 0.301 ; uart_receiver:uart_receiver|r_data_byte[5][0] ; uart_receiver:uart_receiver|r_data_byte[5][2]                                                              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.421      ;
++-------+-----------------------------------------------+------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -3.351   ; 0.149 ; N/A      ; N/A     ; -3.201              ;
+;  clk             ; -3.351   ; 0.149 ; N/A      ; N/A     ; -3.201              ;
+; Design-wide TNS  ; -341.173 ; 0.0   ; 0.0      ; 0.0     ; -264.462            ;
+;  clk             ; -341.173 ; 0.000 ; N/A      ; N/A     ; -264.462            ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; rs232_tx      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; rst_n                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; rs232_rx                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; key_in                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; rs232_tx      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.37 V              ; -0.0346 V           ; 0.198 V                              ; 0.094 V                              ; 3.14e-10 s                  ; 2.92e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.37 V             ; -0.0346 V          ; 0.198 V                             ; 0.094 V                             ; 3.14e-10 s                 ; 2.92e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.57e-09 V                   ; 2.37 V              ; -0.00683 V          ; 0.171 V                              ; 0.018 V                              ; 4.97e-10 s                  ; 6.66e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.57e-09 V                  ; 2.37 V             ; -0.00683 V         ; 0.171 V                             ; 0.018 V                             ; 4.97e-10 s                 ; 6.66e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; rs232_tx      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.55e-07 V                   ; 2.35 V              ; -0.00221 V          ; 0.097 V                              ; 0.005 V                              ; 4.49e-10 s                  ; 3.85e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.55e-07 V                  ; 2.35 V             ; -0.00221 V         ; 0.097 V                             ; 0.005 V                             ; 4.49e-10 s                 ; 3.85e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.54e-07 V                   ; 2.34 V              ; -0.00774 V          ; 0.109 V                              ; 0.026 V                              ; 6.58e-10 s                  ; 8.24e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.54e-07 V                  ; 2.34 V             ; -0.00774 V         ; 0.109 V                             ; 0.026 V                             ; 6.58e-10 s                 ; 8.24e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; rs232_tx      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 2281     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 2281     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 3     ; 3    ;
+; Unconstrained Input Port Paths  ; 152   ; 152  ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
++---------------------------------+-------+------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; clk    ; clk   ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; key_in     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rs232_rx   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst_n      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; rs232_tx    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; key_in     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rs232_rx   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst_n      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; rs232_tx    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+    Info: Processing started: Wed Nov 22 18:14:51 2023
+Info: Command: quartus_sta uart_dparm -c uart_dparm
+Info: qsta_default_script.tcl version: #3
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'uart_dparm.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -3.351
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.351            -341.173 clk 
+Info (332146): Worst-case hold slack is 0.433
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.433               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.201
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.201            -264.462 clk 
+Info (332114): Report Metastability: Found 2 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -3.059
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.059            -304.919 clk 
+Info (332146): Worst-case hold slack is 0.382
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.382               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.201
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.201            -264.462 clk 
+Info (332114): Report Metastability: Found 2 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.818
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.818             -57.426 clk 
+Info (332146): Worst-case hold slack is 0.149
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.149               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -176.328 clk 
+Info (332114): Report Metastability: Found 2 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4894 megabytes
+    Info: Processing ended: Wed Nov 22 18:14:52 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,0 +1,15 @@
+module uart_dparm_tb();
+
+	module uart_dparm(
+	
+	key_in,
+	
+	rs232_rx,
+	rs232_tx,
+	
+	clk,
+	rst_n,
+);
+
+
+endmodule

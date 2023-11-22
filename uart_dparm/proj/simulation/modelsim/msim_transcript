@@ -1,0 +1,153 @@
+# Reading C:/intelFPGA/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# ERROR: No extended dataflow license exists
+# do uart_dparm_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart_dparm/rtl {C:/fpga/workspace/fpga-exps/uart_dparm/rtl/key_filter.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:19 on Nov 22,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart_dparm/rtl" C:/fpga/workspace/fpga-exps/uart_dparm/rtl/key_filter.v 
+# -- Compiling module key_filter
+# 
+# Top level modules:
+# 	key_filter
+# End time: 18:11:19 on Nov 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart_dparm/rtl {C:/fpga/workspace/fpga-exps/uart_dparm/rtl/uart_sender.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:19 on Nov 22,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart_dparm/rtl" C:/fpga/workspace/fpga-exps/uart_dparm/rtl/uart_sender.v 
+# -- Compiling module uart_sender
+# 
+# Top level modules:
+# 	uart_sender
+# End time: 18:11:19 on Nov 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart_dparm/rtl {C:/fpga/workspace/fpga-exps/uart_dparm/rtl/uart_receiver.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:19 on Nov 22,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart_dparm/rtl" C:/fpga/workspace/fpga-exps/uart_dparm/rtl/uart_receiver.v 
+# -- Compiling module uart_receiver
+# 
+# Top level modules:
+# 	uart_receiver
+# End time: 18:11:19 on Nov 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart_dparm/rtl {C:/fpga/workspace/fpga-exps/uart_dparm/rtl/control.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:19 on Nov 22,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart_dparm/rtl" C:/fpga/workspace/fpga-exps/uart_dparm/rtl/control.v 
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# End time: 18:11:19 on Nov 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart_dparm/ip {C:/fpga/workspace/fpga-exps/uart_dparm/ip/dparm.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:19 on Nov 22,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart_dparm/ip" C:/fpga/workspace/fpga-exps/uart_dparm/ip/dparm.v 
+# -- Compiling module dparm
+# 
+# Top level modules:
+# 	dparm
+# End time: 18:11:19 on Nov 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart_dparm/rtl {C:/fpga/workspace/fpga-exps/uart_dparm/rtl/uart_dparm.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:19 on Nov 22,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart_dparm/rtl" C:/fpga/workspace/fpga-exps/uart_dparm/rtl/uart_dparm.v 
+# -- Compiling module uart_dparm
+# 
+# Top level modules:
+# 	uart_dparm
+# End time: 18:11:19 on Nov 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart_dparm/proj/../testbench {C:/fpga/workspace/fpga-exps/uart_dparm/proj/../testbench/uart_dparm_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:19 on Nov 22,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart_dparm/proj/../testbench" C:/fpga/workspace/fpga-exps/uart_dparm/proj/../testbench/uart_dparm_tb.v 
+# -- Compiling module uart_dparm_tb
+# 
+# Top level modules:
+# 	uart_dparm_tb
+# End time: 18:11:19 on Nov 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart_dparm/proj/../testbench {C:/fpga/workspace/fpga-exps/uart_dparm/proj/../testbench/key_model.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:19 on Nov 22,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart_dparm/proj/../testbench" C:/fpga/workspace/fpga-exps/uart_dparm/proj/../testbench/key_model.v 
+# -- Compiling module key_model
+# 
+# Top level modules:
+# 	key_model
+# End time: 18:11:19 on Nov 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart_dparm/proj/../rtl {C:/fpga/workspace/fpga-exps/uart_dparm/proj/../rtl/uart_dparm.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:19 on Nov 22,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart_dparm/proj/../rtl" C:/fpga/workspace/fpga-exps/uart_dparm/proj/../rtl/uart_dparm.v 
+# -- Compiling module uart_dparm
+# 
+# Top level modules:
+# 	uart_dparm
+# End time: 18:11:19 on Nov 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart_dparm/proj/../rtl {C:/fpga/workspace/fpga-exps/uart_dparm/proj/../rtl/uart_sender.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:19 on Nov 22,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart_dparm/proj/../rtl" C:/fpga/workspace/fpga-exps/uart_dparm/proj/../rtl/uart_sender.v 
+# -- Compiling module uart_sender
+# 
+# Top level modules:
+# 	uart_sender
+# End time: 18:11:19 on Nov 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart_dparm/proj/../rtl {C:/fpga/workspace/fpga-exps/uart_dparm/proj/../rtl/key_filter.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:19 on Nov 22,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart_dparm/proj/../rtl" C:/fpga/workspace/fpga-exps/uart_dparm/proj/../rtl/key_filter.v 
+# -- Compiling module key_filter
+# 
+# Top level modules:
+# 	key_filter
+# End time: 18:11:19 on Nov 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  uart_dparm_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" uart_dparm_tb 
+# Start time: 18:11:19 on Nov 22,2023
+# Loading work.uart_dparm_tb
+# Loading work.uart_sender
+# Loading work.uart_dparm
+# Loading work.key_filter
+# Loading work.control
+# Loading work.dparm
+# Loading altera_mf_ver.altsyncram
+# Loading work.uart_receiver
+# Loading work.key_model
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
+# Time: 0  Instance: uart_dparm_tb.uart_dparm1.dparm.altsyncram_component.m_default.altsyncram_inst
+# Break key hit
+# Simulation stop requested.
+# End time: 18:12:16 on Nov 22,2023, Elapsed time: 0:00:57
+# Errors: 0, Warnings: 0

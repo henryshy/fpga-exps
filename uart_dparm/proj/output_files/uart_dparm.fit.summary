@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Nov 22 18:14:49 2023
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+Revision Name : uart_dparm
+Top-level Entity Name : uart_dparm
+Family : Cyclone IV E
+Device : EP4CE10F17C8
+Timing Models : Final
+Total logic elements : 221 / 10,320 ( 2 % )
+    Total combinational functions : 202 / 10,320 ( 2 % )
+    Dedicated logic registers : 150 / 10,320 ( 1 % )
+Total registers : 150
+Total pins : 5 / 180 ( 3 % )
+Total virtual pins : 0
+Total memory bits : 2,048 / 423,936 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

@@ -1,0 +1,186 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/fpga/workspace/fpga-exps/uart_dparm/proj/simulation/modelsim
+vcontrol
+Z1 !s110 1700647879
+!i10b 1
+!s100 bLEoC2zWKUSjPZAK8NIz93
+I146GRMU6HoMY7]^EOiA^A0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1700647782
+8C:/fpga/workspace/fpga-exps/uart_dparm/rtl/control.v
+FC:/fpga/workspace/fpga-exps/uart_dparm/rtl/control.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1700647879.000000
+!s107 C:/fpga/workspace/fpga-exps/uart_dparm/rtl/control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/uart_dparm/rtl|C:/fpga/workspace/fpga-exps/uart_dparm/rtl/control.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart_dparm/rtl
+Z7 tCvgOpt 0
+vdparm
+R1
+!i10b 1
+!s100 N9i0Y@gDamdT?K^DZoYFL1
+IXNFnP8]fC[:j3fgn>KYlH0
+R2
+R0
+w1700647388
+8C:/fpga/workspace/fpga-exps/uart_dparm/ip/dparm.v
+FC:/fpga/workspace/fpga-exps/uart_dparm/ip/dparm.v
+L0 39
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/fpga/workspace/fpga-exps/uart_dparm/ip/dparm.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/uart_dparm/ip|C:/fpga/workspace/fpga-exps/uart_dparm/ip/dparm.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart_dparm/ip
+R7
+vkey_filter
+R1
+!i10b 1
+!s100 MCR>V0;cOd[i3e:A7nDT=1
+IUlaBL5g6ohUBh^K@^JUlf2
+R2
+R0
+w1700647651
+8C:/fpga/workspace/fpga-exps/uart_dparm/proj/../rtl/key_filter.v
+FC:/fpga/workspace/fpga-exps/uart_dparm/proj/../rtl/key_filter.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/fpga/workspace/fpga-exps/uart_dparm/proj/../rtl/key_filter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/uart_dparm/proj/../rtl|C:/fpga/workspace/fpga-exps/uart_dparm/proj/../rtl/key_filter.v|
+!i113 1
+R5
+Z8 !s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart_dparm/proj/../rtl
+R7
+vkey_model
+R1
+!i10b 1
+!s100 =^<h8MjF60M@DlYHI6_@M3
+IVHOQJ0XPbS7gRlCAAD0lj2
+R2
+R0
+w1700636394
+8C:/fpga/workspace/fpga-exps/uart_dparm/proj/../testbench/key_model.v
+FC:/fpga/workspace/fpga-exps/uart_dparm/proj/../testbench/key_model.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/fpga/workspace/fpga-exps/uart_dparm/proj/../testbench/key_model.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/uart_dparm/proj/../testbench|C:/fpga/workspace/fpga-exps/uart_dparm/proj/../testbench/key_model.v|
+!i113 1
+R5
+Z9 !s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart_dparm/proj/../testbench
+R7
+vuart_dparm
+R1
+!i10b 1
+!s100 1i7];6JZK=[bBZK30LBRa2
+IS0@RANi=6dGSZgTY9If031
+R2
+R0
+w1700647783
+8C:/fpga/workspace/fpga-exps/uart_dparm/proj/../rtl/uart_dparm.v
+FC:/fpga/workspace/fpga-exps/uart_dparm/proj/../rtl/uart_dparm.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/fpga/workspace/fpga-exps/uart_dparm/proj/../rtl/uart_dparm.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/uart_dparm/proj/../rtl|C:/fpga/workspace/fpga-exps/uart_dparm/proj/../rtl/uart_dparm.v|
+!i113 1
+R5
+R8
+R7
+vuart_dparm_tb
+R1
+!i10b 1
+!s100 RcanGP]lb9ozQmzR8Zii21
+IBRD=Hmffd=IP_mdKLaTSZ1
+R2
+R0
+w1700645995
+8C:/fpga/workspace/fpga-exps/uart_dparm/proj/../testbench/uart_dparm_tb.v
+FC:/fpga/workspace/fpga-exps/uart_dparm/proj/../testbench/uart_dparm_tb.v
+L0 4
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/fpga/workspace/fpga-exps/uart_dparm/proj/../testbench/uart_dparm_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/uart_dparm/proj/../testbench|C:/fpga/workspace/fpga-exps/uart_dparm/proj/../testbench/uart_dparm_tb.v|
+!i113 1
+R5
+R9
+R7
+vuart_receiver
+R1
+!i10b 1
+!s100 2P61D:ChCm]>[eW2DSAP61
+IGK0Zhj]S7P3DV1SVk@H=:1
+R2
+R0
+w1699945140
+8C:/fpga/workspace/fpga-exps/uart_dparm/rtl/uart_receiver.v
+FC:/fpga/workspace/fpga-exps/uart_dparm/rtl/uart_receiver.v
+Z10 L0 11
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/fpga/workspace/fpga-exps/uart_dparm/rtl/uart_receiver.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/uart_dparm/rtl|C:/fpga/workspace/fpga-exps/uart_dparm/rtl/uart_receiver.v|
+!i113 1
+R5
+R6
+R7
+vuart_sender
+R1
+!i10b 1
+!s100 Ni[<>TzaoeG5S=0<k4_O;0
+IgQMhL5k`A966i_8`2aC1h1
+R2
+R0
+w1700647473
+8C:/fpga/workspace/fpga-exps/uart_dparm/proj/../rtl/uart_sender.v
+FC:/fpga/workspace/fpga-exps/uart_dparm/proj/../rtl/uart_sender.v
+R10
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/fpga/workspace/fpga-exps/uart_dparm/proj/../rtl/uart_sender.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/uart_dparm/proj/../rtl|C:/fpga/workspace/fpga-exps/uart_dparm/proj/../rtl/uart_sender.v|
+!i113 1
+R5
+R8
+R7
