@@ -1,0 +1,20 @@
+module rom_signaltap(
+
+	clk,
+	rst_n,
+	
+
+);
+	
+	input clk;
+	input rst_n;
+	
+	rom rom (
+		.address(),
+		.clock(clk),
+		.q()
+	);
+	
+	
+	
+endmodule
