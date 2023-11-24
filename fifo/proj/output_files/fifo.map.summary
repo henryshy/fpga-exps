@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Nov 24 14:14:43 2023
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+Revision Name : fifo
+Top-level Entity Name : fifo
+Family : Cyclone IV E
+Total logic elements : 51
+    Total combinational functions : 51
+    Dedicated logic registers : 28
+Total registers : 28
+Total pins : 32
+Total virtual pins : 0
+Total memory bits : 2,048
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

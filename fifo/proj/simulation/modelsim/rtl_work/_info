@@ -1,0 +1,76 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/fpga/workspace/fpga-exps/fifo/proj/simulation/modelsim
+vfifo
+!s110 1700806361
+!i10b 1
+!s100 YgIc:1l?5@do3nig>9^?80
+ILDjMiDP0nelloVf1349CU1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1700804535
+8C:/fpga/workspace/fpga-exps/fifo/ip/fifo.v
+FC:/fpga/workspace/fpga-exps/fifo/ip/fifo.v
+Z2 L0 39
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1700806361.000000
+!s107 C:/fpga/workspace/fpga-exps/fifo/ip/fifo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/fifo/ip|C:/fpga/workspace/fpga-exps/fifo/ip/fifo.v|
+!i113 1
+Z4 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/fifo/ip
+Z5 tCvgOpt 0
+vmydcfifo
+!s110 1700806496
+!i10b 1
+!s100 1B>FHlT>AcOlEB:Km`X@`1
+ITZVX=_5MKh<[5U377zzI=3
+R1
+R0
+w1700805744
+8C:/fpga/workspace/fpga-exps/fifo/ip/mydcfifo.v
+FC:/fpga/workspace/fpga-exps/fifo/ip/mydcfifo.v
+R2
+R3
+r1
+!s85 0
+31
+!s108 1700806496.000000
+!s107 C:/fpga/workspace/fpga-exps/fifo/ip/mydcfifo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/fifo/proj/../ip|C:/fpga/workspace/fpga-exps/fifo/ip/mydcfifo.v|
+!i113 1
+R4
+!s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/fifo/proj/../ip
+R5
+vmydcfifo_tb
+!s110 1700806495
+!i10b 1
+!s100 3:A8RX6Nieb_zEYRQ>1<]2
+IEe4e3mk6@fZU=a=V^V4YR1
+R1
+R0
+w1700806474
+8C:/fpga/workspace/fpga-exps/fifo/testbench/mydcfifo_tb.v
+FC:/fpga/workspace/fpga-exps/fifo/testbench/mydcfifo_tb.v
+L0 6
+R3
+r1
+!s85 0
+31
+!s108 1700806494.000000
+!s107 C:/fpga/workspace/fpga-exps/fifo/testbench/mydcfifo_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/fifo/proj/../testbench|C:/fpga/workspace/fpga-exps/fifo/testbench/mydcfifo_tb.v|
+!i113 1
+R4
+!s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/fifo/proj/../testbench
+R5

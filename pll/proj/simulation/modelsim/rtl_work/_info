@@ -1,0 +1,76 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/fpga/workspace/fpga-exps/pll/proj/simulation/modelsim
+vpll
+Z1 !s110 1700810959
+!i10b 1
+!s100 8b;ZR;NDn:dah_Sl1lFPG1
+I?Y9=@LlhQ>ci^lU8JA01F2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1700810644
+8C:/fpga/workspace/fpga-exps/pll/ip/pll.v
+FC:/fpga/workspace/fpga-exps/pll/ip/pll.v
+L0 39
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1700810959.000000
+!s107 C:/fpga/workspace/fpga-exps/pll/ip/pll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/pll/ip|C:/fpga/workspace/fpga-exps/pll/ip/pll.v|
+!i113 1
+Z5 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/pll/ip
+Z6 tCvgOpt 0
+vpll_altpll
+R1
+!i10b 1
+!s100 dVXZKoPmDPYE?bXJgjejL3
+IaeUZ11`3nen<RDX:eo9De3
+R2
+R0
+w1700810910
+8C:/fpga/workspace/fpga-exps/pll/proj/db/pll_altpll.v
+FC:/fpga/workspace/fpga-exps/pll/proj/db/pll_altpll.v
+L0 30
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/fpga/workspace/fpga-exps/pll/proj/db/pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/pll/proj/db|C:/fpga/workspace/fpga-exps/pll/proj/db/pll_altpll.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/pll/proj/db
+R6
+vpll_tb
+R1
+!i10b 1
+!s100 >?ET4N8@>?k_j:X>kR4<K1
+IWMlX23YkCUDFGg:[oEHYV2
+R2
+R0
+w1700810903
+8C:/fpga/workspace/fpga-exps/pll/proj/../testbench/pll_tb.v
+FC:/fpga/workspace/fpga-exps/pll/proj/../testbench/pll_tb.v
+L0 4
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/fpga/workspace/fpga-exps/pll/proj/../testbench/pll_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/pll/proj/../testbench|C:/fpga/workspace/fpga-exps/pll/proj/../testbench/pll_tb.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/pll/proj/../testbench
+R6
