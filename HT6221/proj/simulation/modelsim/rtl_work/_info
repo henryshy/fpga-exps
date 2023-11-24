@@ -1,0 +1,79 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/fpga/workspace/fpga-exps/HT6221/proj/simulation/modelsim
+vHT6221
+Z1 !s110 1700826774
+!i10b 1
+!s100 50cGX:YNBCH3O9UMjWOb00
+I>[YOba>d[z>MJ`i3;DN==0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1700825540
+8C:/fpga/workspace/fpga-exps/HT6221/rtl/HT6221.v
+FC:/fpga/workspace/fpga-exps/HT6221/rtl/HT6221.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1700826774.000000
+!s107 C:/fpga/workspace/fpga-exps/HT6221/rtl/HT6221.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/HT6221/rtl|C:/fpga/workspace/fpga-exps/HT6221/rtl/HT6221.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/HT6221/rtl
+Z7 tCvgOpt 0
+n@h@t6221
+vHT6221_tb
+R1
+!i10b 1
+!s100 cVHg>6MZ5gdRA:ZY:4CDk3
+IlT[9F2aY4`cRjmN2cH]iN2
+R2
+R0
+w1700818373
+8C:/fpga/workspace/fpga-exps/HT6221/proj/../testbench/HT6221_tb.v
+FC:/fpga/workspace/fpga-exps/HT6221/proj/../testbench/HT6221_tb.v
+L0 7
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/fpga/workspace/fpga-exps/HT6221/proj/../testbench/HT6221_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/HT6221/proj/../testbench|C:/fpga/workspace/fpga-exps/HT6221/proj/../testbench/HT6221_tb.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/HT6221/proj/../testbench
+R7
+n@h@t6221_tb
+vHT6221_top
+R1
+!i10b 1
+!s100 Nb`@OKdCc>D4JN4KoKF730
+IHVR=1UWQ@hfYYB^K0EP^40
+R2
+R0
+w1700826536
+8C:/fpga/workspace/fpga-exps/HT6221/rtl/HT6221_top.v
+FC:/fpga/workspace/fpga-exps/HT6221/rtl/HT6221_top.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/fpga/workspace/fpga-exps/HT6221/rtl/HT6221_top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/HT6221/rtl|C:/fpga/workspace/fpga-exps/HT6221/rtl/HT6221_top.v|
+!i113 1
+R5
+R6
+R7
+n@h@t6221_top

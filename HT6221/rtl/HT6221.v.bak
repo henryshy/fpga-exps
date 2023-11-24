@@ -1,0 +1,73 @@
+module HT6221(
+	clk,
+	rst_n,
+	iIR,
+	irdata,
+	iraddr,
+	get_flag
+	
+
+);
+
+	input clk;
+	input rst_n;
+	input iIR;
+	output irdata[15:0];
+	output iraddr[15:0];
+	output get_flag;
+
+
+	reg [18:0] cnt;
+	reg cnt_en;
+	reg t9ms;
+	reg t4p5ms;
+	reg t0p56ms;
+	reg t1p69ms;
+	
+	always@(posedge clk or negedge rst_n)
+		if(!rst_n)
+			cnt <= 0;
+		else if(cnt_en == 1'b1)
+			cnt <= cnt + 1;
+		else 
+			cnt <= 0;
+			
+	always@(posedge clk or negedge rst_n)
+		if(!rst_n)
+			t9ms <= 0;
+		else if(cnt >= 325000 && cnt <= 495000)
+			t9ms <= 1;
+		else
+			t9ms <= 0;
+			
+	always@(posedge clk or negedge rst_n)
+		if(!rst_n)
+			t4p5ms <= 0;
+		else if(cnt >= 152500 && cnt <= 277500)
+			t4p5ms <= 1;
+		else
+			t4p5ms <= 0;
+			
+	always@(posedge clk or negedge rst_n)
+		if(!rst_n)
+			t0p56ms <= 0;
+		else if(cnt >= 20000 && cnt <= 35000)
+			t0p56ms <= 1;
+		else
+			t0p56ms <= 0;
+		
+	always@(posedge clk or negedge rst_n)
+		if(!rst_n)
+			t1p69ms <= 0;
+		else if(cnt >= 75000 && cnt <= 90000)
+			t1p69ms <= 1;
+		else
+			t1p69ms <= 0;	
+			
+	
+			
+	
+	
+
+
+endmodule

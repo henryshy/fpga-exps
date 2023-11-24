@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Nov 24 20:09:27 2023
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+Revision Name : HT6221
+Top-level Entity Name : HT6221_top
+Family : Cyclone IV E
+Total logic elements : 380
+    Total combinational functions : 357
+    Dedicated logic registers : 189
+Total registers : 189
+Total pins : 36
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

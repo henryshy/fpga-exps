@@ -1,0 +1,30 @@
+module HT6221_top(
+	
+	
+	clk,
+	rst_n,
+	
+	IR_in,
+	data
+);
+	input clk;
+	input rst_n;
+	input IR_in;
+	
+	output data;
+
+
+	module HT6221(
+	clk,
+	rst_n,
+	iIR,
+	irdata,
+	iraddr,
+	get_flag
+	
+
+);
+
+
+
+endmodule

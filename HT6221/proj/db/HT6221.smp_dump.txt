@@ -1,0 +1,7 @@
+
+State Machine - |HT6221_top|HT6221:HT6221|state
+Name state.data_get state.leader_0 state.leader_1 state.idle 
+state.idle 0 0 0 0 
+state.leader_1 0 0 1 1 
+state.leader_0 0 1 0 1 
+state.data_get 1 0 0 1 
