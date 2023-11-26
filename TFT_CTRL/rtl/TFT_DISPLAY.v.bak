@@ -1,0 +1,12 @@
+module TFT_DISPLAY(
+	
+	clk,
+	rst_n,
+	
+	
+
+);
+
+
+
+endmodule

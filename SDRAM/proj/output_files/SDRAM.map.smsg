@@ -1,0 +1,3 @@
+Warning (10273): Verilog HDL warning at sdr.v(982): extended using "x" or "z" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/sdr.v Line: 982
+Warning (10273): Verilog HDL warning at sdr.v(985): extended using "x" or "z" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/sdr.v Line: 985
+Warning (10268): Verilog HDL information at sdr.v(198): always construct contains both blocking and non-blocking assignments File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/sdr.v Line: 198

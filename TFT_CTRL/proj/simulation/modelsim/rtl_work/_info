@@ -1,0 +1,122 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/fpga/workspace/fpga-exps/TFT_CTRL/proj/simulation/modelsim
+vpll
+Z1 !s110 1700974017
+!i10b 1
+!s100 <f1^mTk8z2E<L^XN;g;=[0
+I30?5`:IbQ0W[A^VNf3a_53
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1700970546
+8C:/fpga/workspace/fpga-exps/TFT_CTRL/proj/../ip/pll.v
+FC:/fpga/workspace/fpga-exps/TFT_CTRL/proj/../ip/pll.v
+L0 39
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1700974017.000000
+!s107 C:/fpga/workspace/fpga-exps/TFT_CTRL/proj/../ip/pll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/TFT_CTRL/proj/../ip|C:/fpga/workspace/fpga-exps/TFT_CTRL/proj/../ip/pll.v|
+!i113 1
+Z5 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/TFT_CTRL/proj/../ip
+Z6 tCvgOpt 0
+vpll_altpll
+R1
+!i10b 1
+!s100 aVMmgcUnEj]5kH4i5DQHJ3
+I>OTRW?<i^2D>j;G2UI9@;1
+R2
+R0
+w1700970755
+8C:/fpga/workspace/fpga-exps/TFT_CTRL/proj/db/pll_altpll.v
+FC:/fpga/workspace/fpga-exps/TFT_CTRL/proj/db/pll_altpll.v
+L0 30
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/fpga/workspace/fpga-exps/TFT_CTRL/proj/db/pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/TFT_CTRL/proj/db|C:/fpga/workspace/fpga-exps/TFT_CTRL/proj/db/pll_altpll.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/TFT_CTRL/proj/db
+R6
+vpll_tb
+R1
+!i10b 1
+!s100 IX7A;PVD>LYFD13_jBoO<0
+I3o5:oo5<z[e:nMIT:K]_>0
+R2
+R0
+w1700974001
+8C:/fpga/workspace/fpga-exps/TFT_CTRL/proj/../testbench/pll_tb.v
+FC:/fpga/workspace/fpga-exps/TFT_CTRL/proj/../testbench/pll_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/fpga/workspace/fpga-exps/TFT_CTRL/proj/../testbench/pll_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/TFT_CTRL/proj/../testbench|C:/fpga/workspace/fpga-exps/TFT_CTRL/proj/../testbench/pll_tb.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/TFT_CTRL/proj/../testbench
+R6
+vTFT_CTRL
+R1
+!i10b 1
+!s100 =71ia=mViH_iL:Uf`^m@J2
+IS5E5j4@2F^DYn:Y^z`[Ym2
+R2
+R0
+w1700973424
+8C:/fpga/workspace/fpga-exps/TFT_CTRL/rtl/TFT_CTRL.v
+FC:/fpga/workspace/fpga-exps/TFT_CTRL/rtl/TFT_CTRL.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1700974016.000000
+!s107 C:/fpga/workspace/fpga-exps/TFT_CTRL/rtl/TFT_CTRL.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/TFT_CTRL/rtl|C:/fpga/workspace/fpga-exps/TFT_CTRL/rtl/TFT_CTRL.v|
+!i113 1
+R5
+Z7 !s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/TFT_CTRL/rtl
+R6
+n@t@f@t_@c@t@r@l
+vTFT_DISPLAY
+R1
+!i10b 1
+!s100 ;^Ti3;3m10oY1I^NO]Gna0
+IU1mR0RUL`io5Z?gf;aJmX1
+R2
+R0
+w1700973047
+8C:/fpga/workspace/fpga-exps/TFT_CTRL/rtl/TFT_DISPLAY.v
+FC:/fpga/workspace/fpga-exps/TFT_CTRL/rtl/TFT_DISPLAY.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/fpga/workspace/fpga-exps/TFT_CTRL/rtl/TFT_DISPLAY.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/TFT_CTRL/rtl|C:/fpga/workspace/fpga-exps/TFT_CTRL/rtl/TFT_DISPLAY.v|
+!i113 1
+R5
+R7
+R6
+n@t@f@t_@d@i@s@p@l@a@y

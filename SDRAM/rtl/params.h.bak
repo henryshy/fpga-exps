@@ -1,0 +1,8 @@
+parameter //{CS_N,RAS_N,CAS_N,WE}
+		C_NOP  = 4'b0111, //空操作
+		C_PRE  = 4'b0010, //预充电
+		C_AREF = 4'b0001, //自动刷新
+		C_MSET = 4'b0000, //加载模式寄存器
+		C_ACT  = 4'b0011, //激活
+		C_RD   = 4'b0101, //读
+		C_WR   = 4'b0100; // 写

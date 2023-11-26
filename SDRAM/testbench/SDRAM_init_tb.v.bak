@@ -1,0 +1,43 @@
+module SDRAM_init_tb;
+
+	reg CLK;
+	reg RST_N;
+	
+	wire CS_N;
+	wire RAS_N;
+	wire CAS_N;
+	wire WE;
+	wire [`ASIZE-1:0]saddr;
+	wire init_done;
+		
+	SDRAM_init SDRAM_init( //clk 100m 
+	
+		.CLK(CLK),
+		.RST_N(RST_N),
+		.Command({CS_N,RAS_N,CAS_N,WE}),
+		.saddr(saddr),
+		.init_done(init_done)
+	);
+
+	initial CLK = 1;
+	always #5 CLK= ~clk;
+	
+	
+	initial begin
+		RST_N = 0;
+		#200
+		RST_N = 1;
+
+		
+	
+	end
+
+
+
+
+
+
+
+
+
+endmodule

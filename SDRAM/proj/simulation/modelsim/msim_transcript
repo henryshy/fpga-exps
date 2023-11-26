@@ -1,0 +1,142 @@
+# Reading C:/intelFPGA/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# ERROR: No extended dataflow license exists
+# do SDRAM_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/SDRAM/rtl {C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM_init.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:04:43 on Nov 26,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/SDRAM/rtl" C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM_init.v 
+# -- Compiling module SDRAM_init
+# 
+# Top level modules:
+# 	SDRAM_init
+# End time: 19:04:43 on Nov 26,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/SDRAM/proj/../testbench {C:/fpga/workspace/fpga-exps/SDRAM/proj/../testbench/SDRAM_init_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:04:43 on Nov 26,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/SDRAM/proj/../testbench" C:/fpga/workspace/fpga-exps/SDRAM/proj/../testbench/SDRAM_init_tb.v 
+# -- Compiling module SDRAM_init_tb
+# 
+# Top level modules:
+# 	SDRAM_init_tb
+# End time: 19:04:43 on Nov 26,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl {C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl/sdr.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:04:43 on Nov 26,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl" C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl/sdr.v 
+# -- Compiling module sdr
+# 
+# Top level modules:
+# 	sdr
+# End time: 19:04:43 on Nov 26,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl {C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl/SDRAM_init.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:04:43 on Nov 26,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl" C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl/SDRAM_init.v 
+# -- Compiling module SDRAM_init
+# 
+# Top level modules:
+# 	SDRAM_init
+# End time: 19:04:43 on Nov 26,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  SDRAM_init_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" SDRAM_init_tb 
+# Start time: 19:04:43 on Nov 26,2023
+# Loading work.SDRAM_init_tb
+# Loading work.SDRAM_init
+# Loading work.sdr
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $stop    : C:/fpga/workspace/fpga-exps/SDRAM/proj/../testbench/SDRAM_init_tb.v(55)
+#    Time: 202440 ns  Iteration: 0  Instance: /SDRAM_init_tb
+# Break in Module SDRAM_init_tb at C:/fpga/workspace/fpga-exps/SDRAM/proj/../testbench/SDRAM_init_tb.v line 55
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM_init.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:05:47 on Nov 26,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl" C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM_init.v 
+# -- Compiling module SDRAM_init
+# 
+# Top level modules:
+# 	SDRAM_init
+# End time: 19:05:47 on Nov 26,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/SDRAM/proj/../testbench C:/fpga/workspace/fpga-exps/SDRAM/testbench/SDRAM_init_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:05:49 on Nov 26,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/SDRAM/proj/../testbench" C:/fpga/workspace/fpga-exps/SDRAM/testbench/SDRAM_init_tb.v 
+# -- Compiling module SDRAM_init_tb
+# 
+# Top level modules:
+# 	SDRAM_init_tb
+# End time: 19:05:49 on Nov 26,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl C:/fpga/workspace/fpga-exps/SDRAM/rtl/sdr.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:05:50 on Nov 26,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl" C:/fpga/workspace/fpga-exps/SDRAM/rtl/sdr.v 
+# -- Compiling module sdr
+# 
+# Top level modules:
+# 	sdr
+# End time: 19:05:50 on Nov 26,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM_init.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:05:51 on Nov 26,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl" C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM_init.v 
+# -- Compiling module SDRAM_init
+# 
+# Top level modules:
+# 	SDRAM_init
+# End time: 19:05:51 on Nov 26,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/SDRAM/proj/../testbench C:/fpga/workspace/fpga-exps/SDRAM/testbench/SDRAM_init_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:05:52 on Nov 26,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/SDRAM/proj/../testbench" C:/fpga/workspace/fpga-exps/SDRAM/testbench/SDRAM_init_tb.v 
+# -- Compiling module SDRAM_init_tb
+# 
+# Top level modules:
+# 	SDRAM_init_tb
+# End time: 19:05:52 on Nov 26,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.SDRAM_init_tb
+# Loading work.SDRAM_init
+# Loading work.sdr
+# Warning in wave window restart: (vish-4014) No objects found matching '/SDRAM_init_tb/WE'. 
+run -all
+# GetModuleFileName: 找不到指定的模块。
+# 
+# 
+# SDRAM_init_tb.sdr : at time  200235.0 ns AREF : Auto Refresh
+# SDRAM_init_tb.sdr : at time  200335.0 ns AREF : Auto Refresh
+# SDRAM_init_tb.sdr : at time  200435.0 ns LMR  : Load Mode Register
+# SDRAM_init_tb.sdr :                             CAS Latency      = 3
+# SDRAM_init_tb.sdr :                             Burst Length     = 8
+# SDRAM_init_tb.sdr :                             Burst Type       = Sequential
+# SDRAM_init_tb.sdr :                             Write Burst Mode = Programmed Burst Length
+# ** Note: $stop    : C:/fpga/workspace/fpga-exps/SDRAM/testbench/SDRAM_init_tb.v(55)
+#    Time: 202440 ns  Iteration: 0  Instance: /SDRAM_init_tb
+# Break in Module SDRAM_init_tb at C:/fpga/workspace/fpga-exps/SDRAM/testbench/SDRAM_init_tb.v line 55
+# End time: 19:10:35 on Nov 26,2023, Elapsed time: 0:05:52
+# Errors: 1, Warnings: 0

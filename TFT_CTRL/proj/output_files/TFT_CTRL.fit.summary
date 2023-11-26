@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sun Nov 26 14:06:32 2023
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+Revision Name : TFT_CTRL
+Top-level Entity Name : TFT_DISPLAY
+Family : Cyclone IV E
+Device : EP4CE10F17C8
+Timing Models : Final
+Total logic elements : 99 / 10,320 ( < 1 % )
+    Total combinational functions : 99 / 10,320 ( < 1 % )
+    Dedicated logic registers : 22 / 10,320 ( < 1 % )
+Total registers : 22
+Total pins : 23 / 180 ( 13 % )
+Total virtual pins : 0
+Total memory bits : 0 / 423,936 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
+Total PLLs : 1 / 2 ( 50 % )

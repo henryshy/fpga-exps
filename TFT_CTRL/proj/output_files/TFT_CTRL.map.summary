@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Nov 26 14:06:28 2023
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+Revision Name : TFT_CTRL
+Top-level Entity Name : TFT_DISPLAY
+Family : Cyclone IV E
+Total logic elements : 99
+    Total combinational functions : 99
+    Dedicated logic registers : 22
+Total registers : 22
+Total pins : 23
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1
