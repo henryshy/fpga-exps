@@ -1,0 +1,22 @@
+module SDRAM_CTRL(
+
+	clk,
+	rst_n,
+
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+endmdule

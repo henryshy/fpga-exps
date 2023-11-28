@@ -1,7 +1,7 @@
 
 `timescale 1ns/1ps
 
-module SDRAM_init_tb;
+module sdram_init_tb;
 `include "../rtl/params.h"
 	reg CLK;
 	reg RST_N;
@@ -18,14 +18,13 @@ module SDRAM_init_tb;
 	assign sd_clk = ~CLK;
 	assign {CS_N,RAS_N,CAS_N,WE_N} = command;
 	
-	SDRAM_init SDRAM_init( //clk 100m 
-	
-		.CLK(CLK),
-		.RST_N(RST_N),
-		.command(command),
-		.saddr(saddr),
-		.init_done(init_done)
-	);
+	sdram_init sdram_init(
+		.Clk(CLK),
+		.Rst_n(RST_N),
+		.Command(command),
+		.Saddr(saddr),
+		.Init_done(init_done)
+	);	
 
 	sdr sdr (
 		.Dq(), 

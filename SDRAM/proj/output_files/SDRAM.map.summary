@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sun Nov 26 19:05:37 2023
+Analysis & Synthesis Status : Successful - Tue Nov 28 11:51:57 2023
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
 Revision Name : SDRAM
-Top-level Entity Name : SDRAM_init
+Top-level Entity Name : SDRAM
 Family : Cyclone IV E
-Total logic elements : 41
-    Total combinational functions : 41
-    Dedicated logic registers : 20
-Total registers : 20
-Total pins : 20
+Total logic elements : 0
+    Total combinational functions : 0
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 193
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

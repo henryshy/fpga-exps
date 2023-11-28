@@ -1,5 +1,5 @@
 Flow report for SDRAM
-Sun Nov 26 19:05:37 2023
+Tue Nov 28 11:51:57 2023
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Sun Nov 26 19:05:37 2023           ;
+; Flow Status                        ; Successful - Tue Nov 28 11:51:57 2023           ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Standard Edition ;
 ; Revision Name                      ; SDRAM                                           ;
-; Top-level Entity Name              ; SDRAM_init                                      ;
+; Top-level Entity Name              ; SDRAM                                           ;
 ; Family                             ; Cyclone IV E                                    ;
 ; Device                             ; EP4CE10F17C8                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 41                                              ;
-;     Total combinational functions  ; 41                                              ;
-;     Dedicated logic registers      ; 20                                              ;
-; Total registers                    ; 20                                              ;
-; Total pins                         ; 20                                              ;
+; Total logic elements               ; 0                                               ;
+;     Total combinational functions  ; 0                                               ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 193                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -64,40 +64,41 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/26/2023 19:05:30 ;
+; Start date & time ; 11/28/2023 11:51:51 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; SDRAM               ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                             ;
-+--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
-+--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 103707086903038.170099673006016        ; --            ; --          ; --             ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; SDRAM_init_tb  ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; SDRAM_init_tb                          ; --            ; --          ; eda_simulation ;
-; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
-; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation ;
-; EDA_TEST_BENCH_FILE                  ; ../testbench/SDRAM_init_tb.v           ; --            ; --          ; SDRAM_init_tb  ;
-; EDA_TEST_BENCH_FILE                  ; ../rtl/sdr.v                           ; --            ; --          ; SDRAM_init_tb  ;
-; EDA_TEST_BENCH_FILE                  ; ../rtl/SDRAM_init.v                    ; --            ; --          ; SDRAM_init_tb  ;
-; EDA_TEST_BENCH_MODULE_NAME           ; SDRAM_init_tb                          ; --            ; --          ; SDRAM_init_tb  ;
-; EDA_TEST_BENCH_NAME                  ; SDRAM_init_tb                          ; --            ; --          ; eda_simulation ;
-; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation ;
-; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --             ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                   ; --            ; --          ; --             ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; SDRAM_init  ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; SDRAM_init  ; Top            ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; SDRAM_init  ; Top            ;
-; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --             ;
-; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
-; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                     ; SDRAM_init                             ; SDRAM         ; --          ; --             ;
-+--------------------------------------+----------------------------------------+---------------+-------------+----------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                               ;
++--------------------------------------+----------------------------------------+---------------+-------------+------------------+
+; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id       ;
++--------------------------------------+----------------------------------------+---------------+-------------+------------------+
+; COMPILER_SIGNATURE_ID                ; 40632979562199.170114351014680         ; --            ; --          ; --               ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; sdram_control_tb ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; sdram_control_tb                       ; --            ; --          ; eda_simulation   ;
+; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation   ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --               ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation   ;
+; EDA_TEST_BENCH_FILE                  ; ../rtl/params.h                        ; --            ; --          ; sdram_control_tb ;
+; EDA_TEST_BENCH_FILE                  ; ../rtl/sdr.v                           ; --            ; --          ; sdram_control_tb ;
+; EDA_TEST_BENCH_FILE                  ; ../rtl/sdram_init.v                    ; --            ; --          ; sdram_control_tb ;
+; EDA_TEST_BENCH_FILE                  ; ../rtl/sdram_control.v                 ; --            ; --          ; sdram_control_tb ;
+; EDA_TEST_BENCH_FILE                  ; ../testbench/sdram_control_tb.v        ; --            ; --          ; sdram_control_tb ;
+; EDA_TEST_BENCH_MODULE_NAME           ; sdram_control_tb                       ; --            ; --          ; sdram_control_tb ;
+; EDA_TEST_BENCH_NAME                  ; sdram_control_tb                       ; --            ; --          ; eda_simulation   ;
+; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation   ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --               ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --               ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                   ; --            ; --          ; --               ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; --          ; Top              ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; --          ; Top              ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; --          ; Top              ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --               ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --               ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --               ;
++--------------------------------------+----------------------------------------+---------------+-------------+------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -105,8 +106,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4835 MB             ; 00:00:05                           ;
-; Total                ; 00:00:08     ; --                      ; --                  ; 00:00:05                           ;
+; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4719 MB             ; 00:00:04                           ;
+; Total                ; 00:00:07     ; --                      ; --                  ; 00:00:04                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

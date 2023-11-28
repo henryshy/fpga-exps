@@ -1,3 +1,5 @@
 Warning (10273): Verilog HDL warning at sdr.v(982): extended using "x" or "z" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/sdr.v Line: 982
 Warning (10273): Verilog HDL warning at sdr.v(985): extended using "x" or "z" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/sdr.v Line: 985
 Warning (10268): Verilog HDL information at sdr.v(198): always construct contains both blocking and non-blocking assignments File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/sdr.v Line: 198
+Warning (10273): Verilog HDL warning at sdram_control.v(90): extended using "x" or "z" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/sdram_control.v Line: 90
+Info (10281): Verilog HDL Declaration information at params.h(35): object "AUTO_REF" differs only in case from object "auto_ref" in the same scope File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/params.h Line: 35

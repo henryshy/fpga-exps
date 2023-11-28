@@ -9,73 +9,118 @@ z2
 cModel Technology
 Z0 dC:/fpga/workspace/fpga-exps/SDRAM/proj/simulation/modelsim
 vsdr
-!s110 1700996750
+Z1 !s110 1701143524
 !i10b 1
 !s100 <VW5]CJI63aRkca4nk[6d1
-I4F5hLkoWQIVgR3YoUi<M23
-Z1 VDg1SIo80bB@j0V0VzS_@n1
+IE^LD9^>G?d?=<H<C2;>^V3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
 w1490413105
-8C:/fpga/workspace/fpga-exps/SDRAM/rtl/sdr.v
-FC:/fpga/workspace/fpga-exps/SDRAM/rtl/sdr.v
-FC:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl/sdr_parameters.h
+8C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl/sdr.v
+FC:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl/sdr.v
+Fsdr_parameters.h
 L0 48
-Z2 OV;L;10.5b;63
+Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1700996750.000000
-!s107 C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl/sdr_parameters.h|C:/fpga/workspace/fpga-exps/SDRAM/rtl/sdr.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl|C:/fpga/workspace/fpga-exps/SDRAM/rtl/sdr.v|
+Z4 !s108 1701143523.000000
+!s107 sdr_parameters.h|C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl/sdr.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl|C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl/sdr.v|
 !i113 1
-Z3 o-vlog01compat -work work
-Z4 !s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl
-Z5 tCvgOpt 0
-vSDRAM_init
-!s110 1700996751
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl
+Z7 tCvgOpt 0
+vSDRAM
+!s110 1701143523
 !i10b 1
-!s100 8?Fdlm;5X21VcgJeci2YM0
-IUgRmEcBFoJA<XXN:^EHa=1
-R1
-R0
-w1700996667
-8C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM_init.v
-FC:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM_init.v
-FC:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl/params.h
-L0 2
+!s100 X^b`K<m3=c:>B<j=aEFb53
+I9D[UFGYi?eS^o^UkMgOeO0
 R2
+R0
+w1701143444
+8C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v
+FC:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v
+Z8 Fparams.h
+L0 2
+R3
 r1
 !s85 0
 31
-!s108 1700996751.000000
-!s107 C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl/params.h|C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM_init.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl|C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM_init.v|
-!i113 1
-R3
 R4
+!s107 params.h|C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/SDRAM/rtl|C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v|
+!i113 1
 R5
-n@s@d@r@a@m_init
-vSDRAM_init_tb
-!s110 1700996752
-!i10b 1
-!s100 >h`5bEYb]V[dkRc[6lM^f0
-Ib@0;@o>C=`:c;0d2e=PLX1
+!s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/SDRAM/rtl
+R7
+n@s@d@r@a@m
+vsdram_control
 R1
+!i10b 1
+!s100 :czOWoU^GHWN=ig5iz00e0
+Idg?Z@nnc`L3dkE;X:c;zZ3
+R2
 R0
-w1700996728
-8C:/fpga/workspace/fpga-exps/SDRAM/testbench/SDRAM_init_tb.v
-FC:/fpga/workspace/fpga-exps/SDRAM/testbench/SDRAM_init_tb.v
+w1701084721
+8C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl/sdram_control.v
+FC:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl/sdram_control.v
+R8
+L0 2
+R3
+r1
+!s85 0
+31
+Z9 !s108 1701143524.000000
+!s107 params.h|C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl/sdram_control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl|C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl/sdram_control.v|
+!i113 1
+R5
+R6
+R7
+vsdram_control_tb
+R1
+!i10b 1
+!s100 ^3dFI9i154<PRdJLfbkZi3
+IUg_C;kIhRocG^35kbIN2_3
+R2
+R0
+w1701084923
+8C:/fpga/workspace/fpga-exps/SDRAM/proj/../testbench/sdram_control_tb.v
+FC:/fpga/workspace/fpga-exps/SDRAM/proj/../testbench/sdram_control_tb.v
 FC:/fpga/workspace/fpga-exps/SDRAM/proj/../testbench/../rtl/params.h
 L0 4
-R2
+R3
 r1
 !s85 0
 31
-!s108 1700996752.000000
-!s107 C:/fpga/workspace/fpga-exps/SDRAM/proj/../testbench/../rtl/params.h|C:/fpga/workspace/fpga-exps/SDRAM/testbench/SDRAM_init_tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/SDRAM/proj/../testbench|C:/fpga/workspace/fpga-exps/SDRAM/testbench/SDRAM_init_tb.v|
+R9
+!s107 C:/fpga/workspace/fpga-exps/SDRAM/proj/../testbench/../rtl/params.h|C:/fpga/workspace/fpga-exps/SDRAM/proj/../testbench/sdram_control_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/SDRAM/proj/../testbench|C:/fpga/workspace/fpga-exps/SDRAM/proj/../testbench/sdram_control_tb.v|
 !i113 1
-R3
-!s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/SDRAM/proj/../testbench
 R5
-n@s@d@r@a@m_init_tb
+!s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/SDRAM/proj/../testbench
+R7
+vsdram_init
+R1
+!i10b 1
+!s100 Kbc?]a:j^`LlnRlbV3Ie12
+I1mCIghXfiW1I:eFiF6FHP1
+R2
+R0
+w1701084723
+8C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl/sdram_init.v
+FC:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl/sdram_init.v
+R8
+L0 2
+R3
+r1
+!s85 0
+31
+R9
+!s107 params.h|C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl/sdram_init.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl|C:/fpga/workspace/fpga-exps/SDRAM/proj/../rtl/sdram_init.v|
+!i113 1
+R5
+R6
+R7

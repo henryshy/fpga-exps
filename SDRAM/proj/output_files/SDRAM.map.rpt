@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SDRAM
-Sun Nov 26 19:05:37 2023
+Tue Nov 28 11:51:57 2023
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
 
 
@@ -13,14 +13,12 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Inverted Register Statistics
- 11. Parameter Settings for User Entity Instance: Top-level Entity: |SDRAM_init
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
- 15. Analysis & Synthesis Suppressed Messages
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |SDRAM
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+ 13. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -46,16 +44,16 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Nov 26 19:05:37 2023           ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 28 11:51:57 2023           ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Standard Edition ;
 ; Revision Name                      ; SDRAM                                           ;
-; Top-level Entity Name              ; SDRAM_init                                      ;
+; Top-level Entity Name              ; SDRAM                                           ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 41                                              ;
-;     Total combinational functions  ; 41                                              ;
-;     Dedicated logic registers      ; 20                                              ;
-; Total registers                    ; 20                                              ;
-; Total pins                         ; 20                                              ;
+; Total logic elements               ; 0                                               ;
+;     Total combinational functions  ; 0                                               ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 193                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -69,7 +67,7 @@ refer to the applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP4CE10F17C8       ;                    ;
-; Top-level entity name                                                      ; SDRAM_init         ; SDRAM              ;
+; Top-level entity name                                                      ; SDRAM              ; SDRAM              ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -158,54 +156,52 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                     ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                       ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
-; ../rtl/params.h                  ; yes             ; User File              ; C:/fpga/workspace/fpga-exps/SDRAM/rtl/params.h     ;         ;
-; ../rtl/SDRAM_init.v              ; yes             ; User Verilog HDL File  ; C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM_init.v ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                 ;
++----------------------------------+-----------------+------------------------+------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                   ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------+---------+
+; ../rtl/SDRAM.v                   ; yes             ; User Verilog HDL File  ; C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v  ;         ;
+; ../rtl/params.h                  ; yes             ; User File              ; C:/fpga/workspace/fpga-exps/SDRAM/rtl/params.h ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 41        ;
-;                                             ;           ;
-; Total combinational functions               ; 41        ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 17        ;
-;     -- 3 input functions                    ; 6         ;
-;     -- <=2 input functions                  ; 18        ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 27        ;
-;     -- arithmetic mode                      ; 14        ;
-;                                             ;           ;
-; Total registers                             ; 20        ;
-;     -- Dedicated logic registers            ; 20        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 20        ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; CLK~input ;
-; Maximum fan-out                             ; 20        ;
-; Total fan-out                               ; 225       ;
-; Average fan-out                             ; 2.23      ;
-+---------------------------------------------+-----------+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+;                                             ;              ;
+; Total combinational functions               ; 0            ;
+; Logic element usage by number of LUT inputs ;              ;
+;     -- 4 input functions                    ; 0            ;
+;     -- 3 input functions                    ; 0            ;
+;     -- <=2 input functions                  ; 0            ;
+;                                             ;              ;
+; Logic elements by mode                      ;              ;
+;     -- normal mode                          ; 0            ;
+;     -- arithmetic mode                      ; 0            ;
+;                                             ;              ;
+; Total registers                             ; 0            ;
+;     -- Dedicated logic registers            ; 0            ;
+;     -- I/O registers                        ; 0            ;
+;                                             ;              ;
+; I/O pins                                    ; 193          ;
+;                                             ;              ;
+; Embedded Multiplier 9-bit elements          ; 0            ;
+;                                             ;              ;
+; Maximum fan-out node                        ; Dq[0]~output ;
+; Maximum fan-out                             ; 1            ;
+; Total fan-out                               ; 209          ;
+; Average fan-out                             ; 0.52         ;
++---------------------------------------------+--------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -213,30 +209,9 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |SDRAM_init                ; 41 (41)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 20   ; 0            ; |SDRAM_init         ; SDRAM_init  ; work         ;
+; |SDRAM                     ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 193  ; 0            ; |SDRAM              ; SDRAM       ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; command[3]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; saddr[12]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; saddr[11]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; saddr[9]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; saddr[8]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; saddr[7]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; saddr[6]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; saddr[3]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; saddr[2]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; saddr[1]~reg0                          ; Merged with saddr[0]~reg0              ;
-; saddr[4]~reg0                          ; Merged with saddr[0]~reg0              ;
-; saddr[5]~reg0                          ; Merged with saddr[0]~reg0              ;
-; Total Number of Removed Registers = 12 ;                                        ;
-+----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -244,54 +219,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 20    ;
-; Number of registers using Synchronous Clear  ; 15    ;
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 20    ;
+; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; command[0]~reg0                        ; 1       ;
-; command[1]~reg0                        ; 1       ;
-; command[2]~reg0                        ; 1       ;
-; Total number of inverted registers = 3 ;         ;
-+----------------------------------------+---------+
-
-
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |SDRAM_init ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; C_NOP          ; 0111  ; Unsigned Binary                                   ;
-; C_PRE          ; 0010  ; Unsigned Binary                                   ;
-; C_AREF         ; 0001  ; Unsigned Binary                                   ;
-; C_MSET         ; 0000  ; Unsigned Binary                                   ;
-; C_ACT          ; 0011  ; Unsigned Binary                                   ;
-; C_RD           ; 0101  ; Unsigned Binary                                   ;
-; C_WR           ; 0100  ; Unsigned Binary                                   ;
-; INIT_PRE       ; 20000 ; Signed Integer                                    ;
-; tRP            ; 3     ; Signed Integer                                    ;
-; tRFC           ; 10    ; Signed Integer                                    ;
-; tMRD           ; 2     ; Signed Integer                                    ;
-; AUTO_REF       ; 1560  ; Signed Integer                                    ;
-; WR_PRE         ; 2     ; Signed Integer                                    ;
-; SC_RCD         ; 3     ; Signed Integer                                    ;
-; SC_CL          ; 3     ; Signed Integer                                    ;
-; SC_BL          ; 8     ; Signed Integer                                    ;
-; OP_CODE        ; 0     ; Unsigned Binary                                   ;
-; SDR_BL         ; 011   ; Unsigned Binary                                   ;
-; SDR_BT         ; 0     ; Unsigned Binary                                   ;
-; SDR_CL         ; 011   ; Unsigned Binary                                   ;
-+----------------+-------+---------------------------------------------------+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |SDRAM ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; C_NOP          ; 0111  ; Unsigned Binary                              ;
+; C_PRE          ; 0010  ; Unsigned Binary                              ;
+; C_AREF         ; 0001  ; Unsigned Binary                              ;
+; C_MSET         ; 0000  ; Unsigned Binary                              ;
+; C_ACT          ; 0011  ; Unsigned Binary                              ;
+; C_RD           ; 0101  ; Unsigned Binary                              ;
+; C_WR           ; 0100  ; Unsigned Binary                              ;
+; INIT_PRE       ; 20000 ; Signed Integer                               ;
+; REF_PRE        ; 3     ; Signed Integer                               ;
+; REF_REF        ; 10    ; Signed Integer                               ;
+; AUTO_REF       ; 1560  ; Signed Integer                               ;
+; LMR_ACT        ; 2     ; Signed Integer                               ;
+; WR_PRE         ; 2     ; Signed Integer                               ;
+; SC_RCD         ; 3     ; Signed Integer                               ;
+; SC_CL          ; 3     ; Signed Integer                               ;
+; SC_BL          ; 8     ; Signed Integer                               ;
+; OP_CODE        ; 0     ; Unsigned Binary                              ;
+; SDR_BL         ; 011   ; Unsigned Binary                              ;
+; SDR_BT         ; 0     ; Unsigned Binary                              ;
+; SDR_CL         ; 011   ; Unsigned Binary                              ;
++----------------+-------+----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -300,22 +263,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 20                          ;
-; cycloneiii_ff         ; 20                          ;
-;     CLR               ; 5                           ;
-;     CLR SCLR          ; 15                          ;
-; cycloneiii_lcell_comb ; 45                          ;
-;     arith             ; 14                          ;
-;         2 data inputs ; 14                          ;
-;     normal            ; 31                          ;
+; boundary_port         ; 193                         ;
+; cycloneiii_io_obuf    ; 16                          ;
+; cycloneiii_lcell_comb ; 1                           ;
+;     normal            ; 1                           ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 3                           ;
-;         3 data inputs ; 6                           ;
-;         4 data inputs ; 17                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 3.45                        ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
 +-----------------------+-----------------------------+
 
 
@@ -334,45 +289,244 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
-    Info: Processing started: Sun Nov 26 19:05:29 2023
+    Info: Processing started: Tue Nov 28 11:51:50 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SDRAM -c SDRAM
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file /fpga/workspace/fpga-exps/sdram/rtl/sdr.v
-    Info (12023): Found entity 1: sdr File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/sdr.v Line: 48
 Info (12021): Found 1 design units, including 1 entities, in source file /fpga/workspace/fpga-exps/sdram/rtl/sdram.v
     Info (12023): Found entity 1: SDRAM File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga/workspace/fpga-exps/sdram/rtl/sdr.v
+    Info (12023): Found entity 1: sdr File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/sdr.v Line: 48
 Info (12021): Found 1 design units, including 1 entities, in source file /fpga/workspace/fpga-exps/sdram/rtl/sdram_init.v
-    Info (12023): Found entity 1: SDRAM_init File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM_init.v Line: 2
+    Info (12023): Found entity 1: sdram_init File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/sdram_init.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga/workspace/fpga-exps/sdram/rtl/sdram_control.v
+    Info (12023): Found entity 1: sdram_control File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/sdram_control.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file /fpga/workspace/fpga-exps/sdram/testbench/sdram_init_tb.v
-    Info (12023): Found entity 1: SDRAM_init_tb File: C:/fpga/workspace/fpga-exps/SDRAM/testbench/SDRAM_init_tb.v Line: 4
-Info (12127): Elaborating entity "SDRAM_init" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at SDRAM_init.v(38): truncated value with size 32 to match size of target (15) File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM_init.v Line: 38
-Info (13000): Registers with preset signals will power-up high File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM_init.v Line: 49
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+    Info (12023): Found entity 1: sdram_init_tb File: C:/fpga/workspace/fpga-exps/SDRAM/testbench/sdram_init_tb.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga/workspace/fpga-exps/sdram/testbench/sdram_control_tb.v
+    Info (12023): Found entity 1: sdram_control_tb File: C:/fpga/workspace/fpga-exps/SDRAM/testbench/sdram_control_tb.v Line: 4
+Info (12127): Elaborating entity "SDRAM" for the top level hierarchy
+Warning (10034): Output port "Wr_use" at SDRAM.v(49) has no driver File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 49
+Warning (10034): Output port "Rd_data" at SDRAM.v(51) has no driver File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 51
+Warning (10034): Output port "Rd_use" at SDRAM.v(58) has no driver File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 58
+Warning (10034): Output port "Sa" at SDRAM.v(60) has no driver File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 60
+Warning (10034): Output port "Ba" at SDRAM.v(61) has no driver File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 61
+Warning (10034): Output port "Dqm" at SDRAM.v(68) has no driver File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 68
+Warning (10034): Output port "Wr_full" at SDRAM.v(48) has no driver File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 48
+Warning (10034): Output port "Rd_empty" at SDRAM.v(57) has no driver File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 57
+Warning (10034): Output port "Cs_n" at SDRAM.v(62) has no driver File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 62
+Warning (10034): Output port "Cke" at SDRAM.v(63) has no driver File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 63
+Warning (10034): Output port "Ras_n" at SDRAM.v(64) has no driver File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 64
+Warning (10034): Output port "Cas_n" at SDRAM.v(65) has no driver File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 65
+Warning (10034): Output port "We_n" at SDRAM.v(66) has no driver File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 66
+Warning (13039): The following bidirectional pins have no drivers
+    Warning (13040): bidirectional pin "Dq[0]" has no driver File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 67
+    Warning (13040): bidirectional pin "Dq[1]" has no driver File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 67
+    Warning (13040): bidirectional pin "Dq[2]" has no driver File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 67
+    Warning (13040): bidirectional pin "Dq[3]" has no driver File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 67
+    Warning (13040): bidirectional pin "Dq[4]" has no driver File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 67
+    Warning (13040): bidirectional pin "Dq[5]" has no driver File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 67
+    Warning (13040): bidirectional pin "Dq[6]" has no driver File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 67
+    Warning (13040): bidirectional pin "Dq[7]" has no driver File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 67
+    Warning (13040): bidirectional pin "Dq[8]" has no driver File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 67
+    Warning (13040): bidirectional pin "Dq[9]" has no driver File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 67
+    Warning (13040): bidirectional pin "Dq[10]" has no driver File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 67
+    Warning (13040): bidirectional pin "Dq[11]" has no driver File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 67
+    Warning (13040): bidirectional pin "Dq[12]" has no driver File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 67
+    Warning (13040): bidirectional pin "Dq[13]" has no driver File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 67
+    Warning (13040): bidirectional pin "Dq[14]" has no driver File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 67
+    Warning (13040): bidirectional pin "Dq[15]" has no driver File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 67
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "command[3]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM_init.v Line: 49
-    Warning (13410): Pin "saddr[2]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM_init.v Line: 49
-    Warning (13410): Pin "saddr[3]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM_init.v Line: 49
-    Warning (13410): Pin "saddr[6]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM_init.v Line: 49
-    Warning (13410): Pin "saddr[7]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM_init.v Line: 49
-    Warning (13410): Pin "saddr[8]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM_init.v Line: 49
-    Warning (13410): Pin "saddr[9]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM_init.v Line: 49
-    Warning (13410): Pin "saddr[11]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM_init.v Line: 49
-    Warning (13410): Pin "saddr[12]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM_init.v Line: 49
-Info (286030): Timing-Driven Synthesis is running
+    Warning (13410): Pin "Wr_full" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 48
+    Warning (13410): Pin "Wr_use[0]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 49
+    Warning (13410): Pin "Wr_use[1]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 49
+    Warning (13410): Pin "Wr_use[2]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 49
+    Warning (13410): Pin "Wr_use[3]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 49
+    Warning (13410): Pin "Wr_use[4]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 49
+    Warning (13410): Pin "Wr_use[5]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 49
+    Warning (13410): Pin "Wr_use[6]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 49
+    Warning (13410): Pin "Wr_use[7]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 49
+    Warning (13410): Pin "Rd_data[0]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 51
+    Warning (13410): Pin "Rd_data[1]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 51
+    Warning (13410): Pin "Rd_data[2]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 51
+    Warning (13410): Pin "Rd_data[3]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 51
+    Warning (13410): Pin "Rd_data[4]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 51
+    Warning (13410): Pin "Rd_data[5]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 51
+    Warning (13410): Pin "Rd_data[6]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 51
+    Warning (13410): Pin "Rd_data[7]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 51
+    Warning (13410): Pin "Rd_data[8]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 51
+    Warning (13410): Pin "Rd_data[9]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 51
+    Warning (13410): Pin "Rd_data[10]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 51
+    Warning (13410): Pin "Rd_data[11]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 51
+    Warning (13410): Pin "Rd_data[12]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 51
+    Warning (13410): Pin "Rd_data[13]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 51
+    Warning (13410): Pin "Rd_data[14]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 51
+    Warning (13410): Pin "Rd_data[15]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 51
+    Warning (13410): Pin "Rd_empty" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 57
+    Warning (13410): Pin "Rd_use[0]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 58
+    Warning (13410): Pin "Rd_use[1]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 58
+    Warning (13410): Pin "Rd_use[2]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 58
+    Warning (13410): Pin "Rd_use[3]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 58
+    Warning (13410): Pin "Rd_use[4]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 58
+    Warning (13410): Pin "Rd_use[5]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 58
+    Warning (13410): Pin "Rd_use[6]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 58
+    Warning (13410): Pin "Rd_use[7]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 58
+    Warning (13410): Pin "Sa[0]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 60
+    Warning (13410): Pin "Sa[1]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 60
+    Warning (13410): Pin "Sa[2]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 60
+    Warning (13410): Pin "Sa[3]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 60
+    Warning (13410): Pin "Sa[4]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 60
+    Warning (13410): Pin "Sa[5]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 60
+    Warning (13410): Pin "Sa[6]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 60
+    Warning (13410): Pin "Sa[7]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 60
+    Warning (13410): Pin "Sa[8]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 60
+    Warning (13410): Pin "Sa[9]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 60
+    Warning (13410): Pin "Sa[10]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 60
+    Warning (13410): Pin "Sa[11]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 60
+    Warning (13410): Pin "Sa[12]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 60
+    Warning (13410): Pin "Ba[0]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 61
+    Warning (13410): Pin "Ba[1]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 61
+    Warning (13410): Pin "Cs_n" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 62
+    Warning (13410): Pin "Cke" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 63
+    Warning (13410): Pin "Ras_n" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 64
+    Warning (13410): Pin "Cas_n" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 65
+    Warning (13410): Pin "We_n" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 66
+    Warning (13410): Pin "Dqm[0]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 68
+    Warning (13410): Pin "Dqm[1]" is stuck at GND File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 68
 Info (144001): Generated suppressed messages file C:/fpga/workspace/fpga-exps/SDRAM/proj/output_files/SDRAM.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 61 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 18 output pins
-    Info (21061): Implemented 41 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 4835 megabytes
-    Info: Processing ended: Sun Nov 26 19:05:37 2023
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:05
+Warning (21074): Design contains 121 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "Clk" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 38
+    Warning (15610): No output dependent on input pin "Rst_n" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 39
+    Warning (15610): No output dependent on input pin "Sd_clk" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 40
+    Warning (15610): No output dependent on input pin "Wr_data[0]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 42
+    Warning (15610): No output dependent on input pin "Wr_data[1]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 42
+    Warning (15610): No output dependent on input pin "Wr_data[2]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 42
+    Warning (15610): No output dependent on input pin "Wr_data[3]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 42
+    Warning (15610): No output dependent on input pin "Wr_data[4]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 42
+    Warning (15610): No output dependent on input pin "Wr_data[5]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 42
+    Warning (15610): No output dependent on input pin "Wr_data[6]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 42
+    Warning (15610): No output dependent on input pin "Wr_data[7]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 42
+    Warning (15610): No output dependent on input pin "Wr_data[8]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 42
+    Warning (15610): No output dependent on input pin "Wr_data[9]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 42
+    Warning (15610): No output dependent on input pin "Wr_data[10]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 42
+    Warning (15610): No output dependent on input pin "Wr_data[11]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 42
+    Warning (15610): No output dependent on input pin "Wr_data[12]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 42
+    Warning (15610): No output dependent on input pin "Wr_data[13]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 42
+    Warning (15610): No output dependent on input pin "Wr_data[14]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 42
+    Warning (15610): No output dependent on input pin "Wr_data[15]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 42
+    Warning (15610): No output dependent on input pin "Wr_en" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 43
+    Warning (15610): No output dependent on input pin "Wr_addr[0]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 44
+    Warning (15610): No output dependent on input pin "Wr_addr[1]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 44
+    Warning (15610): No output dependent on input pin "Wr_addr[2]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 44
+    Warning (15610): No output dependent on input pin "Wr_addr[3]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 44
+    Warning (15610): No output dependent on input pin "Wr_addr[4]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 44
+    Warning (15610): No output dependent on input pin "Wr_addr[5]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 44
+    Warning (15610): No output dependent on input pin "Wr_addr[6]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 44
+    Warning (15610): No output dependent on input pin "Wr_addr[7]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 44
+    Warning (15610): No output dependent on input pin "Wr_addr[8]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 44
+    Warning (15610): No output dependent on input pin "Wr_addr[9]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 44
+    Warning (15610): No output dependent on input pin "Wr_addr[10]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 44
+    Warning (15610): No output dependent on input pin "Wr_addr[11]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 44
+    Warning (15610): No output dependent on input pin "Wr_addr[12]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 44
+    Warning (15610): No output dependent on input pin "Wr_addr[13]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 44
+    Warning (15610): No output dependent on input pin "Wr_addr[14]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 44
+    Warning (15610): No output dependent on input pin "Wr_addr[15]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 44
+    Warning (15610): No output dependent on input pin "Wr_addr[16]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 44
+    Warning (15610): No output dependent on input pin "Wr_addr[17]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 44
+    Warning (15610): No output dependent on input pin "Wr_addr[18]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 44
+    Warning (15610): No output dependent on input pin "Wr_addr[19]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 44
+    Warning (15610): No output dependent on input pin "Wr_addr[20]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 44
+    Warning (15610): No output dependent on input pin "Wr_addr[21]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 44
+    Warning (15610): No output dependent on input pin "Wr_addr[22]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 44
+    Warning (15610): No output dependent on input pin "Wr_addr[23]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 44
+    Warning (15610): No output dependent on input pin "Wr_max_addr[0]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 45
+    Warning (15610): No output dependent on input pin "Wr_max_addr[1]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 45
+    Warning (15610): No output dependent on input pin "Wr_max_addr[2]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 45
+    Warning (15610): No output dependent on input pin "Wr_max_addr[3]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 45
+    Warning (15610): No output dependent on input pin "Wr_max_addr[4]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 45
+    Warning (15610): No output dependent on input pin "Wr_max_addr[5]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 45
+    Warning (15610): No output dependent on input pin "Wr_max_addr[6]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 45
+    Warning (15610): No output dependent on input pin "Wr_max_addr[7]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 45
+    Warning (15610): No output dependent on input pin "Wr_max_addr[8]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 45
+    Warning (15610): No output dependent on input pin "Wr_max_addr[9]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 45
+    Warning (15610): No output dependent on input pin "Wr_max_addr[10]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 45
+    Warning (15610): No output dependent on input pin "Wr_max_addr[11]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 45
+    Warning (15610): No output dependent on input pin "Wr_max_addr[12]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 45
+    Warning (15610): No output dependent on input pin "Wr_max_addr[13]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 45
+    Warning (15610): No output dependent on input pin "Wr_max_addr[14]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 45
+    Warning (15610): No output dependent on input pin "Wr_max_addr[15]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 45
+    Warning (15610): No output dependent on input pin "Wr_max_addr[16]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 45
+    Warning (15610): No output dependent on input pin "Wr_max_addr[17]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 45
+    Warning (15610): No output dependent on input pin "Wr_max_addr[18]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 45
+    Warning (15610): No output dependent on input pin "Wr_max_addr[19]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 45
+    Warning (15610): No output dependent on input pin "Wr_max_addr[20]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 45
+    Warning (15610): No output dependent on input pin "Wr_max_addr[21]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 45
+    Warning (15610): No output dependent on input pin "Wr_max_addr[22]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 45
+    Warning (15610): No output dependent on input pin "Wr_max_addr[23]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 45
+    Warning (15610): No output dependent on input pin "Wr_load" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 46
+    Warning (15610): No output dependent on input pin "Wr_clk" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 47
+    Warning (15610): No output dependent on input pin "Rd_en" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 52
+    Warning (15610): No output dependent on input pin "Rd_addr[0]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 53
+    Warning (15610): No output dependent on input pin "Rd_addr[1]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 53
+    Warning (15610): No output dependent on input pin "Rd_addr[2]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 53
+    Warning (15610): No output dependent on input pin "Rd_addr[3]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 53
+    Warning (15610): No output dependent on input pin "Rd_addr[4]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 53
+    Warning (15610): No output dependent on input pin "Rd_addr[5]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 53
+    Warning (15610): No output dependent on input pin "Rd_addr[6]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 53
+    Warning (15610): No output dependent on input pin "Rd_addr[7]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 53
+    Warning (15610): No output dependent on input pin "Rd_addr[8]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 53
+    Warning (15610): No output dependent on input pin "Rd_addr[9]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 53
+    Warning (15610): No output dependent on input pin "Rd_addr[10]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 53
+    Warning (15610): No output dependent on input pin "Rd_addr[11]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 53
+    Warning (15610): No output dependent on input pin "Rd_addr[12]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 53
+    Warning (15610): No output dependent on input pin "Rd_addr[13]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 53
+    Warning (15610): No output dependent on input pin "Rd_addr[14]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 53
+    Warning (15610): No output dependent on input pin "Rd_addr[15]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 53
+    Warning (15610): No output dependent on input pin "Rd_addr[16]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 53
+    Warning (15610): No output dependent on input pin "Rd_addr[17]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 53
+    Warning (15610): No output dependent on input pin "Rd_addr[18]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 53
+    Warning (15610): No output dependent on input pin "Rd_addr[19]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 53
+    Warning (15610): No output dependent on input pin "Rd_addr[20]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 53
+    Warning (15610): No output dependent on input pin "Rd_addr[21]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 53
+    Warning (15610): No output dependent on input pin "Rd_addr[22]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 53
+    Warning (15610): No output dependent on input pin "Rd_addr[23]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 53
+    Warning (15610): No output dependent on input pin "Rd_max_addr[0]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 54
+    Warning (15610): No output dependent on input pin "Rd_max_addr[1]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 54
+    Warning (15610): No output dependent on input pin "Rd_max_addr[2]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 54
+    Warning (15610): No output dependent on input pin "Rd_max_addr[3]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 54
+    Warning (15610): No output dependent on input pin "Rd_max_addr[4]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 54
+    Warning (15610): No output dependent on input pin "Rd_max_addr[5]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 54
+    Warning (15610): No output dependent on input pin "Rd_max_addr[6]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 54
+    Warning (15610): No output dependent on input pin "Rd_max_addr[7]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 54
+    Warning (15610): No output dependent on input pin "Rd_max_addr[8]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 54
+    Warning (15610): No output dependent on input pin "Rd_max_addr[9]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 54
+    Warning (15610): No output dependent on input pin "Rd_max_addr[10]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 54
+    Warning (15610): No output dependent on input pin "Rd_max_addr[11]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 54
+    Warning (15610): No output dependent on input pin "Rd_max_addr[12]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 54
+    Warning (15610): No output dependent on input pin "Rd_max_addr[13]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 54
+    Warning (15610): No output dependent on input pin "Rd_max_addr[14]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 54
+    Warning (15610): No output dependent on input pin "Rd_max_addr[15]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 54
+    Warning (15610): No output dependent on input pin "Rd_max_addr[16]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 54
+    Warning (15610): No output dependent on input pin "Rd_max_addr[17]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 54
+    Warning (15610): No output dependent on input pin "Rd_max_addr[18]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 54
+    Warning (15610): No output dependent on input pin "Rd_max_addr[19]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 54
+    Warning (15610): No output dependent on input pin "Rd_max_addr[20]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 54
+    Warning (15610): No output dependent on input pin "Rd_max_addr[21]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 54
+    Warning (15610): No output dependent on input pin "Rd_max_addr[22]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 54
+    Warning (15610): No output dependent on input pin "Rd_max_addr[23]" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 54
+    Warning (15610): No output dependent on input pin "Rd_load" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 55
+    Warning (15610): No output dependent on input pin "Rd_clk" File: C:/fpga/workspace/fpga-exps/SDRAM/rtl/SDRAM.v Line: 56
+Info (21057): Implemented 193 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 121 input pins
+    Info (21059): Implemented 56 output pins
+    Info (21060): Implemented 16 bidirectional pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 210 warnings
+    Info: Peak virtual memory: 4733 megabytes
+    Info: Processing ended: Tue Nov 28 11:51:57 2023
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:04
 
 
 +------------------------------------------+

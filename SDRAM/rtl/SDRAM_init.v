@@ -1,73 +1,75 @@
 
-module SDRAM_init( //clk 100m 
-
-	CLK,
-	RST_N,
-	command,
-	saddr,
-	init_done
+module sdram_init(
+	Clk,
+	Rst_n,
+	Command,
+	Saddr,
+	Init_done
 );
 
-`include "params.h"
-	input CLK;
-	
-	input RST_N;
-	
-	output reg [3:0]command;
-	output reg [`ASIZE-1:0]saddr;
-	output  init_done;
-	
+`include        "params.h"
 
-	localparam 
-		init_PRE_TIME  = INIT_PRE ,
-		init_REF_TIME1 = INIT_PRE + tRP ,
-		init_REF_TIME2 = INIT_PRE + tRP + tRFC,
-		init_LMR_TIME  = INIT_PRE + tRP + tRFC + tRFC ,
-		init_END_TIME  = INIT_PRE + tRP + tRFC + tRFC +tMRD ;
-		
-		
-	reg [14:0]init_CNT;
-	assign init_done = (init_CNT == init_END_TIME);
-//	always@(posedge CLK or negedge RST_N)
-//		if(!RST_N)	
+	input                   Clk;       //系统时钟信号
+	input                   Rst_n;     //系统复位信号
+	output reg [3:0]        Command;   //SDRAM命令信号
+	output reg [`ASIZE-1:0] Saddr;     //SDRAM地址信号
+	output                  Init_done; //初始化完成标识位
 
-	always@(posedge CLK or negedge RST_N)
-		if(!RST_N)
-			init_CNT <= 0;
-		else if(init_CNT < init_END_TIME)
-			init_CNT <= init_CNT + 1;
-		else 
-			init_CNT <= 0;
+	localparam init_PRE_TIME   = INIT_PRE,
+	           init_AREF1_TIME = INIT_PRE+REF_PRE,
+				  init_AREF2_TIME = INIT_PRE+REF_PRE+REF_REF,
+				  init_LMR_TIME   = INIT_PRE+REF_PRE+REF_REF*2,
+				  init_END_TIME   = INIT_PRE+REF_PRE+REF_REF*2+LMR_ACT;
 	
-	
-	always@(posedge CLK or negedge RST_N)
-		if(!RST_N) begin
-			command <= C_NOP;
-			saddr <= 0;
-		end
+	//SDRAM初始化过程时间计数器
+	reg [15:0]init_cnt;
+	always@(posedge Clk or negedge Rst_n)
+	begin
+		if(!Rst_n)
+			init_cnt <= 16'd0;
+		else if(init_cnt < init_END_TIME)
+			init_cnt <= init_cnt + 16'd1;
 		else
-			case(init_CNT)
-				0              : command <= C_NOP;
-									
-				init_PRE_TIME  : begin 
-					command <= C_PRE;
-					saddr[10] <= 1; 
-				end
-				init_REF_TIME1 : begin
-					command <= C_AREF;
-				end	
-				init_REF_TIME2 : begin
-					command <= C_AREF;
-				end
-					
-				init_LMR_TIME  : begin
-					command <= C_MSET;
-					saddr   <= {2'b00,OP_CODE,2'b00,SDR_CL,SDR_BT,SDR_BL};
-				end
-				default: begin
-					command <= C_NOP;
-					saddr <= 0;
-				end 
-			endcase
+			init_cnt <= 16'd0;
+	end
+	
+	//SDRAM初始化完成结束标志位
+	assign Init_done = (init_cnt == init_END_TIME);	
 
-endmodule
+	//SDRAM初始化过程，类似线性序列机
+	//相应时刻发出对应的命令和操作
+	always@(posedge Clk or negedge Rst_n)
+	begin
+		if(!Rst_n)begin
+			Command   <= C_NOP;
+			Saddr     <= 0;
+		end
+		else begin		
+			case(init_cnt)
+				init_PRE_TIME:begin
+					Command   <= C_PRE;
+					Saddr[10] <= 1'b1;
+				end
+				
+				init_AREF1_TIME:begin
+					Command <= C_AREF;
+				end
+				
+				init_AREF2_TIME:begin
+					Command <= C_AREF;
+				end
+				
+				init_LMR_TIME:begin
+					Command <= C_MSET;
+					Saddr   <= {OP_CODE,2'b00,SDR_CL,SDR_BT,SDR_BL};
+				end
+				
+				default:begin
+					Command <= C_NOP;
+					Saddr   <= 0;
+				end	
+			endcase
+		end
+	end
+
+endmodule 

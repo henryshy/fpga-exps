@@ -2,52 +2,7 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : [
-				{
-					"name" : "command[0]",
-					"strict" : false
-				},
-				{
-					"name" : "command[1]",
-					"strict" : false
-				},
-				{
-					"name" : "command[2]",
-					"strict" : false
-				},
-				{
-					"name" : "saddr[0]",
-					"strict" : false
-				},
-				{
-					"name" : "saddr[1]",
-					"strict" : false
-				},
-				{
-					"name" : "saddr[4]",
-					"strict" : false
-				},
-				{
-					"name" : "saddr[5]",
-					"strict" : false
-				},
-				{
-					"name" : "saddr[10]",
-					"strict" : false
-				},
-				{
-					"name" : "init_done",
-					"strict" : false
-				},
-				{
-					"name" : "CLK",
-					"strict" : false
-				},
-				{
-					"name" : "RST_N",
-					"strict" : false
-				}
-			]
+			"pins" : []
 		}
 	]
 }

@@ -1,11 +1,15 @@
-module SDRAM( //clk 100m 
+
+module sdram_top( //clk 100m 
 
 	CLK,
+	RST_N,
 	CKE,
+	
 	CS_N,
 	RAS_N,
 	CAS_N,
 	WE_N,
+	
 	BA,
 	A,
 	DQM,
@@ -14,30 +18,21 @@ module SDRAM( //clk 100m
 );
 
 	input CLK;
-	input CKE;
-	input CS_N;
-	input RAS_N;
-	input CAS_N;
-	input WE_N;
-	input [1:0]BA;
-	input [12:0]A;
+	
+	input RST_N;
+	
+	output reg CKE;
+	
+	output reg CS_N;
+	output reg RAS_N;
+	output reg CAS_N;
+	output reg WE_N;
+	
+	output [1:0]BA;
+	inout [12:0]A;
 	input [1:0]DQM;
 	inout [15:0]DQ;
 	
-	
-	localparam 
-		tRP  = 3,
-		tRFC = 10,
-		tMRD = 6,
-		INIT_PRE = 200000;
-	
-	localparam 
-		init_PRE_TIME  = INIT_PRE,
-		init_REF_TIME1 = INIT_PRE + tRP,
-		init_REF_TIME2 = INIT_PRE + tRP + tRFC,
-		init_LMR_TIME  = INIT_PRE + tRP + tRFC + tRFC,
-		init_END_TIME  = INIT_PRE + tRP + tRFC + tRFC +tMRD;
-		
-		
+
 
 endmodule
