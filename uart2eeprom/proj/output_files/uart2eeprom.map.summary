@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Wed Nov 29 19:00:44 2023
+Analysis & Synthesis Status : Successful - Fri Dec 01 22:25:54 2023
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
 Revision Name : uart2eeprom
 Top-level Entity Name : i2c_control
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 0
-Total pins : 4
+Total registers : 82
+Total pins : 58
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

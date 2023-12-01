@@ -1,5 +1,5 @@
 Analysis & Synthesis report for uart2eeprom
-Wed Nov 29 19:00:44 2023
+Fri Dec 01 22:25:54 2023
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
 
 
@@ -13,9 +13,9 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
+  8. State Machine - |i2c_control|state
+  9. General Register Statistics
+ 10. Inverted Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
  12. Parameter Settings for User Entity Instance: Top-level Entity: |i2c_control
  13. Post-Synthesis Netlist Statistics for Top Partition
@@ -46,14 +46,14 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Nov 29 19:00:44 2023           ;
+; Analysis & Synthesis Status     ; Successful - Fri Dec 01 22:25:54 2023           ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Standard Edition ;
 ; Revision Name                   ; uart2eeprom                                     ;
 ; Top-level Entity Name           ; i2c_control                                     ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 0                                               ;
-; Total pins                      ; 4                                               ;
+; Total registers                 ; 82                                              ;
+; Total pins                      ; 58                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
 ; Total DSP Blocks                ; 0                                               ;
@@ -162,10 +162,11 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -178,31 +179,31 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------+-----------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Estimate of Logic utilization (ALMs needed) ; 0          ;
-;                                             ;            ;
-; Combinational ALUT usage for logic          ; 0          ;
-;     -- 7 input functions                    ; 0          ;
-;     -- 6 input functions                    ; 0          ;
-;     -- 5 input functions                    ; 0          ;
-;     -- 4 input functions                    ; 0          ;
-;     -- <=3 input functions                  ; 0          ;
-;                                             ;            ;
-; Dedicated logic registers                   ; 0          ;
-;                                             ;            ;
-; I/O pins                                    ; 4          ;
-;                                             ;            ;
-; Total DSP Blocks                            ; 0          ;
-;                                             ;            ;
-; Maximum fan-out node                        ; SDA~output ;
-; Maximum fan-out                             ; 1          ;
-; Total fan-out                               ; 5          ;
-; Average fan-out                             ; 0.56       ;
-+---------------------------------------------+------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 119       ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 177       ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 59        ;
+;     -- 5 input functions                    ; 33        ;
+;     -- 4 input functions                    ; 25        ;
+;     -- <=3 input functions                  ; 60        ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 82        ;
+;                                             ;           ;
+; I/O pins                                    ; 58        ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 82        ;
+; Total fan-out                               ; 1126      ;
+; Average fan-out                             ; 2.99      ;
++---------------------------------------------+-----------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -210,41 +211,27 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |i2c_control               ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 4    ; 0            ; |i2c_control        ; i2c_control ; work         ;
+; |i2c_control               ; 177 (177)           ; 82 (82)                   ; 0                 ; 0          ; 58   ; 0            ; |i2c_control        ; i2c_control ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                   ;
-+----------------------------------------+---------------------------------------------+
-; Register name                          ; Reason for Removal                          ;
-+----------------------------------------+---------------------------------------------+
-; state[3..8]                            ; Stuck at GND due to stuck port data_in      ;
-; control_byte[7]                        ; Stuck at GND due to stuck port data_in      ;
-; scl_low                                ; Lost fanout                                 ;
-; state[0]                               ; Stuck at VCC due to stuck port data_in      ;
-; i2c_sda_od                             ; Stuck at VCC due to stuck port clock_enable ;
-; state[1]                               ; Stuck at GND due to stuck port clock_enable ;
-; scl_high                               ; Lost fanout                                 ;
-; state[2]                               ; Stuck at GND due to stuck port data_in      ;
-; aoe                                    ; Lost fanout                                 ;
-; scl_cnt[0..15]                         ; Lost fanout                                 ;
-; Total Number of Removed Registers = 30 ;                                             ;
-+----------------------------------------+---------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                              ;
-+-----------------+---------------------------+--------------------------------------------------------------------------------------------+
-; Register name   ; Reason for Removal        ; Registers Removed due to This Register                                                     ;
-+-----------------+---------------------------+--------------------------------------------------------------------------------------------+
-; control_byte[7] ; Stuck at GND              ; scl_low, i2c_sda_od, aoe, scl_cnt[15], scl_cnt[14], scl_cnt[13], scl_cnt[12], scl_cnt[11], ;
-;                 ; due to stuck port data_in ; scl_cnt[10], scl_cnt[9], scl_cnt[8], scl_cnt[7], scl_cnt[6], scl_cnt[5], scl_cnt[4],       ;
-;                 ;                           ; scl_cnt[3], scl_cnt[2], scl_cnt[1], scl_cnt[0]                                             ;
-; state[0]        ; Stuck at VCC              ; scl_high                                                                                   ;
-;                 ; due to stuck port data_in ;                                                                                            ;
-+-----------------+---------------------------+--------------------------------------------------------------------------------------------+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |i2c_control|state                                                                                                                                                         ;
++---------------------+---------------+-----------------+--------------------+------------------+------------------+------------------+---------------------+-------------------+------------+
+; Name                ; state.opt_end ; state.read_data ; state.read_control ; state.read_begin ; state.write_data ; state.write_addr ; state.write_control ; state.write_begin ; state.idle ;
++---------------------+---------------+-----------------+--------------------+------------------+------------------+------------------+---------------------+-------------------+------------+
+; state.idle          ; 0             ; 0               ; 0                  ; 0                ; 0                ; 0                ; 0                   ; 0                 ; 0          ;
+; state.write_begin   ; 0             ; 0               ; 0                  ; 0                ; 0                ; 0                ; 0                   ; 1                 ; 1          ;
+; state.write_control ; 0             ; 0               ; 0                  ; 0                ; 0                ; 0                ; 1                   ; 0                 ; 1          ;
+; state.write_addr    ; 0             ; 0               ; 0                  ; 0                ; 0                ; 1                ; 0                   ; 0                 ; 1          ;
+; state.write_data    ; 0             ; 0               ; 0                  ; 0                ; 1                ; 0                ; 0                   ; 0                 ; 1          ;
+; state.read_begin    ; 0             ; 0               ; 0                  ; 1                ; 0                ; 0                ; 0                   ; 0                 ; 1          ;
+; state.read_control  ; 0             ; 0               ; 1                  ; 0                ; 0                ; 0                ; 0                   ; 0                 ; 1          ;
+; state.read_data     ; 0             ; 1               ; 0                  ; 0                ; 0                ; 0                ; 0                   ; 0                 ; 1          ;
+; state.opt_end       ; 1             ; 0               ; 0                  ; 0                ; 0                ; 0                ; 0                   ; 0                 ; 1          ;
++---------------------+---------------+-----------------+--------------------+------------------+------------------+------------------+---------------------+-------------------+------------+
 
 
 +------------------------------------------------------+
@@ -252,23 +239,39 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 82    ;
+; Number of registers using Synchronous Clear  ; 31    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 65    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 47    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; Yes        ; |i2c_control|state[1]      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; rdata_cnt[0]                           ; 2       ;
+; waddr_cnt[0]                           ; 11      ;
+; wdata_cnt[0]                           ; 6       ;
+; SCL~reg0                               ; 2       ;
+; Total number of inverted registers = 4 ;         ;
++----------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |i2c_control|half_bit[0]     ;
+; 14:1               ; 4 bits    ; 36 LEs        ; 12 LEs               ; 24 LEs                 ; Yes        ; |i2c_control|sda_data_out[4] ;
+; 14:1               ; 3 bits    ; 27 LEs        ; 12 LEs               ; 15 LEs                 ; Yes        ; |i2c_control|sda_data_out[3] ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |i2c_control|wdata_cnt       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
@@ -287,14 +290,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
+; arriav_ff             ; 82                          ;
+;     CLR               ; 19                          ;
+;     CLR SCLR          ; 16                          ;
+;     ENA               ; 17                          ;
+;     ENA CLR           ; 15                          ;
+;     ENA CLR SCLR      ; 15                          ;
 ; arriav_io_obuf        ; 1                           ;
-; arriav_lcell_comb     ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
-; boundary_port         ; 4                           ;
+; arriav_lcell_comb     ; 178                         ;
+;     arith             ; 32                          ;
+;         1 data inputs ; 30                          ;
+;         2 data inputs ; 2                           ;
+;     normal            ; 146                         ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 17                          ;
+;         3 data inputs ; 10                          ;
+;         4 data inputs ; 25                          ;
+;         5 data inputs ; 33                          ;
+;         6 data inputs ; 59                          ;
+; boundary_port         ; 58                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 2.32                        ;
 +-----------------------+-----------------------------+
 
 
@@ -313,7 +330,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
-    Info: Processing started: Wed Nov 29 19:00:36 2023
+    Info: Processing started: Fri Dec 01 22:25:46 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off uart2eeprom -c uart2eeprom
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -322,47 +339,17 @@ Info (12021): Found 1 design units, including 1 entities, in source file /fpga/w
 Info (12021): Found 1 design units, including 1 entities, in source file /fpga/workspace/fpga-exps/uart2eeprom/rtl/uart2eeprom.v
     Info (12023): Found entity 1: uart2eeprom File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/uart2eeprom.v Line: 1
 Info (12127): Elaborating entity "i2c_control" for the top level hierarchy
-Warning (10858): Verilog HDL warning at i2c_control.v(34): object done used but never assigned File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v Line: 34
-Warning (10858): Verilog HDL warning at i2c_control.v(35): object rd used but never assigned File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v Line: 35
-Warning (10858): Verilog HDL warning at i2c_control.v(36): object wr used but never assigned File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v Line: 36
-Warning (10858): Verilog HDL warning at i2c_control.v(118): object word_addr used but never assigned File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v Line: 118
-Warning (10036): Verilog HDL or VHDL warning at i2c_control.v(121): object "sda_r" assigned a value but never read File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v Line: 121
-Warning (10036): Verilog HDL or VHDL warning at i2c_control.v(122): object "bit_cnt" assigned a value but never read File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v Line: 122
-Warning (10230): Verilog HDL assignment warning at i2c_control.v(57): truncated value with size 32 to match size of target (16) File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v Line: 57
-Warning (10242): Verilog HDL Function Declaration warning at i2c_control.v(133): variable "bit_cnt" may have a Don't Care value because it may not be assigned a value in every possible path through the statements preceding its use File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v Line: 133
-Warning (10242): Verilog HDL Function Declaration warning at i2c_control.v(134): variable "bit_cnt" may have a Don't Care value because it may not be assigned a value in every possible path through the statements preceding its use File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v Line: 134
-Warning (10242): Verilog HDL Function Declaration warning at i2c_control.v(145): variable "bit_cnt" may have a Don't Care value because it may not be assigned a value in every possible path through the statements preceding its use File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v Line: 145
-Warning (10230): Verilog HDL assignment warning at i2c_control.v(145): truncated value with size 32 to match size of target (4) File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v Line: 145
-Warning (10242): Verilog HDL Function Declaration warning at i2c_control.v(147): variable "bit_cnt" may have a Don't Care value because it may not be assigned a value in every possible path through the statements preceding its use File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v Line: 147
-Warning (10242): Verilog HDL Function Declaration warning at i2c_control.v(149): variable "bit_cnt" may have a Don't Care value because it may not be assigned a value in every possible path through the statements preceding its use File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v Line: 149
-Warning (10230): Verilog HDL assignment warning at i2c_control.v(155): truncated value with size 9 to match size of target (1) File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v Line: 155
-Warning (10242): Verilog HDL Function Declaration warning at i2c_control.v(162): variable "bit_cnt" may have a Don't Care value because it may not be assigned a value in every possible path through the statements preceding its use File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v Line: 162
-Warning (10776): Verilog HDL warning at i2c_control.v(129): variable i2c_sda_od in static task or function send8bit may have unintended latch behavior File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v Line: 129
-Warning (10776): Verilog HDL warning at i2c_control.v(131): variable bit_cnt in static task or function send8bit may have unintended latch behavior File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v Line: 131
-Warning (10776): Verilog HDL warning at i2c_control.v(130): variable state in static task or function send8bit may have unintended latch behavior File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v Line: 130
-Info (10264): Verilog HDL Case Statement information at i2c_control.v(175): all case item expressions in this case statement are onehot File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v Line: 175
-Warning (10030): Net "send8bit.bit_cnt" at i2c_control.v(131) has no driver or initial value, using a default initial value '0' File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v Line: 131
-Warning (10030): Net "word_addr" at i2c_control.v(118) has no driver or initial value, using a default initial value '0' File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v Line: 118
-Warning (10030): Net "send8bit.i2c_sda_od" at i2c_control.v(129) has no driver or initial value, using a default initial value '0' File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v Line: 129
-Warning (10030): Net "send8bit.state" at i2c_control.v(130) has no driver or initial value, using a default initial value '0' File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v Line: 130
-Warning (10030): Net "rd" at i2c_control.v(35) has no driver or initial value, using a default initial value '0' File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v Line: 35
-Warning (10030): Net "wr" at i2c_control.v(36) has no driver or initial value, using a default initial value '0' File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v Line: 36
-Warning (10034): Output port "SCL" at i2c_control.v(22) has no driver File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v Line: 22
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "SCL" is stuck at GND File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v Line: 22
-Info (17049): 19 registers lost all their fanouts during netlist optimizations.
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk" File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v Line: 18
-    Warning (15610): No output dependent on input pin "rst_n" File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v Line: 19
-Info (21057): Implemented 4 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 1 output pins
+Info (21057): Implemented 253 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 45 input pins
+    Info (21059): Implemented 12 output pins
     Info (21060): Implemented 1 bidirectional pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 31 warnings
-    Info: Peak virtual memory: 4799 megabytes
-    Info: Processing ended: Wed Nov 29 19:00:44 2023
+    Info (21061): Implemented 195 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4877 megabytes
+    Info: Processing ended: Fri Dec 01 22:25:54 2023
     Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:06
 

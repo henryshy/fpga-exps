@@ -1,0 +1,12 @@
+
+State Machine - |i2c_control|state
+Name state.opt_end state.read_data state.read_control state.read_begin state.write_data state.write_addr state.write_control state.write_begin state.idle 
+state.idle 0 0 0 0 0 0 0 0 0 
+state.write_begin 0 0 0 0 0 0 0 1 1 
+state.write_control 0 0 0 0 0 0 1 0 1 
+state.write_addr 0 0 0 0 0 1 0 0 1 
+state.write_data 0 0 0 0 1 0 0 0 1 
+state.read_begin 0 0 0 1 0 0 0 0 1 
+state.read_control 0 0 1 0 0 0 0 0 1 
+state.read_data 0 1 0 0 0 0 0 0 1 
+state.opt_end 1 0 0 0 0 0 0 0 1 

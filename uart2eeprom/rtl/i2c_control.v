@@ -2,10 +2,20 @@
 module i2c_control(
 	clk,
 	rst_n,
-
+	rd,
+	wr,
+	wrdata_num,
+	rddata_num,
+	wraddr_num,
+	device_addr,
+	word_addr,
+	wr_data,
+	wr_data_valid,
+	rd_data,
+	rd_data_valid,
+	done,
 	SCL,
 	SDA
-
 );
 	
 	
@@ -14,47 +24,51 @@ module i2c_control(
 	
 	
 	localparam scl_cnt_max = sys_clock / i2c_clock;
-	localparam sda_cnt_max = 8*scl_cnt_max;
+
 	input clk;
 	input rst_n;
+	input rd;
+	input wr;
 	
+	input [5:0]wrdata_num;
+	input [5:0]rddata_num;
+	input [1:0]wraddr_num;
 
-	output SCL;
+	
+	input [2:0]device_addr;
+	input [15:0]word_addr;
+	
+	input [7:0]wr_data;
+	output wr_data_valid;
+	
+	output reg[7:0] rd_data;
+	output reg rd_data_valid;
+	
+	output reg done;
+	output reg SCL;
 	inout SDA;
 	
 	
 	
 	reg [15:0]scl_cnt;
 	
-	reg scl_clock;
 	reg scl_valid;
 	reg scl_high;
 	reg scl_low;
-	
-	reg done;
-	reg rd;
-	reg wr;
-	
-	 
+
 	reg aoe;
-	
 	reg i2c_sda_od;
-	wire i2c_sda_id;
-	
 	assign SDA = (aoe && !i2c_sda_od)?1'b0:1'bz;
-	
-	assign i2c_sda_id = SDA;
 	
 
 	
-	
 	always@(posedge clk or negedge rst_n)
 		if(!rst_n)
-			scl_cnt <= 0;
+			scl_cnt <= 16'd0;
 		else if(scl_cnt == scl_cnt_max)
-			scl_cnt <= 0;
+			scl_cnt <= 16'd0;
 		else
-			scl_cnt <= scl_cnt + 1;
+			scl_cnt <= scl_cnt + 16'd1;
 			
 	always@(posedge clk or negedge rst_n)
 		if(!rst_n)
@@ -69,13 +83,13 @@ module i2c_control(
 
 	always@(posedge clk or negedge rst_n)
 		if(!rst_n)
-			scl_clock <= 1;
+			SCL <= 1;
 		else if(scl_cnt == (scl_cnt_max>>1))
-			scl_clock <= 0;
+			SCL <= 0;
 		else if(scl_cnt == 0)
-			scl_clock <= 1;
+			SCL <= 1;
 		else
-			scl_clock <= scl_clock;
+			SCL <= SCL;
 	
 	always@(posedge clk or negedge rst_n)
 		if(!rst_n) 
@@ -108,125 +122,360 @@ module i2c_control(
 					read_data		= 9'b010000000,
 					opt_end			= 9'b100000000;
 			   
+
+	reg [4:0] half_bit;
+	
+	always@(posedge clk or negedge rst_n)
+		if(!rst_n)
+			half_bit <= 5'd0;
+		else if((state == write_control) ||
+				  (state == write_addr) ||
+				  (state == write_data) ||
+				  (state == read_data) ||
+				  (state == read_control)) begin		
+			if(scl_high | scl_low) begin
+				if(half_bit == 5'd17)
+					half_bit <= 5'd0;
+				else 
+					half_bit <= half_bit + 5'd1;
+			end
+			else
+				half_bit <= half_bit;
+		end
+		else
+			half_bit <= 5'd0;
+			
+	reg ack;
+	
+	always@(posedge clk or negedge rst_n)
+		if(!rst_n)
+			ack <= 0;
+		else if((half_bit == 5'd16)&&scl_high&&(SDA == 0))
+			ack <= 1;
+		else if((half_bit == 5'd17) && scl_low)
+			ack <= 0;
+		else
+			ack <= ack;
 			
 	
-	localparam control_code = 4'b1010;
-	localparam chip_select_bit = 3'b110;
-	localparam slave_addr = {control_code,chip_select_bit};
-	
-	
-	reg [7:0] word_addr;
-	reg [7:0] control_byte;
-	reg [7:0] data;
-	reg sda_r;
-	reg [3:0] bit_cnt;
-	task send8bit;
-	
-		input [7:0]data;
-		input scl_low;
-		input scl_high;
-		input next_state;
-		output i2c_sda_od;
-		output state;
-		output [3:0] bit_cnt;
-		
-		if(scl_low && bit_cnt != 8) begin
-			case(bit_cnt) 
-				0: i2c_sda_od <= data[7];
-				1: i2c_sda_od <= data[6];
-				2: i2c_sda_od <= data[5];
-				3: i2c_sda_od <= data[4];
-				4: i2c_sda_od <= data[3];
-				5: i2c_sda_od <= data[2];
-				6: i2c_sda_od <= data[1];
-				7: i2c_sda_od <= data[0];
-				default:;
-			endcase
-			bit_cnt <= bit_cnt + 1;
-		end
-		else if(scl_low && bit_cnt == 8)
-			aoe <= 0;
-		else if(scl_high && bit_cnt == 8) begin
-			if(i2c_sda_id == 0) begin
-				state <= next_state;
+	always@(*) begin
+		case(state)
+			idle 	: 
+				aoe <= 0;			
+			write_begin, read_begin, opt_end :
 				aoe <= 1;
+	
+			write_addr,write_control,read_control, write_data : begin
+				if(half_bit < 16)
+					aoe <= 1;
+				else
+					aoe <= 0;
 			end
-			else begin
-				state <= idle;
+			read_data : begin
+				if(half_bit < 16)
+					aoe <= 0;
+				else
+					aoe <= 1;
+			end		
+			default:
 				aoe <= 0;
-			end
+		endcase			
+	end
+
+
+	
+	reg w_flag;
+	reg r_flag;
+
+	reg [7:0] wdata_cnt;
+	reg [7:0] rdata_cnt;
+	reg [1:0] waddr_cnt;
+
+
+	reg FF;
+	
+	reg [7:0]sda_data_out;
+	reg [7:0]sda_data_in;
+	
+	wire [7:0]wr_ctrl_word;
+	wire [7:0]rd_ctrl_word;
+	
+	assign wr_ctrl_word = {4'b1010, device_addr,1'b0};
+	assign rd_ctrl_word = {4'b1010, device_addr,1'b1};
+	
+	
+	task send8bit;
+		if((scl_high) && (half_bit == 16))
+			FF <= 1;
+		else if (half_bit < 5'd17) begin
+			i2c_sda_od <= sda_data_out[7];
+			if(scl_low)
+				sda_data_out <= {sda_data_out[6:0],1'b0};
+			else
+				sda_data_out <= sda_data_out;
 		end
-		else begin
-			aoe <= aoe;
-			state <= next_state;
-			bit_cnt <= bit_cnt;
+		else
+			;
+	endtask
+	
+	task receive8bit;
+		if((scl_low) && (half_bit == 5'd15))
+			FF <= 1;
+		else if (half_bit < 5'd16) begin
+			if(scl_high)
+				sda_data_in <= {sda_data_in[6:0],SDA};
+			else
+				sda_data_in <= sda_data_in;
 		end
+		else
+			;
 	endtask
 	
 	always@(posedge clk or negedge rst_n)
 		if(!rst_n) begin
-			aoe <= 0;
 			state <= idle;
-			i2c_sda_od <= 1;
-			bit_cnt <= 0;
-
+			done <= 0;
+			i2c_sda_od <= 0;
+			w_flag <= 0;
+			r_flag <= 0;
+			wdata_cnt <= 8'd1;
+			waddr_cnt <= 2'd1;
+			rdata_cnt <= 8'd1;
 		end
 		else
 			case(state)
 					idle				: begin
-						aoe <= 0;
-						if(wr|rd) begin
+						done <= 0;
+						i2c_sda_od <= 0;
+						w_flag <= 0;
+						r_flag <= 0;
+						wdata_cnt <= 8'd1;
+						waddr_cnt <= 2'd1;
+						rdata_cnt <= 8'd1;
+						
+						if(wr) begin
+							w_flag <= 1;
 							state <= write_begin;
-							control_byte <= {slave_addr,1'b0};
 						end
-						else begin
-							state <= state;
-							control_byte <= control_byte;	
-						end
-					end
-					write_begin		: begin
-						if(scl_high) begin
-							aoe <= 1;
-							sda_r <= 0;
-							state <= write_control;
+						else if(rd) begin
+							r_flag <= 1;
+							state <= write_begin;
 						end
 						else
-							state <= state;
+							state <= idle;
+					end
+					
+					write_begin		: begin
+						if(scl_high) begin
+							i2c_sda_od <= 0;
+							state <= write_begin;
+						end
+						else if(scl_low) begin
+							state <= write_control;
+							FF <= 0;
+							sda_data_out <= wr_ctrl_word;
+						end
+						else
+							state <= write_begin;
+
 					end
 					write_control	: begin
-						send8bit(control_byte,scl_low,scl_high,write_addr,i2c_sda_od,state,bit_cnt);
+						if(FF == 0)
+							send8bit;
+						else begin
+							if(ack == 1)
+								if(scl_low) begin
+									
+									state <= write_addr;
+									FF <= 0;
+									if(wraddr_num == 1)
+										sda_data_out <= word_addr[7:0];
+									else	
+										sda_data_out <= word_addr[15:8];
+								end
+								else
+									state <= write_control;
+									
+							else
+								state <= idle;
+						end
 					end
 					
 					write_addr		: begin
-						if(wr)
-							send8bit(word_addr,scl_low,scl_high,write_data,i2c_sda_od,state,bit_cnt);
-						else if(rd)
-							send8bit(word_addr,scl_low,scl_high,read_control,i2c_sda_od,state,bit_cnt);
-						else
-							state <= idle;
-
+						if( FF ==0)
+							send8bit;
+						else begin
+							if(ack == 1)
+								if(waddr_cnt == wraddr_num) begin
+									if(scl_low && w_flag) begin
+										state <= write_data;
+										FF <= 0;
+										sda_data_out <= wr_data;
+										waddr_cnt <= 2'd1;
+									end
+									else if(scl_low && r_flag) begin
+										state <= read_begin;
+										FF <= 0;
+										waddr_cnt <= 2'd1;
+									end
+									else
+										state <= write_addr;
+								end
+								else begin
+									if(scl_low) begin
+										waddr_cnt <= waddr_cnt + 2'd1;
+										state <= write_addr;
+										sda_data_out <= word_addr[7:0];
+										FF <= 0;
+									end
+									else
+										state <=write_addr;
+								end
+		
+							else
+								state <= idle;
+						end			
+						
 					end
 					
 					
 					write_data		: begin
-						send8bit(word_addr,scl_low,scl_high,idle,i2c_sda_od,state,bit_cnt);
-
+						if( FF == 0)
+							send8bit;
+						else begin
+							if(ack == 1)
+								if(wrdata_num == wdata_cnt)
+									if(scl_low) begin
+										state  <= opt_end;
+										i2c_sda_od <= 0;
+										wdata_cnt <= 7'd1;
+									end
+									else
+										state <= write_data;
+								else begin
+									if(scl_low) begin
+										state <= write_data;
+										FF <= 0;
+										sda_data_out <= wr_data;
+										wdata_cnt <= wdata_cnt + 7'd1;
+									end
+									else
+										state <= write_data;
+								end
+									
+							else
+								state <= idle;			
+									
+						end
 					end
+					
 					read_begin		: begin
+						if(scl_high) begin
+							i2c_sda_od <= 0;
+							state <= read_begin;
+						end
+						else if(scl_low) begin
+							state <= read_control;
+							FF <= 0;
+							sda_data_out <= rd_ctrl_word;
+						end
+						else
+							state <= read_begin;
 					end
+					
 					read_control	: begin
+						if(FF == 0)
+							send8bit;
+						else begin
+							if(ack == 1) begin
+								if(scl_low) begin
+									state <= read_data;
+									FF <= 0;
+								end
+								else
+									state <= read_control;
+							end
+							else
+								state <= idle;
+						end
 					end
+								
 					read_data		: begin
+					
+					
+						if(FF == 1'b0)
+							receive8bit;
+						else begin
+							if(rdata_cnt == rddata_num)begin
+								i2c_sda_od <= 1'b1;
+								if(scl_low)begin
+									state <= opt_end;
+									i2c_sda_od  <= 1'b0;
+								end
+								else
+									state <= read_data;
+							end
+							else begin
+								i2c_sda_od <= 1'b0;
+								if(scl_low)begin
+									rdata_cnt  <= rdata_cnt + 8'd1;
+									state <= read_data;
+									FF         <= 1'b0;
+								end
+								else
+									state <= read_data;
+							end
+						end
 					end
+					
+					
 					opt_end			: begin
+						if(scl_high) begin
+							i2c_sda_od <= 1;
+							state <= idle;
+							done <= 1;
+							
+						end
+						else
+							state <= opt_end;
+						
+						
 					end
-					
-					
-					
+			
 					default			: begin
+						state <= idle;
 					end
 				endcase
-	
-	
+				
+	wire rd_data_valid_r;
+	assign wr_data_valid = ((state==write_addr)&&
+	                       (waddr_cnt==wraddr_num)&&
+								  (w_flag && scl_low)&&
+								  (ack == 1'b1))||
+                     	  ((state == write_data)&&
+								  (ack == 1'b1)&&(scl_low)&&
+								  (wdata_cnt != wrdata_num));
+	assign rd_data_valid_r = (state == read_data)
+	                        &&(half_bit == 8'd15)&&scl_low;		
+
+	always@(posedge clk or negedge rst_n)
+	begin
+		if(!rst_n)
+			rd_data_valid <= 1'b0;
+		else if(rd_data_valid_r)
+			rd_data_valid <= 1'b1;
+		else
+			rd_data_valid <= 1'b0;
+	end
+
+	always@(posedge clk or negedge rst_n) begin
+		if(!rst_n)
+			rd_data <= 8'd0;
+		else if(rd_data_valid_r)
+			rd_data <= sda_data_in;
+		else
+			rd_data <= rd_data;
+	end
+							
 endmodule
 
