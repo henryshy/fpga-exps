@@ -56,6 +56,7 @@ clk => half_bit[4].CLK
 clk => scl_low.CLK
 clk => scl_high.CLK
 clk => SCL~reg0.CLK
+clk => scl_valid.CLK
 clk => scl_cnt[0].CLK
 clk => scl_cnt[1].CLK
 clk => scl_cnt[2].CLK
@@ -93,7 +94,7 @@ rst_n => wdata_cnt[6].ACLR
 rst_n => wdata_cnt[7].ACLR
 rst_n => r_flag.ACLR
 rst_n => w_flag.ACLR
-rst_n => i2c_sda_od.ACLR
+rst_n => i2c_sda_od.PRESET
 rst_n => done~reg0.ACLR
 rst_n => rd_data[0]~reg0.ACLR
 rst_n => rd_data[1]~reg0.ACLR
@@ -121,6 +122,7 @@ rst_n => scl_cnt[12].ACLR
 rst_n => scl_cnt[13].ACLR
 rst_n => scl_cnt[14].ACLR
 rst_n => scl_cnt[15].ACLR
+rst_n => scl_valid.ACLR
 rst_n => scl_high.ACLR
 rst_n => scl_low.ACLR
 rst_n => half_bit[0].ACLR
@@ -147,9 +149,11 @@ rst_n => sda_data_in[3].ENA
 rst_n => sda_data_in[2].ENA
 rst_n => sda_data_in[1].ENA
 rst_n => sda_data_in[0].ENA
+rd => always1.IN0
 rd => r_flag.DATAA
 rd => state.DATAA
 rd => state.DATAA
+wr => always1.IN1
 wr => state.OUTPUTSELECT
 wr => state.OUTPUTSELECT
 wr => r_flag.OUTPUTSELECT
@@ -219,18 +223,18 @@ wr_data[6] => sda_data_out.DATAB
 wr_data[6] => sda_data_out.DATAB
 wr_data[7] => sda_data_out.DATAB
 wr_data[7] => sda_data_out.DATAB
-wr_data_valid <= wr_data_valid.DB_MAX_OUTPUT_PORT_TYPE
-rd_data[0] <= rd_data[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-rd_data[1] <= rd_data[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-rd_data[2] <= rd_data[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-rd_data[3] <= rd_data[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-rd_data[4] <= rd_data[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-rd_data[5] <= rd_data[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-rd_data[6] <= rd_data[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-rd_data[7] <= rd_data[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-rd_data_valid <= rd_data_valid~reg0.DB_MAX_OUTPUT_PORT_TYPE
-done <= done~reg0.DB_MAX_OUTPUT_PORT_TYPE
-SCL <= SCL~reg0.DB_MAX_OUTPUT_PORT_TYPE
+wr_data_valid << wr_data_valid.DB_MAX_OUTPUT_PORT_TYPE
+rd_data[0] << rd_data[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rd_data[1] << rd_data[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rd_data[2] << rd_data[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rd_data[3] << rd_data[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rd_data[4] << rd_data[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rd_data[5] << rd_data[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rd_data[6] << rd_data[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rd_data[7] << rd_data[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rd_data_valid << rd_data_valid~reg0.DB_MAX_OUTPUT_PORT_TYPE
+done << done~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SCL << SCL~reg0.DB_MAX_OUTPUT_PORT_TYPE
 SDA <> SDA
 
 

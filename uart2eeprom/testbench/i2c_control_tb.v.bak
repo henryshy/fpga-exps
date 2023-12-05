@@ -1,0 +1,19 @@
+module i2c_control_tb();
+
+	reg clk;
+	reg rst_n;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+endmodule

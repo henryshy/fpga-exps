@@ -56,14 +56,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "wraddr_num[0]",
-					"strict" : false
-				},
-				{
-					"name" : "wraddr_num[1]",
-					"strict" : false
-				},
-				{
 					"name" : "wrdata_num[5]",
 					"strict" : false
 				},
@@ -88,6 +80,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "wraddr_num[0]",
+					"strict" : false
+				},
+				{
+					"name" : "wraddr_num[1]",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				},
@@ -97,10 +97,6 @@
 				},
 				{
 					"name" : "wr",
-					"strict" : false
-				},
-				{
-					"name" : "rd",
 					"strict" : false
 				},
 				{
@@ -125,6 +121,10 @@
 				},
 				{
 					"name" : "rddata_num[4]",
+					"strict" : false
+				},
+				{
+					"name" : "rd",
 					"strict" : false
 				},
 				{
@@ -184,11 +184,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "word_addr[11]",
+					"name" : "device_addr[2]",
 					"strict" : false
 				},
 				{
-					"name" : "device_addr[2]",
+					"name" : "word_addr[11]",
 					"strict" : false
 				},
 				{
@@ -200,11 +200,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "word_addr[10]",
+					"name" : "device_addr[1]",
 					"strict" : false
 				},
 				{
-					"name" : "device_addr[1]",
+					"name" : "word_addr[10]",
 					"strict" : false
 				},
 				{
@@ -216,11 +216,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "word_addr[9]",
+					"name" : "device_addr[0]",
 					"strict" : false
 				},
 				{
-					"name" : "device_addr[0]",
+					"name" : "word_addr[9]",
 					"strict" : false
 				},
 				{

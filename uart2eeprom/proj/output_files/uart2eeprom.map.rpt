@@ -1,5 +1,5 @@
 Analysis & Synthesis report for uart2eeprom
-Fri Dec 01 22:25:54 2023
+Tue Dec 05 14:09:09 2023
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
 
 
@@ -46,13 +46,13 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Dec 01 22:25:54 2023           ;
+; Analysis & Synthesis Status     ; Successful - Tue Dec 05 14:09:09 2023           ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Standard Edition ;
 ; Revision Name                   ; uart2eeprom                                     ;
 ; Top-level Entity Name           ; i2c_control                                     ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 82                                              ;
+; Total registers                 ; 83                                              ;
 ; Total pins                      ; 58                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
@@ -184,25 +184,25 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 119       ;
+; Estimate of Logic utilization (ALMs needed) ; 122       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 177       ;
-;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 59        ;
-;     -- 5 input functions                    ; 33        ;
-;     -- 4 input functions                    ; 25        ;
-;     -- <=3 input functions                  ; 60        ;
+; Combinational ALUT usage for logic          ; 185       ;
+;     -- 7 input functions                    ; 1         ;
+;     -- 6 input functions                    ; 55        ;
+;     -- 5 input functions                    ; 30        ;
+;     -- 4 input functions                    ; 33        ;
+;     -- <=3 input functions                  ; 66        ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 82        ;
+; Dedicated logic registers                   ; 83        ;
 ;                                             ;           ;
 ; I/O pins                                    ; 58        ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 82        ;
-; Total fan-out                               ; 1126      ;
-; Average fan-out                             ; 2.99      ;
+; Maximum fan-out                             ; 83        ;
+; Total fan-out                               ; 1147      ;
+; Average fan-out                             ; 2.98      ;
 +---------------------------------------------+-----------+
 
 
@@ -211,7 +211,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |i2c_control               ; 177 (177)           ; 82 (82)                   ; 0                 ; 0          ; 58   ; 0            ; |i2c_control        ; i2c_control ; work         ;
+; |i2c_control               ; 185 (185)           ; 83 (83)                   ; 0                 ; 0          ; 58   ; 0            ; |i2c_control        ; i2c_control ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -239,10 +239,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 82    ;
+; Total registers                              ; 83    ;
 ; Number of registers using Synchronous Clear  ; 31    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 65    ;
+; Number of registers using Asynchronous Clear ; 66    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 47    ;
 ; Number of registers using Preset             ; 0     ;
@@ -255,10 +255,11 @@ Encoding Type:  One-Hot
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
 ; rdata_cnt[0]                           ; 2       ;
-; waddr_cnt[0]                           ; 11      ;
-; wdata_cnt[0]                           ; 6       ;
+; wdata_cnt[0]                           ; 3       ;
+; waddr_cnt[0]                           ; 9       ;
 ; SCL~reg0                               ; 2       ;
-; Total number of inverted registers = 4 ;         ;
+; i2c_sda_od                             ; 7       ;
+; Total number of inverted registers = 5 ;         ;
 +----------------------------------------+---------+
 
 
@@ -267,9 +268,10 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |i2c_control|scl_cnt[12]     ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |i2c_control|half_bit[0]     ;
-; 14:1               ; 4 bits    ; 36 LEs        ; 12 LEs               ; 24 LEs                 ; Yes        ; |i2c_control|sda_data_out[4] ;
-; 14:1               ; 3 bits    ; 27 LEs        ; 12 LEs               ; 15 LEs                 ; Yes        ; |i2c_control|sda_data_out[3] ;
+; 15:1               ; 4 bits    ; 40 LEs        ; 12 LEs               ; 28 LEs                 ; Yes        ; |i2c_control|sda_data_out[4] ;
+; 15:1               ; 3 bits    ; 30 LEs        ; 12 LEs               ; 18 LEs                 ; Yes        ; |i2c_control|sda_data_out[2] ;
 ; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |i2c_control|wdata_cnt       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
 
@@ -290,24 +292,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 82                          ;
-;     CLR               ; 19                          ;
+; arriav_ff             ; 83                          ;
+;     CLR               ; 20                          ;
 ;     CLR SCLR          ; 16                          ;
 ;     ENA               ; 17                          ;
 ;     ENA CLR           ; 15                          ;
 ;     ENA CLR SCLR      ; 15                          ;
 ; arriav_io_obuf        ; 1                           ;
-; arriav_lcell_comb     ; 178                         ;
+; arriav_lcell_comb     ; 186                         ;
 ;     arith             ; 32                          ;
 ;         1 data inputs ; 30                          ;
 ;         2 data inputs ; 2                           ;
-;     normal            ; 146                         ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 153                         ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 17                          ;
-;         3 data inputs ; 10                          ;
-;         4 data inputs ; 25                          ;
-;         5 data inputs ; 33                          ;
-;         6 data inputs ; 59                          ;
+;         2 data inputs ; 18                          ;
+;         3 data inputs ; 15                          ;
+;         4 data inputs ; 33                          ;
+;         5 data inputs ; 30                          ;
+;         6 data inputs ; 55                          ;
 ; boundary_port         ; 58                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
@@ -330,26 +334,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
-    Info: Processing started: Fri Dec 01 22:25:46 2023
+    Info: Processing started: Tue Dec 05 14:09:01 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off uart2eeprom -c uart2eeprom
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga/workspace/fpga-exps/uart2eeprom/rtl/24lc64.v
+    Info (12023): Found entity 1: M24LC64 File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/24LC64.v Line: 87
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga/workspace/fpga-exps/uart2eeprom/rtl/24lc04b.v
+    Info (12023): Found entity 1: M24LC04B File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/24LC04B.v Line: 85
 Info (12021): Found 1 design units, including 1 entities, in source file /fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v
     Info (12023): Found entity 1: i2c_control File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file /fpga/workspace/fpga-exps/uart2eeprom/rtl/uart2eeprom.v
     Info (12023): Found entity 1: uart2eeprom File: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/uart2eeprom.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga/workspace/fpga-exps/uart2eeprom/testbench/i2c_control_tb.v
+    Info (12023): Found entity 1: i2c_control_tb File: C:/fpga/workspace/fpga-exps/uart2eeprom/testbench/i2c_control_tb.v Line: 3
 Info (12127): Elaborating entity "i2c_control" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 253 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 261 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 45 input pins
     Info (21059): Implemented 12 output pins
     Info (21060): Implemented 1 bidirectional pins
-    Info (21061): Implemented 195 logic cells
+    Info (21061): Implemented 203 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4877 megabytes
-    Info: Processing ended: Fri Dec 01 22:25:54 2023
+    Info: Peak virtual memory: 4886 megabytes
+    Info: Processing ended: Tue Dec 05 14:09:09 2023
     Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:06
 

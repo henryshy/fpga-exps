@@ -58,17 +58,22 @@ module i2c_control(
 
 	reg aoe;
 	reg i2c_sda_od;
-	assign SDA = (aoe && !i2c_sda_od)?1'b0:1'bz;
+	assign SDA = aoe?i2c_sda_od:1'bz;
 	
 
 	
 	always@(posedge clk or negedge rst_n)
 		if(!rst_n)
 			scl_cnt <= 16'd0;
-		else if(scl_cnt == scl_cnt_max)
-			scl_cnt <= 16'd0;
+		else if(scl_valid) begin
+			if(scl_cnt == scl_cnt_max - 1)
+				scl_cnt <= 16'd0;
+			else
+				scl_cnt <= scl_cnt + 16'd1;
+		end
 		else
-			scl_cnt <= scl_cnt + 16'd1;
+			scl_cnt <= 16'b0;
+
 			
 	always@(posedge clk or negedge rst_n)
 		if(!rst_n)
@@ -235,7 +240,7 @@ module i2c_control(
 		if(!rst_n) begin
 			state <= idle;
 			done <= 0;
-			i2c_sda_od <= 0;
+			i2c_sda_od <= 1;
 			w_flag <= 0;
 			r_flag <= 0;
 			wdata_cnt <= 8'd1;
@@ -246,7 +251,7 @@ module i2c_control(
 			case(state)
 					idle				: begin
 						done <= 0;
-						i2c_sda_od <= 0;
+						i2c_sda_od <= 1;
 						w_flag <= 0;
 						r_flag <= 0;
 						wdata_cnt <= 8'd1;
@@ -315,8 +320,7 @@ module i2c_control(
 									end
 									else if(scl_low && r_flag) begin
 										state <= read_begin;
-										FF <= 0;
-										waddr_cnt <= 2'd1;
+										i2c_sda_od <= 1;
 									end
 									else
 										state <= write_addr;
@@ -370,14 +374,14 @@ module i2c_control(
 					end
 					
 					read_begin		: begin
-						if(scl_high) begin
-							i2c_sda_od <= 0;
-							state <= read_begin;
-						end
-						else if(scl_low) begin
+						if(scl_low) begin
 							state <= read_control;
-							FF <= 0;
 							sda_data_out <= rd_ctrl_word;
+							FF <= 0;
+						end
+						else if(scl_high) begin
+							state <= read_begin;
+							i2c_sda_od <= 0;
 						end
 						else
 							state <= read_begin;

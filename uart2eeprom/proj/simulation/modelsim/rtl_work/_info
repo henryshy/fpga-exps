@@ -1,0 +1,77 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/fpga/workspace/fpga-exps/uart2eeprom/proj/simulation/modelsim
+vi2c_control
+!s110 1701755944
+!i10b 1
+!s100 =7UV5L@OW:BCU78`mVRi_3
+IoNiB13=:=gUQoEWQ5B_^k0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1701755134
+8C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v
+FC:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v
+L0 2
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1701755944.000000
+!s107 C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl|C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v|
+!i113 1
+Z3 o-vlog01compat -work work
+Z4 !s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl
+Z5 tCvgOpt 0
+vi2c_control_tb
+!s110 1701756853
+!i10b 1
+!s100 8VCJ<h^XDeeU4gAHi6Z^=3
+IJUP=EjIeTJ11C^4R4?0DJ1
+R1
+R0
+w1701756820
+8C:/fpga/workspace/fpga-exps/uart2eeprom/testbench/i2c_control_tb.v
+FC:/fpga/workspace/fpga-exps/uart2eeprom/testbench/i2c_control_tb.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1701756853.000000
+!s107 C:/fpga/workspace/fpga-exps/uart2eeprom/testbench/i2c_control_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../testbench|C:/fpga/workspace/fpga-exps/uart2eeprom/testbench/i2c_control_tb.v|
+!i113 1
+R3
+!s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../testbench
+R5
+vM24LC04B
+!s110 1701755943
+!i10b 1
+!s100 I?0=DUJCMn<YXFFK1Y`ZK3
+I]LLRCGk5VS4]7;87]eYXl1
+R1
+R0
+w1701755889
+8C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/24LC04B.v
+FC:/fpga/workspace/fpga-exps/uart2eeprom/rtl/24LC04B.v
+L0 85
+R2
+r1
+!s85 0
+31
+!s108 1701755943.000000
+!s107 C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/24LC04B.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl|C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/24LC04B.v|
+!i113 1
+R3
+R4
+R5
+n@m24@l@c04@b

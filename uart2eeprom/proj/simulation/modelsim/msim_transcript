@@ -1,0 +1,260 @@
+# Reading C:/intelFPGA/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# ERROR: No extended dataflow license exists
+# do uart2eeprom_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart2eeprom/rtl {C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:56:28 on Dec 05,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart2eeprom/rtl" C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v 
+# -- Compiling module i2c_control
+# 
+# Top level modules:
+# 	i2c_control
+# End time: 13:56:28 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../testbench {C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../testbench/i2c_control_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:56:29 on Dec 05,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../testbench" C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../testbench/i2c_control_tb.v 
+# -- Compiling module i2c_control_tb
+# 
+# Top level modules:
+# 	i2c_control_tb
+# End time: 13:56:29 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl {C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:56:29 on Dec 05,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl" C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v 
+# -- Compiling module M24LC04B
+# 
+# Top level modules:
+# 	M24LC04B
+# End time: 13:56:29 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl {C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/i2c_control.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:56:29 on Dec 05,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl" C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/i2c_control.v 
+# -- Compiling module i2c_control
+# 
+# Top level modules:
+# 	i2c_control
+# End time: 13:56:29 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  i2c_control_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" i2c_control_tb 
+# Start time: 13:56:29 on Dec 05,2023
+# Loading work.i2c_control_tb
+# Loading work.i2c_control
+# Loading work.M24LC04B
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:900 ns, :1060 ns, 1300 ns );
+#    Time: 1060 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:140560 ns, :141220 ns, 1300 ns );
+#    Time: 141220 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:280720 ns, :281380 ns, 1300 ns );
+#    Time: 281380 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:420880 ns, :421540 ns, 1300 ns );
+#    Time: 421540 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:561040 ns, :561700 ns, 1300 ns );
+#    Time: 561700 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:701200 ns, :701860 ns, 1300 ns );
+#    Time: 701860 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:841360 ns, :842020 ns, 1300 ns );
+#    Time: 842020 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:981520 ns, :982180 ns, 1300 ns );
+#    Time: 982180 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:1121680 ns, :1122340 ns, 1300 ns );
+#    Time: 1122340 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:1261840 ns, :1262500 ns, 1300 ns );
+#    Time: 1262500 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:1402 us, :1402660 ns, 1300 ns );
+#    Time: 1402660 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:1542160 ns, :1542820 ns, 1300 ns );
+#    Time: 1542820 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:1682320 ns, :1682980 ns, 1300 ns );
+#    Time: 1682980 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:1822480 ns, :1823140 ns, 1300 ns );
+#    Time: 1823140 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:1962640 ns, :1963300 ns, 1300 ns );
+#    Time: 1963300 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:2102800 ns, :2103460 ns, 1300 ns );
+#    Time: 2103460 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:2242960 ns, :2243620 ns, 1300 ns );
+#    Time: 2243620 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:2383120 ns, :2383780 ns, 1300 ns );
+#    Time: 2383780 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:2523280 ns, :2523940 ns, 1300 ns );
+#    Time: 2523940 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:2663440 ns, :2664100 ns, 1300 ns );
+#    Time: 2664100 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:2805600 ns, :2806260 ns, 1300 ns );
+#    Time: 2806260 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:2970760 ns, :2971420 ns, 1300 ns );
+#    Time: 2971420 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:3135920 ns, :3136580 ns, 1300 ns );
+#    Time: 3136580 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:3301080 ns, :3301740 ns, 1300 ns );
+#    Time: 3301740 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:3466240 ns, :3466900 ns, 1300 ns );
+#    Time: 3466900 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:3631400 ns, :3632060 ns, 1300 ns );
+#    Time: 3632060 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:3796560 ns, :3797220 ns, 1300 ns );
+#    Time: 3797220 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:3961720 ns, :3962380 ns, 1300 ns );
+#    Time: 3962380 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:4126880 ns, :4127540 ns, 1300 ns );
+#    Time: 4127540 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:4292040 ns, :4292700 ns, 1300 ns );
+#    Time: 4292700 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:4457200 ns, :4457860 ns, 1300 ns );
+#    Time: 4457860 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:4622360 ns, :4623020 ns, 1300 ns );
+#    Time: 4623020 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:4787520 ns, :4788180 ns, 1300 ns );
+#    Time: 4788180 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:4952680 ns, :4953340 ns, 1300 ns );
+#    Time: 4953340 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:5117840 ns, :5118500 ns, 1300 ns );
+#    Time: 5118500 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:5283 us, :5283660 ns, 1300 ns );
+#    Time: 5283660 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:5448160 ns, :5448820 ns, 1300 ns );
+#    Time: 5448820 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:5613320 ns, :5613980 ns, 1300 ns );
+#    Time: 5613980 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:5778480 ns, :5779140 ns, 1300 ns );
+#    Time: 5779140 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:5943640 ns, :5944300 ns, 1300 ns );
+#    Time: 5944300 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Note: $stop    : C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../testbench/i2c_control_tb.v(113)
+#    Time: 6113800 ns  Iteration: 0  Instance: /i2c_control_tb
+# Break in Module i2c_control_tb at C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../testbench/i2c_control_tb.v line 113
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/24LC04B.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:58:58 on Dec 05,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl" C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/24LC04B.v 
+# -- Compiling module M24LC04B
+# 
+# Top level modules:
+# 	M24LC04B
+# End time: 13:58:58 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../testbench C:/fpga/workspace/fpga-exps/uart2eeprom/testbench/i2c_control_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:58:59 on Dec 05,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../testbench" C:/fpga/workspace/fpga-exps/uart2eeprom/testbench/i2c_control_tb.v 
+# -- Compiling module i2c_control_tb
+# 
+# Top level modules:
+# 	i2c_control_tb
+# End time: 13:58:59 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:59:01 on Dec 05,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl" C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v 
+# -- Compiling module i2c_control
+# 
+# Top level modules:
+# 	i2c_control
+# End time: 13:59:01 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../testbench C:/fpga/workspace/fpga-exps/uart2eeprom/testbench/i2c_control_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:59:02 on Dec 05,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../testbench" C:/fpga/workspace/fpga-exps/uart2eeprom/testbench/i2c_control_tb.v 
+# -- Compiling module i2c_control_tb
+# 
+# Top level modules:
+# 	i2c_control_tb
+# End time: 13:59:02 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/24LC04B.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:59:03 on Dec 05,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl" C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/24LC04B.v 
+# -- Compiling module M24LC04B
+# 
+# Top level modules:
+# 	M24LC04B
+# End time: 13:59:03 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:59:04 on Dec 05,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../rtl" C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/i2c_control.v 
+# -- Compiling module i2c_control
+# 
+# Top level modules:
+# 	i2c_control
+# End time: 13:59:04 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.i2c_control_tb
+# Loading work.i2c_control
+# Loading work.M24LC04B
+run -all
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:900 ns, :1060 ns, 600 ns );
+#    Time: 1060 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Note: $stop    : C:/fpga/workspace/fpga-exps/uart2eeprom/testbench/i2c_control_tb.v(113)
+#    Time: 6113800 ns  Iteration: 0  Instance: /i2c_control_tb
+# Break in Module i2c_control_tb at C:/fpga/workspace/fpga-exps/uart2eeprom/testbench/i2c_control_tb.v line 113
+add wave -position insertpoint sim:/i2c_control_tb/i2c_control/*
+restart
+run -all
+# ** Error: C:/fpga/workspace/fpga-exps/uart2eeprom/rtl/24LC04B.v(516): $width( posedge SDA &&& SCL:900 ns, :1060 ns, 600 ns );
+#    Time: 1060 ns  Iteration: 2  Instance: /i2c_control_tb/M24LC04B
+# ** Note: $stop    : C:/fpga/workspace/fpga-exps/uart2eeprom/testbench/i2c_control_tb.v(113)
+#    Time: 6113800 ns  Iteration: 0  Instance: /i2c_control_tb
+# Break in Module i2c_control_tb at C:/fpga/workspace/fpga-exps/uart2eeprom/testbench/i2c_control_tb.v line 113
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../testbench C:/fpga/workspace/fpga-exps/uart2eeprom/testbench/i2c_control_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:09:22 on Dec 05,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../testbench" C:/fpga/workspace/fpga-exps/uart2eeprom/testbench/i2c_control_tb.v 
+# -- Compiling module i2c_control_tb
+# 
+# Top level modules:
+# 	i2c_control_tb
+# End time: 14:09:22 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.i2c_control_tb
+run -all
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../testbench C:/fpga/workspace/fpga-exps/uart2eeprom/testbench/i2c_control_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:14:13 on Dec 05,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/uart2eeprom/proj/../testbench" C:/fpga/workspace/fpga-exps/uart2eeprom/testbench/i2c_control_tb.v 
+# -- Compiling module i2c_control_tb
+# 
+# Top level modules:
+# 	i2c_control_tb
+# End time: 14:14:13 on Dec 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.i2c_control_tb
+run -all
+# ** Note: $stop    : C:/fpga/workspace/fpga-exps/uart2eeprom/testbench/i2c_control_tb.v(111)
+#    Time: 6117620 ns  Iteration: 0  Instance: /i2c_control_tb
+# Break in Module i2c_control_tb at C:/fpga/workspace/fpga-exps/uart2eeprom/testbench/i2c_control_tb.v line 111
+# End time: 14:15:01 on Dec 05,2023, Elapsed time: 0:18:32
+# Errors: 42, Warnings: 0
