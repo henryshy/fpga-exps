@@ -1,0 +1,6 @@
+
+
+C:/fpga/workspace/fpga-exps/OV5640/ip/pll/pll.v
+
+Dec 05 07PM:01:23>: File C:/fpga/workspace/fpga-exps/OV5640/ip/pll/pll.v does not exist.
+Do you want to create the file?

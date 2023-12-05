@@ -1,0 +1,3 @@
+
+
+vlogan +v2k "C:/fpga/workspace/fpga-exps/OV5640/ip/pll/pll_sim/pll.vo"

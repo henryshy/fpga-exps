@@ -1,0 +1,256 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/fpga/workspace/fpga-exps/OV5640/proj/simulation/modelsim
+vcamera_init
+Z1 !s110 1701776708
+!i10b 1
+!s100 =QEcmkWf[70:7555_cJ9=0
+ISS?`l`cROB8XRmMNA5gfF3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1582188299
+8C:/fpga/workspace/fpga-exps/OV5640/rtl/camera_init.v
+FC:/fpga/workspace/fpga-exps/OV5640/rtl/camera_init.v
+Z3 L0 17
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1701776708.000000
+!s107 C:/fpga/workspace/fpga-exps/OV5640/rtl/camera_init.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/OV5640/rtl|C:/fpga/workspace/fpga-exps/OV5640/rtl/camera_init.v|
+!i113 1
+Z6 o-vlog01compat -work work
+Z7 !s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/OV5640/rtl
+Z8 tCvgOpt 0
+vdpram
+R1
+!i10b 1
+!s100 KNof5kOnfh@YF;Z:E]A7E1
+IPabn^S:^F_l2`Q=BJ_dnF2
+R2
+R0
+w1701776598
+8C:/fpga/workspace/fpga-exps/OV5640/ip/dpram/dpram.v
+FC:/fpga/workspace/fpga-exps/OV5640/ip/dpram/dpram.v
+Z9 L0 39
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/fpga/workspace/fpga-exps/OV5640/ip/dpram/dpram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/OV5640/ip/dpram|C:/fpga/workspace/fpga-exps/OV5640/ip/dpram/dpram.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/OV5640/ip/dpram
+R8
+vDVP_capture
+R1
+!i10b 1
+!s100 5[Xf_Yi1J9[zQZ@;1kze;1
+IU4M2B0kNO_FhgHC2[aalQ1
+R2
+R0
+w1701763476
+8C:/fpga/workspace/fpga-exps/OV5640/rtl/DVP_capture.v
+FC:/fpga/workspace/fpga-exps/OV5640/rtl/DVP_capture.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/fpga/workspace/fpga-exps/OV5640/rtl/DVP_capture.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/OV5640/rtl|C:/fpga/workspace/fpga-exps/OV5640/rtl/DVP_capture.v|
+!i113 1
+R6
+R7
+R8
+n@d@v@p_capture
+vi2c_bit_shift
+R1
+!i10b 1
+!s100 AaR8^I9YWe:P2;G5eh@[<0
+Ii;oTe;X;4PWI_WZc[8FmM1
+R2
+R0
+w1569506342
+8C:/fpga/workspace/fpga-exps/OV5640/rtl/i2c_bit_shift.v
+FC:/fpga/workspace/fpga-exps/OV5640/rtl/i2c_bit_shift.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/fpga/workspace/fpga-exps/OV5640/rtl/i2c_bit_shift.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/OV5640/rtl|C:/fpga/workspace/fpga-exps/OV5640/rtl/i2c_bit_shift.v|
+!i113 1
+R6
+R7
+R8
+vi2c_control
+R1
+!i10b 1
+!s100 @YV>`X3mm0^HOS;1kfb3i3
+IR=:`zD1?U3DGGb3]jg?K00
+R2
+R0
+w1569506311
+8C:/fpga/workspace/fpga-exps/OV5640/rtl/i2c_control.v
+FC:/fpga/workspace/fpga-exps/OV5640/rtl/i2c_control.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/fpga/workspace/fpga-exps/OV5640/rtl/i2c_control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/OV5640/rtl|C:/fpga/workspace/fpga-exps/OV5640/rtl/i2c_control.v|
+!i113 1
+R6
+R7
+R8
+vOV5640
+R1
+!i10b 1
+!s100 ]LFC9U0;`lCzc4LIE3HUE1
+IO[2z5XFbPjD<RKNde>9Q;3
+R2
+R0
+w1701776624
+8C:/fpga/workspace/fpga-exps/OV5640/rtl/OV5640.v
+FC:/fpga/workspace/fpga-exps/OV5640/rtl/OV5640.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/fpga/workspace/fpga-exps/OV5640/rtl/OV5640.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/OV5640/rtl|C:/fpga/workspace/fpga-exps/OV5640/rtl/OV5640.v|
+!i113 1
+R6
+R7
+R8
+n@o@v5640
+vov5640_init_table_rgb
+R1
+!i10b 1
+!s100 X7:d_`kOdSW2gQc;[9Wno0
+IV:F<cYJ2fN;FNWKJM3gmm2
+R2
+R0
+w1582105523
+8C:/fpga/workspace/fpga-exps/OV5640/rtl/ov5640_init_table_rgb.v
+FC:/fpga/workspace/fpga-exps/OV5640/rtl/ov5640_init_table_rgb.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/fpga/workspace/fpga-exps/OV5640/rtl/ov5640_init_table_rgb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/OV5640/rtl|C:/fpga/workspace/fpga-exps/OV5640/rtl/ov5640_init_table_rgb.v|
+!i113 1
+R6
+R7
+R8
+vOV5640_tb
+R1
+!i10b 1
+!s100 QHVNH;H]k991Kf7LFcM7O2
+IY=ALZ6e@WPK^`EUA[mk3Q2
+R2
+R0
+w1701776670
+8C:/fpga/workspace/fpga-exps/OV5640/proj/../testbench/OV5640_tb.v
+FC:/fpga/workspace/fpga-exps/OV5640/proj/../testbench/OV5640_tb.v
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/fpga/workspace/fpga-exps/OV5640/proj/../testbench/OV5640_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/OV5640/proj/../testbench|C:/fpga/workspace/fpga-exps/OV5640/proj/../testbench/OV5640_tb.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/OV5640/proj/../testbench
+R8
+n@o@v5640_tb
+vpll
+R1
+!i10b 1
+!s100 P>OM1Egk7XnK?3Rae`P:91
+IgeYa4c3l=z7[U^Oi6T4580
+R2
+R0
+w1701776539
+8C:/fpga/workspace/fpga-exps/OV5640/ip/pll/pll.v
+FC:/fpga/workspace/fpga-exps/OV5640/ip/pll/pll.v
+R9
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/fpga/workspace/fpga-exps/OV5640/ip/pll/pll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/OV5640/ip/pll|C:/fpga/workspace/fpga-exps/OV5640/ip/pll/pll.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/OV5640/ip/pll
+R8
+vpll_altpll
+R1
+!i10b 1
+!s100 5]KV6`n;;<SC73;[KSzWV0
+If;UKGB618?zjT>=aEISJI2
+R2
+R0
+w1701776570
+8C:/fpga/workspace/fpga-exps/OV5640/proj/db/pll_altpll.v
+FC:/fpga/workspace/fpga-exps/OV5640/proj/db/pll_altpll.v
+L0 29
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/fpga/workspace/fpga-exps/OV5640/proj/db/pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/OV5640/proj/db|C:/fpga/workspace/fpga-exps/OV5640/proj/db/pll_altpll.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/OV5640/proj/db
+R8
+vTFT_CTRL
+R1
+!i10b 1
+!s100 2Hin0>LiV`g::YL=QeZ_X2
+Ik]MSP[[om8^=Xh`hVRlMZ3
+R2
+R0
+w1701776338
+8C:/fpga/workspace/fpga-exps/OV5640/rtl/TFT_CTRL.v
+FC:/fpga/workspace/fpga-exps/OV5640/rtl/TFT_CTRL.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/fpga/workspace/fpga-exps/OV5640/rtl/TFT_CTRL.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/OV5640/rtl|C:/fpga/workspace/fpga-exps/OV5640/rtl/TFT_CTRL.v|
+!i113 1
+R6
+R7
+R8
+n@t@f@t_@c@t@r@l

@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Dec 05 20:51:15 2023
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+Revision Name : OV5640
+Top-level Entity Name : OV5640
+Family : Cyclone IV E
+Device : EP4CE10F17C8
+Timing Models : Final
+Total logic elements : 393 / 10,320 ( 4 % )
+    Total combinational functions : 364 / 10,320 ( 4 % )
+    Dedicated logic registers : 206 / 10,320 ( 2 % )
+Total registers : 206
+Total pins : 38 / 180 ( 21 % )
+Total virtual pins : 0
+Total memory bits : 333,824 / 423,936 ( 79 % )
+Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
+Total PLLs : 1 / 2 ( 50 % )

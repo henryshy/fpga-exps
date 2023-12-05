@@ -1,0 +1,26 @@
+module DVP_capture_tb();
+
+
+
+
+
+module DVP_capture(
+	
+	pclk,
+	rst_n,
+	vsync,
+	href,
+	data,
+	datapixel,
+	datavalid,
+	imagestate,
+	xaddr,
+	yaddr
+
+);
+
+
+
+
+
+endmodule

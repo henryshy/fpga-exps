@@ -1,0 +1,149 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Camera_Rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "Camera_sclk",
+					"strict" : false
+				},
+				{
+					"name" : "TFT_RGB[0]",
+					"strict" : false
+				},
+				{
+					"name" : "TFT_RGB[1]",
+					"strict" : false
+				},
+				{
+					"name" : "TFT_RGB[2]",
+					"strict" : false
+				},
+				{
+					"name" : "TFT_RGB[3]",
+					"strict" : false
+				},
+				{
+					"name" : "TFT_RGB[4]",
+					"strict" : false
+				},
+				{
+					"name" : "TFT_RGB[5]",
+					"strict" : false
+				},
+				{
+					"name" : "TFT_RGB[6]",
+					"strict" : false
+				},
+				{
+					"name" : "TFT_RGB[7]",
+					"strict" : false
+				},
+				{
+					"name" : "TFT_RGB[8]",
+					"strict" : false
+				},
+				{
+					"name" : "TFT_RGB[9]",
+					"strict" : false
+				},
+				{
+					"name" : "TFT_RGB[10]",
+					"strict" : false
+				},
+				{
+					"name" : "TFT_RGB[11]",
+					"strict" : false
+				},
+				{
+					"name" : "TFT_RGB[12]",
+					"strict" : false
+				},
+				{
+					"name" : "TFT_RGB[13]",
+					"strict" : false
+				},
+				{
+					"name" : "TFT_RGB[14]",
+					"strict" : false
+				},
+				{
+					"name" : "TFT_RGB[15]",
+					"strict" : false
+				},
+				{
+					"name" : "TFT_VS",
+					"strict" : false
+				},
+				{
+					"name" : "TFT_HS",
+					"strict" : false
+				},
+				{
+					"name" : "TFT_DE",
+					"strict" : false
+				},
+				{
+					"name" : "Camera_sdat",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "Camera_PCLK",
+					"strict" : false
+				},
+				{
+					"name" : "Camera_Vsync",
+					"strict" : false
+				},
+				{
+					"name" : "Camera_Href",
+					"strict" : false
+				},
+				{
+					"name" : "Camera_Data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Camera_Data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Camera_Data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Camera_Data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Camera_Data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Camera_Data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Camera_Data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Camera_Data[7]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
