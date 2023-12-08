@@ -1,5 +1,5 @@
 Analysis & Synthesis report for arp_send_rgmii
-Thu Dec 07 22:07:58 2023
+Fri Dec 08 11:19:33 2023
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
 
 
@@ -27,15 +27,17 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
  19. Parameter Settings for User Entity Instance: gmii_to_rgmii:gmii_to_rgmii|ddo_x1:ddo2|altddio_out:ALTDDIO_OUT_component
  20. Parameter Settings for User Entity Instance: gmii_to_rgmii:gmii_to_rgmii|ddo_x1:ddo3|altddio_out:ALTDDIO_OUT_component
  21. Parameter Settings for User Entity Instance: eth_send_frame:eth_send_frame
- 22. Parameter Settings for User Entity Instance: pll:pll|altpll:altpll_component
- 23. altpll Parameter Settings by Entity Instance
- 24. Port Connectivity Checks: "eth_send_frame:eth_send_frame|eth_send:eth_send"
- 25. Port Connectivity Checks: "eth_send_frame:eth_send_frame"
- 26. Port Connectivity Checks: "gmii_to_rgmii:gmii_to_rgmii|ddo_x1:ddo3"
- 27. Post-Synthesis Netlist Statistics for Top Partition
- 28. Elapsed Time Per Partition
- 29. Analysis & Synthesis Messages
- 30. Analysis & Synthesis Suppressed Messages
+ 22. Parameter Settings for User Entity Instance: eth_send_frame:eth_send_frame|crc32_D8:crc32_D8
+ 23. Parameter Settings for User Entity Instance: pll:pll|altpll:altpll_component
+ 24. altpll Parameter Settings by Entity Instance
+ 25. Port Connectivity Checks: "eth_send_frame:eth_send_frame|crc32_D8:crc32_D8"
+ 26. Port Connectivity Checks: "eth_send_frame:eth_send_frame|eth_send:eth_send"
+ 27. Port Connectivity Checks: "eth_send_frame:eth_send_frame"
+ 28. Port Connectivity Checks: "gmii_to_rgmii:gmii_to_rgmii|ddo_x1:ddo3"
+ 29. Post-Synthesis Netlist Statistics for Top Partition
+ 30. Elapsed Time Per Partition
+ 31. Analysis & Synthesis Messages
+ 32. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -61,15 +63,15 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Dec 07 22:07:58 2023           ;
+; Analysis & Synthesis Status        ; Successful - Fri Dec 08 11:19:33 2023           ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Standard Edition ;
 ; Revision Name                      ; arp_send_rgmii                                  ;
 ; Top-level Entity Name              ; arp_send_rgmii                                  ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 193                                             ;
-;     Total combinational functions  ; 193                                             ;
-;     Dedicated logic registers      ; 78                                              ;
-; Total registers                    ; 90                                              ;
+; Total logic elements               ; 277                                             ;
+;     Total combinational functions  ; 277                                             ;
+;     Dedicated logic registers      ; 110                                             ;
+; Total registers                    ; 122                                             ;
 ; Total pins                         ; 9                                               ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -191,6 +193,7 @@ refer to the applicable agreement for further details.
 ; ../rtl/eth_send.v                ; yes             ; User Verilog HDL File        ; C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/eth_send.v           ;         ;
 ; ../rtl/eth_send_frame.v          ; yes             ; User Verilog HDL File        ; C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/eth_send_frame.v     ;         ;
 ; ../ip/pll/pll.v                  ; yes             ; User Wizard-Generated File   ; C:/fpga/workspace/fpga-exps/arp_send_rgmii/ip/pll/pll.v             ;         ;
+; ../rtl/crc_calc.v                ; yes             ; User Verilog HDL File        ; C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/crc_calc.v           ;         ;
 ; altddio_out.tdf                  ; yes             ; Megafunction                 ; c:/intelfpga/17.1/quartus/libraries/megafunctions/altddio_out.tdf   ;         ;
 ; aglobal171.inc                   ; yes             ; Megafunction                 ; c:/intelfpga/17.1/quartus/libraries/megafunctions/aglobal171.inc    ;         ;
 ; stratix_ddio.inc                 ; yes             ; Megafunction                 ; c:/intelfpga/17.1/quartus/libraries/megafunctions/stratix_ddio.inc  ;         ;
@@ -212,20 +215,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                      ;
 +---------------------------------------------+----------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 193                                                                        ;
+; Estimated Total logic elements              ; 277                                                                        ;
 ;                                             ;                                                                            ;
-; Total combinational functions               ; 193                                                                        ;
+; Total combinational functions               ; 277                                                                        ;
 ; Logic element usage by number of LUT inputs ;                                                                            ;
-;     -- 4 input functions                    ; 87                                                                         ;
-;     -- 3 input functions                    ; 29                                                                         ;
-;     -- <=2 input functions                  ; 77                                                                         ;
+;     -- 4 input functions                    ; 162                                                                        ;
+;     -- 3 input functions                    ; 21                                                                         ;
+;     -- <=2 input functions                  ; 94                                                                         ;
 ;                                             ;                                                                            ;
 ; Logic elements by mode                      ;                                                                            ;
-;     -- normal mode                          ; 130                                                                        ;
+;     -- normal mode                          ; 214                                                                        ;
 ;     -- arithmetic mode                      ; 63                                                                         ;
 ;                                             ;                                                                            ;
-; Total registers                             ; 90                                                                         ;
-;     -- Dedicated logic registers            ; 78                                                                         ;
+; Total registers                             ; 122                                                                        ;
+;     -- Dedicated logic registers            ; 110                                                                        ;
 ;     -- I/O registers                        ; 24                                                                         ;
 ;                                             ;                                                                            ;
 ; I/O pins                                    ; 9                                                                          ;
@@ -236,9 +239,9 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1                                                                          ;
 ;                                             ;                                                                            ;
 ; Maximum fan-out node                        ; pll:pll|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 85                                                                         ;
-; Total fan-out                               ; 936                                                                        ;
-; Average fan-out                             ; 3.16                                                                       ;
+; Maximum fan-out                             ; 117                                                                        ;
+; Total fan-out                               ; 1342                                                                       ;
+; Average fan-out                             ; 3.26                                                                       ;
 +---------------------------------------------+----------------------------------------------------------------------------+
 
 
@@ -247,9 +250,10 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                   ; Entity Name    ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+----------------+--------------+
-; |arp_send_rgmii                              ; 193 (1)             ; 78 (0)                    ; 0           ; 0            ; 0       ; 0         ; 9    ; 0            ; |arp_send_rgmii                                                                                                       ; arp_send_rgmii ; work         ;
-;    |eth_send_frame:eth_send_frame|           ; 192 (82)            ; 78 (36)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arp_send_rgmii|eth_send_frame:eth_send_frame                                                                         ; eth_send_frame ; work         ;
-;       |eth_send:eth_send|                    ; 110 (110)           ; 42 (42)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arp_send_rgmii|eth_send_frame:eth_send_frame|eth_send:eth_send                                                       ; eth_send       ; work         ;
+; |arp_send_rgmii                              ; 277 (1)             ; 110 (0)                   ; 0           ; 0            ; 0       ; 0         ; 9    ; 0            ; |arp_send_rgmii                                                                                                       ; arp_send_rgmii ; work         ;
+;    |eth_send_frame:eth_send_frame|           ; 276 (75)            ; 110 (36)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arp_send_rgmii|eth_send_frame:eth_send_frame                                                                         ; eth_send_frame ; work         ;
+;       |crc32_D8:crc32_D8|                    ; 58 (58)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arp_send_rgmii|eth_send_frame:eth_send_frame|crc32_D8:crc32_D8                                                       ; crc32_D8       ; work         ;
+;       |eth_send:eth_send|                    ; 143 (143)           ; 42 (42)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arp_send_rgmii|eth_send_frame:eth_send_frame|eth_send:eth_send                                                       ; eth_send       ; work         ;
 ;    |gmii_to_rgmii:gmii_to_rgmii|             ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arp_send_rgmii|gmii_to_rgmii:gmii_to_rgmii                                                                           ; gmii_to_rgmii  ; work         ;
 ;       |ddo_x1:ddo2|                          ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arp_send_rgmii|gmii_to_rgmii:gmii_to_rgmii|ddo_x1:ddo2                                                               ; ddo_x1         ; work         ;
 ;          |altddio_out:ALTDDIO_OUT_component| ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |arp_send_rgmii|gmii_to_rgmii:gmii_to_rgmii|ddo_x1:ddo2|altddio_out:ALTDDIO_OUT_component                             ; altddio_out    ; work         ;
@@ -297,12 +301,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 78    ;
+; Total registers                              ; 110   ;
 ; Number of registers using Synchronous Clear  ; 28    ;
 ; Number of registers using Synchronous Load   ; 16    ;
 ; Number of registers using Asynchronous Clear ; 78    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 32    ;
+; Number of registers using Clock Enable       ; 64    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -312,10 +316,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |arp_send_rgmii|eth_send_frame:eth_send_frame|eth_send:eth_send|fifo_data_num[14] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |arp_send_rgmii|eth_send_frame:eth_send_frame|eth_send:eth_send|send_cnt[11]      ;
-; 20:1               ; 3 bits    ; 39 LEs        ; 39 LEs               ; 0 LEs                  ; Yes        ; |arp_send_rgmii|eth_send_frame:eth_send_frame|eth_send:eth_send|gmii_tx_data[5]   ;
-; 21:1               ; 4 bits    ; 56 LEs        ; 40 LEs               ; 16 LEs                 ; Yes        ; |arp_send_rgmii|eth_send_frame:eth_send_frame|eth_send:eth_send|gmii_tx_data[0]   ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |arp_send_rgmii|eth_send_frame:eth_send_frame|eth_send:eth_send|fifo_data_num[13] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |arp_send_rgmii|eth_send_frame:eth_send_frame|eth_send:eth_send|send_cnt[15]      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |arp_send_rgmii|eth_send_frame:eth_send_frame|crc32_D8:crc32_D8|crc[7]            ;
+; 20:1               ; 3 bits    ; 39 LEs        ; 39 LEs               ; 0 LEs                  ; Yes        ; |arp_send_rgmii|eth_send_frame:eth_send_frame|eth_send:eth_send|gmii_tx_data[1]   ;
+; 21:1               ; 4 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; Yes        ; |arp_send_rgmii|eth_send_frame:eth_send_frame|eth_send:eth_send|gmii_tx_data[2]   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------+
 
 
@@ -451,7 +456,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name       ; Value                                            ; Type            ;
 +----------------------+--------------------------------------------------+-----------------+
 ; target_mac_addr      ; 111111111111111111111111111111111111111111111111 ; Unsigned Binary ;
-; src_mac_addr         ; 000000000000011111101101101011000110001000000000 ; Unsigned Binary ;
+; src_mac_addr         ; 000000000000011111101101101011000110001000110011 ; Unsigned Binary ;
 ; frame_type           ; 0000100000000110                                 ; Unsigned Binary ;
 ; hardware_type        ; 0000000000000001                                 ; Unsigned Binary ;
 ; protocol_type        ; 0000100000000000                                 ; Unsigned Binary ;
@@ -460,8 +465,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; option               ; 0000000000000001                                 ; Unsigned Binary ;
 ; src_ip               ; 11000000101010000000000000000010                 ; Unsigned Binary ;
 ; target_ip            ; 11000000101010000000000000000011                 ; Unsigned Binary ;
-; crc                  ; 10111110011111000001110010111011                 ; Unsigned Binary ;
 +----------------------+--------------------------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: eth_send_frame:eth_send_frame|crc32_D8:crc32_D8 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; Tp             ; 1     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -856,6 +870,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+---------------------------------+
 
 
++-----------------------------------------------------------------------------+
+; Port Connectivity Checks: "eth_send_frame:eth_send_frame|crc32_D8:crc32_D8" ;
++---------+--------+----------+-----------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                       ;
++---------+--------+----------+-----------------------------------------------+
+; crc     ; Output ; Info     ; Explicitly unconnected                        ;
+; crcNext ; Output ; Info     ; Explicitly unconnected                        ;
++---------+--------+----------+-----------------------------------------------+
+
+
 +-----------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "eth_send_frame:eth_send_frame|eth_send:eth_send"                                                       ;
 +-------------------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -867,10 +891,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; src_mac_addr[24..23]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; src_mac_addr[19..18]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; src_mac_addr[14..13]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; src_mac_addr[5..4]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; src_mac_addr[1..0]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; src_mac_addr[47..35]    ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; src_mac_addr[17..15]    ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; src_mac_addr[12..10]    ; Input  ; Info     ; Stuck at GND                                                                        ;
-; src_mac_addr[8..0]      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; src_mac_addr[8..6]      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; src_mac_addr[3..2]      ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; src_mac_addr[28]        ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; src_mac_addr[25]        ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; src_mac_addr[22]        ; Input  ; Info     ; Stuck at GND                                                                        ;
@@ -882,20 +909,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; frame_type[10..3]       ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; frame_type[11]          ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; frame_type[0]           ; Input  ; Info     ; Stuck at GND                                                                        ;
-; fsc[29..27]             ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; fsc[25..24]             ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; fsc[20..18]             ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; fsc[14..10]             ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; fsc[5..1]               ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; fsc[23..21]             ; Input  ; Info     ; Stuck at GND                                                                        ;
-; fsc[17..15]             ; Input  ; Info     ; Stuck at GND                                                                        ;
-; fsc[9..8]               ; Input  ; Info     ; Stuck at GND                                                                        ;
-; fsc[31]                 ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; fsc[30]                 ; Input  ; Info     ; Stuck at GND                                                                        ;
-; fsc[26]                 ; Input  ; Info     ; Stuck at GND                                                                        ;
-; fsc[7]                  ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; fsc[6]                  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; fsc[0]                  ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; fifo_data_length[3..1]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; fifo_data_length[15..6] ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; fifo_data_length[5]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
@@ -931,25 +944,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; boundary_port         ; 9                           ;
 ; cycloneiii_ddio_out   ; 6                           ;
-; cycloneiii_ff         ; 78                          ;
+; cycloneiii_ff         ; 110                         ;
 ;     CLR               ; 34                          ;
 ;     CLR SCLR          ; 12                          ;
+;     ENA               ; 32                          ;
 ;     ENA CLR SCLR      ; 16                          ;
 ;     ENA CLR SLD       ; 16                          ;
-; cycloneiii_lcell_comb ; 194                         ;
+; cycloneiii_lcell_comb ; 278                         ;
 ;     arith             ; 63                          ;
 ;         2 data inputs ; 62                          ;
 ;         3 data inputs ; 1                           ;
-;     normal            ; 131                         ;
+;     normal            ; 215                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 5                           ;
-;         2 data inputs ; 9                           ;
-;         3 data inputs ; 28                          ;
-;         4 data inputs ; 87                          ;
+;         2 data inputs ; 26                          ;
+;         3 data inputs ; 20                          ;
+;         4 data inputs ; 162                         ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 10.00                       ;
-; Average LUT depth     ; 4.59                        ;
+; Max LUT depth         ; 9.00                        ;
+; Average LUT depth     ; 4.39                        ;
 +-----------------------+-----------------------------+
 
 
@@ -968,7 +982,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
-    Info: Processing started: Thu Dec 07 22:07:50 2023
+    Info: Processing started: Fri Dec 08 11:19:24 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off arp_send_rgmii -c arp_send_rgmii
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -992,6 +1006,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file /fpga/w
     Info (12023): Found entity 1: pll File: C:/fpga/workspace/fpga-exps/arp_send_rgmii/ip/pll/pll.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file /fpga/workspace/fpga-exps/arp_send_rgmii/testbench/arp_send_rgmii_tb.v
     Info (12023): Found entity 1: arp_send_rgmii_tb File: C:/fpga/workspace/fpga-exps/arp_send_rgmii/testbench/arp_send_rgmii_tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file /fpga/workspace/fpga-exps/arp_send_rgmii/rtl/crc_calc.v
+    Info (12023): Found entity 1: crc32_D8 File: C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/crc_calc.v Line: 2
 Info (12127): Elaborating entity "arp_send_rgmii" for the top level hierarchy
 Info (12128): Elaborating entity "gmii_to_rgmii" for hierarchy "gmii_to_rgmii:gmii_to_rgmii" File: C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/arp_send_rgmii.v Line: 36
 Info (12128): Elaborating entity "ddo_x4" for hierarchy "gmii_to_rgmii:gmii_to_rgmii|ddo_x4:ddo1" File: C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/gmii_to_rgmii.v Line: 101
@@ -1023,8 +1039,9 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/ddio
     Info (12023): Found entity 1: ddio_out_p9j File: C:/fpga/workspace/fpga-exps/arp_send_rgmii/proj/db/ddio_out_p9j.tdf Line: 27
 Info (12128): Elaborating entity "ddio_out_p9j" for hierarchy "gmii_to_rgmii:gmii_to_rgmii|ddo_x1:ddo2|altddio_out:ALTDDIO_OUT_component|ddio_out_p9j:auto_generated" File: c:/intelfpga/17.1/quartus/libraries/megafunctions/altddio_out.tdf Line: 100
 Info (12128): Elaborating entity "eth_send_frame" for hierarchy "eth_send_frame:eth_send_frame" File: C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/arp_send_rgmii.v Line: 46
-Info (12128): Elaborating entity "eth_send" for hierarchy "eth_send_frame:eth_send_frame|eth_send:eth_send" File: C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/eth_send_frame.v Line: 60
-Warning (10034): Output port "gmii_tx_er" at eth_send.v(40) has no driver File: C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/eth_send.v Line: 40
+Info (12128): Elaborating entity "eth_send" for hierarchy "eth_send_frame:eth_send_frame|eth_send:eth_send" File: C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/eth_send_frame.v Line: 61
+Warning (10034): Output port "gmii_tx_er" at eth_send.v(42) has no driver File: C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/eth_send.v Line: 42
+Info (12128): Elaborating entity "crc32_D8" for hierarchy "eth_send_frame:eth_send_frame|crc32_D8:crc32_D8" File: C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/eth_send_frame.v Line: 72
 Info (12128): Elaborating entity "pll" for hierarchy "pll:pll" File: C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/arp_send_rgmii.v Line: 51
 Info (12128): Elaborating entity "altpll" for hierarchy "pll:pll|altpll:altpll_component" File: C:/fpga/workspace/fpga-exps/arp_send_rgmii/ip/pll/pll.v Line: 90
 Info (12130): Elaborated megafunction instantiation "pll:pll|altpll:altpll_component" File: C:/fpga/workspace/fpga-exps/arp_send_rgmii/ip/pll/pll.v Line: 90
@@ -1092,16 +1109,16 @@ Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/fpga/workspace/fpga-exps/arp_send_rgmii/proj/output_files/arp_send_rgmii.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 209 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 293 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 7 output pins
-    Info (21061): Implemented 193 logic cells
+    Info (21061): Implemented 277 logic cells
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4848 megabytes
-    Info: Processing ended: Thu Dec 07 22:07:58 2023
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Peak virtual memory: 4847 megabytes
+    Info: Processing ended: Fri Dec 08 11:19:33 2023
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:07
 
 
 +------------------------------------------+

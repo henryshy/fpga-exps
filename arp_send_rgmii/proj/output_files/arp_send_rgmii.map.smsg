@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at eth_send_frame.v(83): always construct contains both blocking and non-blocking assignments File: C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/eth_send_frame.v Line: 83
+Warning (10268): Verilog HDL information at eth_send_frame.v(93): always construct contains both blocking and non-blocking assignments File: C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/eth_send_frame.v Line: 93

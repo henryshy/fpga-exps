@@ -1,5 +1,5 @@
 Flow report for arp_send_rgmii
-Thu Dec 07 22:08:08 2023
+Fri Dec 08 11:19:42 2023
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
 
 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Thu Dec 07 22:08:08 2023           ;
+; Flow Status                        ; Successful - Fri Dec 08 11:19:42 2023           ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Standard Edition ;
 ; Revision Name                      ; arp_send_rgmii                                  ;
 ; Top-level Entity Name              ; arp_send_rgmii                                  ;
 ; Family                             ; Cyclone IV E                                    ;
 ; Device                             ; EP4CE10F17C8                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 193 / 10,320 ( 2 % )                            ;
-;     Total combinational functions  ; 193 / 10,320 ( 2 % )                            ;
-;     Dedicated logic registers      ; 78 / 10,320 ( < 1 % )                           ;
-; Total registers                    ; 90                                              ;
+; Total logic elements               ; 277 / 10,320 ( 3 % )                            ;
+;     Total combinational functions  ; 277 / 10,320 ( 3 % )                            ;
+;     Dedicated logic registers      ; 110 / 10,320 ( 1 % )                            ;
+; Total registers                    ; 122                                             ;
 ; Total pins                         ; 9 / 180 ( 5 % )                                 ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 423,936 ( 0 % )                             ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/07/2023 22:07:50 ;
+; Start date & time ; 12/08/2023 11:19:25 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; arp_send_rgmii      ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+-------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-------------------+
-; COMPILER_SIGNATURE_ID                ; 40632979562199.170195807020420         ; --            ; --          ; --                ;
+; COMPILER_SIGNATURE_ID                ; 40632979562199.170200556429524         ; --            ; --          ; --                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; arp_send_rgmii_tb ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; eth_send_frame_tb ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; arp_send_rgmii_tb                      ; --            ; --          ; eda_simulation    ;
@@ -107,12 +107,12 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:08     ; 1.0                     ; 4848 MB             ; 00:00:06                           ;
-; Fitter                    ; 00:00:04     ; 1.1                     ; 6512 MB             ; 00:00:02                           ;
-; Assembler                 ; 00:00:00     ; 1.0                     ; 4676 MB             ; 00:00:00                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.1                     ; 4891 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:09     ; 1.0                     ; 4847 MB             ; 00:00:07                           ;
+; Fitter                    ; 00:00:03     ; 1.1                     ; 6516 MB             ; 00:00:02                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:00                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.1                     ; 4898 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4643 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:15     ; --                      ; --                  ; 00:00:10                           ;
+; Total                     ; 00:00:15     ; --                      ; --                  ; 00:00:11                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

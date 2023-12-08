@@ -9,6 +9,7 @@ module eth_send(
 	
 	frame_type,
 	fsc,
+	crc_en,
 	
 	fifo_data_length,
 	fifo_rdreq,
@@ -28,6 +29,7 @@ module eth_send(
 	input [47:0] src_mac_addr;
 	input [15:0] frame_type;
 	input [31:0] fsc ;
+	output crc_en;
 	
 	input [15:0]fifo_data_length;
 	output fifo_rdreq;
@@ -46,22 +48,11 @@ module eth_send(
 	reg [47:0]r_tgt_mac_addr;
 	reg [15:0]r_type_length;	
 	
-// parameter [47:0]target_mac_addr = 48'hFFFFFFFFFFFF;
-// parameter [47:0] src_mac_addr = 48'h0007EDAC6200;
-// parameter [15:0] frame_type = 16'h0806;
-//	parameter [15:0] hardware_type = 16'h0001;
-//	parameter [15:0] protocol_type= 16'h0800;
-//	parameter [7:0] hardware_addr_length = 8'h06;
-//	parameter [7:0] protocol_addr_length = 8'h04;
-//	parameter [15:0] option = 16'h0001;
-//	parameter [31:0] src_ip = 32'hC0A80002;
-//	parameter [31:0] target_ip = 32'hC0A80003;
-	
-//	parameter [31:0]crc = 32'h5F3FAFB4;
-//	parameter [31:0] fsc = {crc[7:0],crc[15:0],crc[23:16],crc[31:24]};
-	assign fifo_rdreq = data_tx_en;
 
+	assign fifo_rdreq = data_tx_en;
 	assign fifo_rdclk = gmii_tx_clk;
+	
+	assign crc_en = ((send_cnt > 9) && (send_cnt <= 24));
 
 	
 	always@(posedge gmii_tx_clk)
@@ -100,7 +91,6 @@ module eth_send(
 			send_cnt <= #1 16'd0;
 			
 	assign data_tx_en = (send_cnt == 16'd23)&&(fifo_data_num > 1);
-	
 
 	always@(posedge gmii_tx_clk or negedge rst_n)
 		if(!rst_n)
@@ -111,15 +101,7 @@ module eth_send(
 			fifo_data_num <= #1 fifo_data_num - 16'd1;
 		else
 			fifo_data_num <= #1 fifo_data_num;
-
-			
-
 	
-
-
-	
-
-			
 			
 	always@(posedge gmii_tx_clk or negedge rst_n)
 		if(!rst_n)
