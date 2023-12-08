@@ -1,0 +1,120 @@
+# Reading C:/intelFPGA/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# ERROR: No extended dataflow license exists
+# do arp_send_rgmii_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl {C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/arp_send_rgmii.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:26:52 on Dec 07,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl" C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/arp_send_rgmii.v 
+# -- Compiling module arp_send_rgmii
+# 
+# Top level modules:
+# 	arp_send_rgmii
+# End time: 17:26:52 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl {C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/gmii_to_rgmii.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:26:52 on Dec 07,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl" C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/gmii_to_rgmii.v 
+# -- Compiling module ddo_x4
+# -- Compiling module ddo_x1
+# -- Compiling module gmii_to_rgmii
+# 
+# Top level modules:
+# 	gmii_to_rgmii
+# End time: 17:26:52 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl {C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/eth_send.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:26:52 on Dec 07,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl" C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/eth_send.v 
+# -- Compiling module eth_send
+# 
+# Top level modules:
+# 	eth_send
+# End time: 17:26:52 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl {C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/eth_send_frame.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:26:52 on Dec 07,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl" C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/eth_send_frame.v 
+# -- Compiling module eth_send_frame
+# 
+# Top level modules:
+# 	eth_send_frame
+# End time: 17:26:52 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/arp_send_rgmii/ip/pll {C:/fpga/workspace/fpga-exps/arp_send_rgmii/ip/pll/pll.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:26:52 on Dec 07,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/arp_send_rgmii/ip/pll" C:/fpga/workspace/fpga-exps/arp_send_rgmii/ip/pll/pll.v 
+# -- Compiling module pll
+# 
+# Top level modules:
+# 	pll
+# End time: 17:26:53 on Dec 07,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/arp_send_rgmii/proj/db {C:/fpga/workspace/fpga-exps/arp_send_rgmii/proj/db/pll_altpll.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:26:53 on Dec 07,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/arp_send_rgmii/proj/db" C:/fpga/workspace/fpga-exps/arp_send_rgmii/proj/db/pll_altpll.v 
+# -- Compiling module pll_altpll
+# 
+# Top level modules:
+# 	pll_altpll
+# End time: 17:26:53 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/arp_send_rgmii/proj/../testbench {C:/fpga/workspace/fpga-exps/arp_send_rgmii/proj/../testbench/arp_send_rgmii_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:26:53 on Dec 07,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/fpga/workspace/fpga-exps/arp_send_rgmii/proj/../testbench" C:/fpga/workspace/fpga-exps/arp_send_rgmii/proj/../testbench/arp_send_rgmii_tb.v 
+# -- Compiling module arp_send_rgmii_tb
+# 
+# Top level modules:
+# 	arp_send_rgmii_tb
+# End time: 17:26:53 on Dec 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  arp_send_rgmii_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" arp_send_rgmii_tb 
+# Start time: 17:26:53 on Dec 07,2023
+# Loading work.arp_send_rgmii_tb
+# Loading work.arp_send_rgmii
+# Loading work.gmii_to_rgmii
+# Loading work.ddo_x4
+# Loading altera_mf_ver.altddio_out
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading work.ddo_x1
+# Loading work.eth_send_frame
+# Loading work.eth_send
+# Loading work.pll
+# Loading altera_mf_ver.altpll
+# Loading altera_mf_ver.pll_iobuf
+# Loading altera_mf_ver.MF_cycloneiii_pll
+# Loading altera_mf_ver.cda_m_cntr
+# Loading altera_mf_ver.cda_n_cntr
+# Loading altera_mf_ver.cda_scale_cntr
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 60000  Instance: arp_send_rgmii_tb.arp_send_rgmii.pll.altpll_component.cycloneiii_pll.pll3
+# ** Note: $stop    : C:/fpga/workspace/fpga-exps/arp_send_rgmii/proj/../testbench/arp_send_rgmii_tb.v(32)
+#    Time: 5201 ns  Iteration: 0  Instance: /arp_send_rgmii_tb
+# Break in Module arp_send_rgmii_tb at C:/fpga/workspace/fpga-exps/arp_send_rgmii/proj/../testbench/arp_send_rgmii_tb.v line 32
+# End time: 20:41:30 on Dec 07,2023, Elapsed time: 3:14:37
+# Errors: 0, Warnings: 0

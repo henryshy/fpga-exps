@@ -1,0 +1,8 @@
+
+
+c:/intelfpga/17.1/quartus/libraries/megafunctions/altddio_out.tdf
+
+Dec 07 04PM:19:29>: MegaWizard Plug-In Manager does not recognize c:/intelfpga/17.1/quartus/libraries/megafunctions/altddio_out.tdf as a wizard-generated
+custom megafunction variation.
+
+Do you want to use a wizard to overwrite it?

@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu Dec 07 22:08:03 2023
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+Revision Name : arp_send_rgmii
+Top-level Entity Name : arp_send_rgmii
+Family : Cyclone IV E
+Device : EP4CE10F17C8
+Timing Models : Final
+Total logic elements : 193 / 10,320 ( 2 % )
+    Total combinational functions : 193 / 10,320 ( 2 % )
+    Dedicated logic registers : 78 / 10,320 ( < 1 % )
+Total registers : 90
+Total pins : 9 / 180 ( 5 % )
+Total virtual pins : 0
+Total memory bits : 0 / 423,936 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
+Total PLLs : 1 / 2 ( 50 % )

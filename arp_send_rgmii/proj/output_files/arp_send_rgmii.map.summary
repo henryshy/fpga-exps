@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Dec 07 22:07:58 2023
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+Revision Name : arp_send_rgmii
+Top-level Entity Name : arp_send_rgmii
+Family : Cyclone IV E
+Total logic elements : 193
+    Total combinational functions : 193
+    Dedicated logic registers : 78
+Total registers : 90
+Total pins : 9
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

@@ -1,0 +1,208 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/fpga/workspace/fpga-exps/arp_send_rgmii/proj/simulation/modelsim
+varp_send_rgmii
+Z1 !s110 1701941212
+!i10b 1
+!s100 k=70mnRXKYB:cY@O0^QzM0
+ITzQU<?1z3zblUh3e1d:0D0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1701937635
+8C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/arp_send_rgmii.v
+FC:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/arp_send_rgmii.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1701941212.000000
+!s107 C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/arp_send_rgmii.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl|C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/arp_send_rgmii.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl
+Z7 tCvgOpt 0
+varp_send_rgmii_tb
+Z8 !s110 1701941213
+!i10b 1
+!s100 ]Ek4BR@<DG]2ac;he^Rlj3
+IIdjh4_FHQ:^XWj?93fz]l0
+R2
+R0
+w1701937597
+8C:/fpga/workspace/fpga-exps/arp_send_rgmii/proj/../testbench/arp_send_rgmii_tb.v
+FC:/fpga/workspace/fpga-exps/arp_send_rgmii/proj/../testbench/arp_send_rgmii_tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+Z9 !s108 1701941213.000000
+!s107 C:/fpga/workspace/fpga-exps/arp_send_rgmii/proj/../testbench/arp_send_rgmii_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/arp_send_rgmii/proj/../testbench|C:/fpga/workspace/fpga-exps/arp_send_rgmii/proj/../testbench/arp_send_rgmii_tb.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/arp_send_rgmii/proj/../testbench
+R7
+vddo_x1
+R1
+!i10b 1
+!s100 EQobfhT5G>;SGTNgbQfLT1
+INh:ooo0ThoTTO?QKSa<f@3
+R2
+R0
+Z10 w1701937111
+Z11 8C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/gmii_to_rgmii.v
+Z12 FC:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/gmii_to_rgmii.v
+Z13 L0 39
+R3
+r1
+!s85 0
+31
+R4
+Z14 !s107 C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/gmii_to_rgmii.v|
+Z15 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl|C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/gmii_to_rgmii.v|
+!i113 1
+R5
+R6
+R7
+vddo_x4
+R1
+!i10b 1
+!s100 =_l_bCRm959_Vd3i4]Dok1
+IkAhO2mOCgdCXSDb>4HcVY3
+R2
+R0
+R10
+R11
+R12
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+R14
+R15
+!i113 1
+R5
+R6
+R7
+veth_send
+R1
+!i10b 1
+!s100 CJ44Gf9n111A]hRAJSI[[2
+I@YaC_^HGgW`H@zE3]e@JD1
+R2
+R0
+w1701941115
+8C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/eth_send.v
+FC:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/eth_send.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/eth_send.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl|C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/eth_send.v|
+!i113 1
+R5
+R6
+R7
+veth_send_frame
+R1
+!i10b 1
+!s100 A31=E<a8HJ8Oo>g6SzK7m2
+IVZ3Hocaij><TV0IUW]b5n0
+R2
+R0
+w1701940893
+8C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/eth_send_frame.v
+FC:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/eth_send_frame.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/eth_send_frame.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl|C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/eth_send_frame.v|
+!i113 1
+R5
+R6
+R7
+vgmii_to_rgmii
+R1
+!i10b 1
+!s100 :fXn6NNf=I757BTARRHKV1
+II6hBLioGXing^SO:V2_BD3
+R2
+R0
+R10
+R11
+R12
+L0 76
+R3
+r1
+!s85 0
+31
+R4
+R14
+R15
+!i113 1
+R5
+R6
+R7
+vpll
+R8
+!i10b 1
+!s100 BJA8z1hbXW=9hHkZ=zAFm3
+IblanA;0o;j9YScW88P@hS2
+R2
+R0
+w1701937153
+8C:/fpga/workspace/fpga-exps/arp_send_rgmii/ip/pll/pll.v
+FC:/fpga/workspace/fpga-exps/arp_send_rgmii/ip/pll/pll.v
+R13
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/fpga/workspace/fpga-exps/arp_send_rgmii/ip/pll/pll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/arp_send_rgmii/ip/pll|C:/fpga/workspace/fpga-exps/arp_send_rgmii/ip/pll/pll.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/arp_send_rgmii/ip/pll
+R7
+vpll_altpll
+R8
+!i10b 1
+!s100 OI1CSUkdgOzh0a_5CW7WG2
+IL3JMdQ4nCC]V6:zhVmJ:g1
+R2
+R0
+w1701937171
+8C:/fpga/workspace/fpga-exps/arp_send_rgmii/proj/db/pll_altpll.v
+FC:/fpga/workspace/fpga-exps/arp_send_rgmii/proj/db/pll_altpll.v
+L0 29
+R3
+r1
+!s85 0
+31
+R9
+!s107 C:/fpga/workspace/fpga-exps/arp_send_rgmii/proj/db/pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/fpga/workspace/fpga-exps/arp_send_rgmii/proj/db|C:/fpga/workspace/fpga-exps/arp_send_rgmii/proj/db/pll_altpll.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/arp_send_rgmii/proj/db
+R7

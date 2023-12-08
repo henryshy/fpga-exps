@@ -1,0 +1,14 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl {C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/arp_send_rgmii.v}
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl {C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/gmii_to_rgmii.v}
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl {C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/eth_send.v}
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl {C:/fpga/workspace/fpga-exps/arp_send_rgmii/rtl/eth_send_frame.v}
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/arp_send_rgmii/ip/pll {C:/fpga/workspace/fpga-exps/arp_send_rgmii/ip/pll/pll.v}
+vlog -vlog01compat -work work +incdir+C:/fpga/workspace/fpga-exps/arp_send_rgmii/proj/db {C:/fpga/workspace/fpga-exps/arp_send_rgmii/proj/db/pll_altpll.v}
+

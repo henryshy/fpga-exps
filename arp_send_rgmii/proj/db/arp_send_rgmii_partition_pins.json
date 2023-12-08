@@ -1,0 +1,37 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "rgmii_tx_clk",
+					"strict" : false
+				},
+				{
+					"name" : "rgmii_tx_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rgmii_tx_data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "rgmii_tx_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "rgmii_tx_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "rgmii_tx_ctl",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
